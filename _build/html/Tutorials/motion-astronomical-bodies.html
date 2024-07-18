@@ -72,6 +72,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorials/motion-astronomical-bodies';</script>
     <link rel="canonical" href="https://saturnaxis.github.io/ASTR1304/Tutorials/motion-astronomical-bodies.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -178,7 +180,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="thinking-like-astronomer.html">1. Ch 1: Thinking Like an Astronomer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thinking-like-astronomer.html">1. Thinking Like an Astronomer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="patterns-in-sky.html">2. Patterns in the Sky</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Motion of Astronomical Bodies</a></li>
 </ul>
@@ -386,7 +388,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -402,6 +406,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orbital-periods">3.1. Orbital Periods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kepler-s-3rd-law">3.2. Kepler’s 3rd Law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-newton-s-laws">3.3. Using Newton’s Laws</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -413,6 +427,56 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="motion-of-astronomical-bodies">
 <h1><span class="section-number">3. </span>Motion of Astronomical Bodies<a class="headerlink" href="#motion-of-astronomical-bodies" title="Permalink to this heading">#</a></h1>
+<section id="orbital-periods">
+<h2><span class="section-number">3.1. </span>Orbital Periods<a class="headerlink" href="#orbital-periods" title="Permalink to this heading">#</a></h2>
+<p>Copernicus determined the scale of the Solar System from observations, in particular using the <em>synodic period</em> <span class="math notranslate nohighlight">\(S\)</span> and sidereal period <span class="math notranslate nohighlight">\(P\)</span>.  He didn’t actually know the distance from the Earth to the Sun, so he (and others) let the Earth-Sun distance equal to <span class="math notranslate nohighlight">\(1\)</span> (unity).
+- <a class="reference external" href="https://en.wikipedia.org/wiki/Astronomical_unit"><strong>Astronomical unit</strong></a> (AU): the distance from the Earth to the Sun
+- During Copernicus’ time, the AU represented the actual distance; Later, it was redefined to be the <em>average</em> distance.  Today it’s defined as fundamental constants (i.e., the speed of light).</p>
+<p>The sidereal period <span class="math notranslate nohighlight">\(P\)</span> of a planet can be determined by comparing the planet’s synodic period <span class="math notranslate nohighlight">\(S\)</span> to the Earth’s sidereal period <span class="math notranslate nohighlight">\(E = 365.25\ {\rm days} = 1\ {\rm yr}\)</span>.  However this comparison differs depending on whether the planet (in question) is on a superior or inferior orbit compared to the Earth.  The relations are given as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{1}{P} &amp;= 
+    \begin{cases} 
+        \frac{1}{E} + \frac{1}{S}, \quad \text{(inferior)} \\
+        \frac{1}{E} - \frac{1}{S}. \quad \text{(superior)}
+    \end{cases}
+\end{align*}\]</div>
+<p>For Saturn (a superior orbit planet), the time that passes between oppositions (or the time between maximum brightness) is <span class="math notranslate nohighlight">\(378.1\ {\rm days} = 1.035\ {\rm yr}\)</span>.  Then we can calculate Saturn’s sidereal period as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{1}{P} &amp;= \frac{1}{1\ {\rm yr}} - \frac{1}{1.035\ {\rm yr}} = 0.03399\ {\rm yr^{-1}}, \\
+P &amp;= \frac{1}{0.03399\ {\rm yr^{-1}}} = 29.42\ {\rm yr}.
+\end{align*}\]</div>
+<p><strong>Saturn’s sidereal period is 29.4 years</strong>, which means that Saturn takes 29.4 years to return to the same spot while orbiting the Sun.</p>
+<p>In Copernicus’ model, the planetary orbits were perfect circles.</p>
+<ul class="simple">
+<li><p>He needed to measure the time <span class="math notranslate nohighlight">\(t_O\)</span> when a planet was at opposition (for outer planets) or inferior conjunction (for inner planets).</p></li>
+<li><p>The time <span class="math notranslate nohighlight">\(t\)</span> when the same planet was at quadrature (for outer planets) or elongation (for inner planets).</p></li>
+</ul>
+<p>The difference in these times (<span class="math notranslate nohighlight">\(T = |t-t_O|\)</span>) would tell Copernicus what fraction of an orbit the planet had moved.  This would provide an estimate for the heliocentric longitude <span class="math notranslate nohighlight">\(\lambda\)</span> of the planet at quadrature or elongation.  See <a class="reference external" href="https://astro.unl.edu/naap/ssm/ssm_advanced.html">here</a> for more details.</p>
+<div class="math notranslate nohighlight">
+\[ \lambda = \left(\frac{T}{S}\right) \times 360^\circ. \]</div>
+<p>Recall that the special points (quadrature or elongation) form right triangles, where one angle is <span class="math notranslate nohighlight">\(90^\circ\)</span> and another angle will be the heliocentric longitude <span class="math notranslate nohighlight">\(\lambda\)</span>.  In both cases, one side of the triangle will be the Earth-Sun distance (i.e., 1 AU).  Copernicus only need to use trigonometry to find the side corresponding to the planet-Sun distance <span class="math notranslate nohighlight">\(d_p\)</span>.  The following relations describe the trigonometry required for a planet on an inferior or superior orbit:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+d_p &amp;= \begin{cases}
+    \cos{\lambda}, \quad \text{(inferior)} \\
+    \frac{1}{\cos{\lambda}}. \quad \text{(superior)}
+    \end{cases}
+\end{align*}\]</div>
+<p>For Saturn, it takes ~3 months (0.24 yr) for Saturn to move from opposition to next quadrature because Earth is moving along its orbit too.  Using this estimate, we have
+$<span class="math notranslate nohighlight">\(\lambda_{\rm Sat} = \left(\frac{0.24\ {\rm yr}}{1.035\ {\rm yr}}\right) \times 360^\circ = 84^\circ.\)</span>$</p>
+<p>The Saturn-Sun distance is then</p>
+<div class="math notranslate nohighlight">
+\[d_{\rm Sat} = \frac{1\ {\rm AU}}{\cos{(84^\circ)}} = 9.56\ {\rm AU}.\]</div>
+<p><strong>Not too far from the modern value, <span class="math notranslate nohighlight">\(9.58\ {\rm AU}\)</span>.</strong></p>
+</section>
+<section id="kepler-s-3rd-law">
+<h2><span class="section-number">3.2. </span>Kepler’s 3rd Law<a class="headerlink" href="#kepler-s-3rd-law" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="using-newton-s-laws">
+<h2><span class="section-number">3.3. </span>Using Newton’s Laws<a class="headerlink" href="#using-newton-s-laws" title="Permalink to this heading">#</a></h2>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -460,6 +524,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orbital-periods">3.1. Orbital Periods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kepler-s-3rd-law">3.2. Kepler’s 3rd Law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-newton-s-laws">3.3. Using Newton’s Laws</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
