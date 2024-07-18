@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Ch 1: Thinking Like an Astronomer &#8212; ASTR1304 Astronomy of the Solar System</title>
+    <title>1. Thinking Like an Astronomer &#8212; ASTR1304 Astronomy of the Solar System</title>
   
   
   
@@ -181,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Ch 1: Thinking Like an Astronomer</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Thinking Like an Astronomer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="patterns-in-sky.html">2. Patterns in the Sky</a></li>
 <li class="toctree-l1"><a class="reference internal" href="motion-astronomical-bodies.html">3. Motion of Astronomical Bodies</a></li>
 </ul>
@@ -402,7 +402,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Ch 1: Thinking Like an Astronomer</h1>
+    <h1>Thinking Like an Astronomer</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -413,6 +413,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-tools">1.1. Mathematical Tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-a-graph">1.2. Reading a Graph</a></li>
 </ul>
             </nav>
         </div>
@@ -424,8 +425,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="ch-1-thinking-like-an-astronomer">
-<h1><span class="section-number">1. </span>Ch 1: Thinking Like an Astronomer<a class="headerlink" href="#ch-1-thinking-like-an-astronomer" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="thinking-like-an-astronomer">
+<h1><span class="section-number">1. </span>Thinking Like an Astronomer<a class="headerlink" href="#thinking-like-an-astronomer" title="Permalink to this heading">#</a></h1>
 <section id="mathematical-tools">
 <h2><span class="section-number">1.1. </span>Mathematical Tools<a class="headerlink" href="#mathematical-tools" title="Permalink to this heading">#</a></h2>
 <p>The main difference between modern science and prior systems of inquiry is through the use of mathematics to precisely describe the patterns observed.  The language of mathematics was developed over centuries to provide a more precise means of communicating ideas.  Below are some mathematical ideas that are useful in our study of astronomy:</p>
@@ -466,6 +467,157 @@ allowfullscreen></iframe>
 </div>
 </div>
 </div>
+<ul>
+<li><p><strong>Units and Ratios</strong>: useful way to represent and compare quantities.</p>
+<ul class="simple">
+<li><p>Instead of writing that the Sun has a mass of <span class="math notranslate nohighlight">\(1.989 \times 10^{30}\ {\rm kg}\)</span>, it is more convenient to represent this value in a new unit: <strong>Solar mass</strong> <span class="math notranslate nohighlight">\(\equiv 1\ M_\odot\)</span>.  The <span class="math notranslate nohighlight">\(M_\odot\)</span> tells us when the new unit is being invoked.</p></li>
+<li><p>Stars cover a wide range in mass, and the new unit allows us to represent a star that is <span class="math notranslate nohighlight">\(10\times\)</span> the Sun’s mass as just <span class="math notranslate nohighlight">\(10\ M_\odot\)</span>.</p></li>
+<li><p>A <strong>unit conversion</strong> (e.g., <span class="math notranslate nohighlight">\(1000\ {\rm m} = 1\ {\rm km}\)</span>) can be represented as a ratio, or <span class="math notranslate nohighlight">\(\frac{1000\ {\rm m}}{1\ {\rm km}}\)</span>.
+$<span class="math notranslate nohighlight">\( \frac{3 \times 10^{8}\ {\rm m/s}}{1} \times \frac{1\ {\rm km}}{10^3\ {\rm m}} = 3 \times 10^5\ {\rm km/s} \)</span>$</p></li>
+<li><p>Using ratios is also useful in making other calculations (with formualas easier).  Suppose you want to know how much more light-gather power a 30-m telescope has compared to a 3-m telescope.  The light-gathering power is proportional to the area, so we just need to compare the areas (from a circle) of the two telescopes.  The 30-m telescope has <span class="math notranslate nohighlight">\(100\times\)</span> more light-gathering power as found using a ratio.  <strong>Note: the value of <span class="math notranslate nohighlight">\(\pi\)</span> canceled and was not needed.</strong>
+$<span class="math notranslate nohighlight">\( \text{light-gathering power ratio} = \frac{A_{30m}}{A_{3m}} = \frac{\pi 30^2}{\pi 3^2} = \left(\frac{30}{3} \right)^2 = 10^2 = 100. \)</span>$</p></li>
+<li><p>Below is a video showing how to use a ratio to solve a problem with intensity and temperature.</p></li>
+</ul>
+  <div align="center">
+  <iframe width="560" height="315"
+  src="https://www.youtube.com/embed/ZTWv8bEaNfA" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen></iframe>
+  </div>
+</li>
+<li><p><strong>Proportionality</strong>: useful way to understand how the result of a formula will change with different given values.  This is similar to using ratios, but the question is just asked in a different way.</p>
+<ul class="simple">
+<li><p>“If you have <em>half</em> as much money, you will be able to buy only <em>half</em> as much gas” is an example of a linear proportion.</p></li>
+<li><p>“If you <em>double</em> the telescope diameter, you will have <em>four times</em> the light-gathering power (i.e., $2^2 = 4) is an example of a proportion with an exponent.</p></li>
+<li><p>Below is a refresher video from <a class="reference external" href="https://www.khanacademy.org/">Khan Academy</a> about proportionality in a general context.</p></li>
+</ul>
+  <div align="center">
+  <iframe width="560" height="315"
+  src="https://www.youtube.com/embed/AQFZuih2odo" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen></iframe>
+  </div></li>
+</ul>
+</section>
+<section id="reading-a-graph">
+<h2><span class="section-number">1.2. </span>Reading a Graph<a class="headerlink" href="#reading-a-graph" title="Permalink to this heading">#</a></h2>
+<p>Scientists (and other technical professionals) often interpret their data using a graph because it’s easier to see the general relationship visually rather than by comparing individual numbers.  Graphs typically have two axes: horizontal (independent) and vertical (dependent).</p>
+<ul class="simple">
+<li><p>The independent variable represents the quantity for which the scientist can control.</p></li>
+<li><p>The dependent variable represents the final quantity obtained (from a formula) or measured (by experiment).</p></li>
+</ul>
+<p>Suppose we have some data that describes how far a car moves (i.e., its distance from the start) at different points in time over a trip.  When gathering the data, we had control over when to record the distance measurements.  Therefore, the independent variable is the time <span class="math notranslate nohighlight">\(t\)</span> describing when we make the measurement (plotted along the horizontal axis).  The dependent variable is <span class="math notranslate nohighlight">\(d\)</span> that describes the distance measured at a given <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>Below is a python script (<strong>DON’T PANIC</strong>) that demonstrates some randomly generated distances (points) and the expectation for how far we would travel assuming a consant speed of <span class="math notranslate nohighlight">\(60\ \rm {kph}\)</span>.  These values are then graphed to show us visually the relationships.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span> <span class="c1">#set this so that the results are reproducible</span>
+
+<span class="n">npts</span> <span class="o">=</span> <span class="mi">21</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="s1">&#39;large&#39;</span>
+<span class="n">v_o</span> <span class="o">=</span> <span class="mi">60</span> <span class="c1">#speed in kilometers per hour (kph)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">npts</span><span class="p">)</span>
+<span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="n">npts</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mf">60.</span> <span class="c1">#measurement time (converted in hours)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">v_o</span><span class="o">*</span><span class="n">t</span>
+<span class="n">d_rand</span> <span class="o">=</span> <span class="n">d</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">60</span><span class="o">*</span><span class="n">t</span><span class="p">,</span><span class="n">d_rand</span><span class="p">,</span><span class="s1">&#39;k.&#39;</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;(generated) measurements&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">60</span><span class="o">*</span><span class="n">t</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="s1">&#39;b--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;model&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time $t$ (minutes)&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Distance $d$ (km)&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">21</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">25</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/9bc696e2e4fc226b7adefaa71c588c8ea2adc3e4431a36b6e1cceb28b3136039.png" src="../_images/9bc696e2e4fc226b7adefaa71c588c8ea2adc3e4431a36b6e1cceb28b3136039.png" />
+</div>
+</div>
+<p>We can analyze the gravph above and recover our initial values.</p>
+<ul class="simple">
+<li><p>First, we can find the slope of the line <span class="math notranslate nohighlight">\(m\)</span> using the general formula: <span class="math notranslate nohighlight">\(m = \frac{y_2-y_1}{x_2 - x_1}\)</span>, or <span class="math notranslate nohighlight">\(m = \frac{d_2-d_1}{t_2-t_1}\)</span> for our specific problem.  To find the slope, we must pick two points on the dashed line, where it is better if they are far apart and easy to read based on the grid lines.  We know that we started from the origin <span class="math notranslate nohighlight">\((0,0)\)</span> and ended on <span class="math notranslate nohighlight">\((20,20)\)</span> (using the dashed-line).</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ m = \frac{(20-0)\ {\rm km}}{(20-0)\ {\rm min}} = 1\ {\rm km/min}. \]</div>
+<ul class="simple">
+<li><p>The slope of the line is <span class="math notranslate nohighlight">\(1\ {\rm km/min}\)</span>, which represents our <em>average</em> speed.  <strong>But we started with 60 kph!</strong>  We can convert the minutes to hours:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \frac{1\ {\rm km}}{1\ {\rm min}} \times \frac{60\ {\rm min}}{1\ {\rm h}} = 60\ {\rm km/h} = 60\ {\rm kph}. \]</div>
+<ul>
+<li><p>Finding the <span class="math notranslate nohighlight">\(y\)</span>-intercept <span class="math notranslate nohighlight">\(b\)</span> requires that we use the equation of a line <span class="math notranslate nohighlight">\(y=mx+b\)</span> and one of our points measured off the graph.  Let’s use <span class="math notranslate nohighlight">\((20\ {\rm min},20\ {\rm km})\)</span>, which gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    20 &amp;= \left(\frac{1\ {\rm km}}{1\ {\rm min}}\right) (20\ {\rm min}) + b, \\
+    20 &amp;= 20 + b, \\
+    b &amp; = 0.
+    \end{align*}\]</div>
+</li>
+</ul>
+<p>Althought the above example was linear (i.e., followed the equation of a line), not all data turns out that way.  The textbook (21st Century Astronomy) provides an example where this is not the case, which we reproduce below (using python).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">ms</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">npts</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="s1">&#39;large&#39;</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">npts</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#time steps</span>
+<span class="n">num_of_virus</span> <span class="o">=</span>  <span class="p">[</span><span class="mi">2</span><span class="o">**</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">npts</span><span class="p">)]</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">num_of_virus</span><span class="p">,</span><span class="s1">&#39;k.&#39;</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="n">ms</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">num_of_virus</span><span class="p">,</span><span class="s1">&#39;k.&#39;</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="n">ms</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Number of viruses&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time step&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Number of viruses&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time step&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">])</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">1500</span><span class="p">,</span><span class="mi">2000</span><span class="p">,</span><span class="mi">2500</span><span class="p">])</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">])</span>
+
+<span class="n">y2_ticks</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">10000</span><span class="p">]</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">y2_ticks</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([</span><span class="s1">&#39;</span><span class="si">%i</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">y2_ticks</span><span class="p">])</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.88</span><span class="p">,</span><span class="s1">&#39;(a)&#39;</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="n">ax1</span><span class="o">.</span><span class="n">transAxes</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.88</span><span class="p">,</span><span class="s1">&#39;(b)&#39;</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="n">ax2</span><span class="o">.</span><span class="n">transAxes</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span><span class="o">=</span><span class="mf">0.5</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/49929da4f10035ca78f3789d640adc272a24b5ff0e1a50ac1610032e903fffc5.png" src="../_images/49929da4f10035ca78f3789d640adc272a24b5ff0e1a50ac1610032e903fffc5.png" />
+</div>
+</div>
+<p>The data above represents number of viruses relative to the doubling time (time step) for which the virus can multiply.  Initially there is very little virus, but as the virus infects cells and used them to reproduce, the number of viruses quickly grows.</p>
+<ul class="simple">
+<li><p>Figure (a) shows the amount of virus using a <em>linear</em> scale, where the amount of virus is not noticable until <span class="math notranslate nohighlight">\({\gtrsim}5\)</span> time steps.</p></li>
+<li><p>Figure (b) shows the amount of virus using a <em>logarithmic</em> scale, where the change in the amount of virus is much more noticeable.</p></li>
+</ul>
 </section>
 </section>
 
@@ -533,6 +685,7 @@ allowfullscreen></iframe>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-tools">1.1. Mathematical Tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-a-graph">1.2. Reading a Graph</a></li>
 </ul>
   </nav></div>
 
