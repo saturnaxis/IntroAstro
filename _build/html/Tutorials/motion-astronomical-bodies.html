@@ -447,6 +447,24 @@ document.write(`
 \frac{1}{P} &amp;= \frac{1}{1\ {\rm yr}} - \frac{1}{1.035\ {\rm yr}} = 0.03399\ {\rm yr^{-1}}, \\
 P &amp;= \frac{1}{0.03399\ {\rm yr^{-1}}} = 29.42\ {\rm yr}.
 \end{align*}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E</span> <span class="o">=</span> <span class="mf">365.25</span> <span class="c1">#Earth&#39;s sidereal period (in days)</span>
+<span class="n">S</span> <span class="o">=</span> <span class="mf">378.1</span> <span class="c1">#Saturn&#39;s synodic period (in days)</span>
+
+<span class="n">P_inv</span> <span class="o">=</span> <span class="mi">1</span><span class="o">-</span> <span class="p">(</span><span class="n">E</span><span class="o">/</span><span class="n">S</span><span class="p">)</span> <span class="c1">#1/P (Saturn&#39;s siderial period)</span>
+<span class="n">P</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">P_inv</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Saturn&#39;s sidereal period is </span><span class="si">%2.1f</span><span class="s2"> yr.&quot;</span> <span class="o">%</span> <span class="n">P</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saturn&#39;s sidereal period is 29.4 yr.
+</pre></div>
+</div>
+</div>
+</div>
 <p><strong>Saturn’s sidereal period is 29.4 years</strong>, which means that Saturn takes 29.4 years to return to the same spot while orbiting the Sun.</p>
 <p>In Copernicus’ model, the planetary orbits were perfect circles.</p>
 <ul class="simple">
@@ -464,12 +482,35 @@ d_p &amp;= \begin{cases}
     \frac{1}{\cos{\lambda}}. \quad \text{(superior)}
     \end{cases}
 \end{align*}\]</div>
-<p>For Saturn, it takes ~3 months (0.24 yr) for Saturn to move from opposition to next quadrature because Earth is moving along its orbit too.  Using this estimate, we have
-$<span class="math notranslate nohighlight">\(\lambda_{\rm Sat} = \left(\frac{0.24\ {\rm yr}}{1.035\ {\rm yr}}\right) \times 360^\circ = 84^\circ.\)</span>$</p>
+<p>For Saturn, it takes ~88 days (0.241 yr) for Saturn to move from opposition to next quadrature because Earth is moving along its orbit too.  Using this estimate, we have
+$<span class="math notranslate nohighlight">\(\lambda_{\rm Sat} = \left(\frac{0.241\ {\rm yr}}{1.035\ {\rm yr}}\right) \times 360^\circ = 83.8^\circ.\)</span>$</p>
 <p>The Saturn-Sun distance is then</p>
 <div class="math notranslate nohighlight">
-\[d_{\rm Sat} = \frac{1\ {\rm AU}}{\cos{(84^\circ)}} = 9.56\ {\rm AU}.\]</div>
+\[d_{\rm Sat} = \frac{1\ {\rm AU}}{\cos{(83.8^\circ)}} = 9.3\ {\rm AU}.\]</div>
 <p><strong>Not too far from the modern value, <span class="math notranslate nohighlight">\(9.58\ {\rm AU}\)</span>.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">S</span> <span class="o">=</span> <span class="mf">1.035</span> <span class="c1">#Saturn&#39;s synodic period (in yr)</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="mf">0.241</span> <span class="c1"># Time between Saturn&#39;s opposition and next quadrature (in yr)</span>
+<span class="n">lamb</span> <span class="o">=</span> <span class="p">(</span><span class="n">T</span><span class="o">/</span><span class="n">S</span><span class="p">)</span><span class="o">*</span><span class="mf">360.</span> <span class="c1">#heliocentric longitude (in degrees)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Saturn&#39;s heliocentric longitude at quadrature is </span><span class="si">%2.1f</span><span class="s2"> deg.&quot;</span> <span class="o">%</span> <span class="n">lamb</span><span class="p">)</span>
+
+<span class="n">d_sat</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">lamb</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The Saturn-Sun distance is </span><span class="si">%1.1f</span><span class="s2"> AU.&quot;</span> <span class="o">%</span> <span class="n">d_sat</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saturn&#39;s heliocentric longitude at quadrature is 83.8 deg.
+The Saturn-Sun distance is 9.3 AU.
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="kepler-s-3rd-law">
 <h2><span class="section-number">3.2. </span>Kepler’s 3rd Law<a class="headerlink" href="#kepler-s-3rd-law" title="Permalink to this heading">#</a></h2>
