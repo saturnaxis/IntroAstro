@@ -1,0 +1,18 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+format: jb-book
+root: home
+parts:
+- caption: Preamble
+  chapters:
+  - file: Preamble/who-for
+  - file: Preamble/cite-reuse
+- caption: Tutorials
+  numbered: true
+  chapters:
+  - file: Tutorials/thinking-like-astronomer.ipynb
+  - file: Tutorials/patterns-in-sky.ipynb
+  - file: Tutorials/motion-astronomical-bodies.ipynb
+
+
