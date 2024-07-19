@@ -411,7 +411,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orbital-periods">3.1. Orbital Periods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orbital-periods">3.1. Orbital Periods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-code-demonstration">3.1.1. Python code demonstration</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kepler-s-3rd-law">3.2. Kepler’s 3rd Law</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-newton-s-laws">3.3. Using Newton’s Laws</a></li>
 </ul>
@@ -482,8 +485,9 @@ d_p &amp;= \begin{cases}
     \frac{1}{\cos{\lambda}}. \quad \text{(superior)}
     \end{cases}
 \end{align*}\]</div>
-<p>For Saturn, it takes ~88 days (0.241 yr) for Saturn to move from opposition to next quadrature because Earth is moving along its orbit too.  Using this estimate, we have
-$<span class="math notranslate nohighlight">\(\lambda_{\rm Sat} = \left(\frac{0.241\ {\rm yr}}{1.035\ {\rm yr}}\right) \times 360^\circ = 83.8^\circ.\)</span>$</p>
+<p>For Saturn, it takes ~88 days (0.241 yr) for Saturn to move from opposition to next quadrature because Earth is moving along its orbit too.  Using this estimate, we have</p>
+<div class="math notranslate nohighlight">
+\[\lambda_{\rm Sat} = \left(\frac{0.241\ {\rm yr}}{1.035\ {\rm yr}}\right) \times 360^\circ = 83.8^\circ.\]</div>
 <p>The Saturn-Sun distance is then</p>
 <div class="math notranslate nohighlight">
 \[d_{\rm Sat} = \frac{1\ {\rm AU}}{\cos{(83.8^\circ)}} = 9.3\ {\rm AU}.\]</div>
@@ -511,12 +515,147 @@ The Saturn-Sun distance is 9.3 AU.
 </div>
 </div>
 </div>
+<section id="python-code-demonstration">
+<h3><span class="section-number">3.1.1. </span>Python code demonstration<a class="headerlink" href="#python-code-demonstration" title="Permalink to this heading">#</a></h3>
+<p>Below is a python code that uses the n-body simulation software <a class="reference external" href="https://rebound.readthedocs.io/en/latest/">rebound</a>.  Earth (blue dot) and Saturn (red dot) begin at opposition, where the simulation is evolved forward by 89 days (cyan –&gt; Earth; magenta –&gt; Saturn).  The dashed-lines connect the Earth-Saturn-Sun configuration and illustrates that Saturn is near quadrature because Earth has move forward in its orbit.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rebound</span>
+
+<span class="k">def</span> <span class="nf">runSim</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="c1">#run simulation forward by t days</span>
+    <span class="n">sim</span> <span class="o">=</span> <span class="n">rebound</span><span class="o">.</span><span class="n">Simulation</span><span class="p">()</span>
+    <span class="n">sim</span><span class="o">.</span><span class="n">integrator</span> <span class="o">=</span> <span class="s1">&#39;whfast&#39;</span>
+    <span class="n">sim</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;AU&#39;</span><span class="p">,</span><span class="s1">&#39;days&#39;</span><span class="p">,</span><span class="s1">&#39;Msun&#39;</span><span class="p">)</span>
+    <span class="n">sim</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="n">sim</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># add Sun</span>
+    <span class="n">sim</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="mf">3.003e-6</span><span class="p">,</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#add Earth</span>
+    <span class="n">sim</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="mf">2.867e-4</span><span class="p">,</span><span class="n">a</span><span class="o">=</span><span class="mf">9.58</span><span class="p">)</span> <span class="c1">#add Saturn</span>
+    <span class="n">sim</span><span class="o">.</span><span class="n">move_to_hel</span><span class="p">()</span>
+
+    <span class="c1">#sim.save_to_file(&quot;archive.bin&quot;, interval=10)</span>
+    <span class="n">sim</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">sim</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">def</span> <span class="nf">plot_points</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="n">col_E</span><span class="p">,</span> <span class="n">col_Sat</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span>
+    <span class="k">if</span> <span class="n">t</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">col_E</span><span class="p">,</span> <span class="n">col_Sat</span> <span class="o">=</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;m&#39;</span>
+    <span class="n">sim</span> <span class="o">=</span> <span class="n">runSim</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">ps</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">particles</span>
+    <span class="n">x_E</span><span class="p">,</span> <span class="n">y_E</span>  <span class="o">=</span> <span class="n">ps</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="n">ps</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">y</span>
+    <span class="n">x_Sat</span><span class="p">,</span><span class="n">y_Sat</span> <span class="o">=</span> <span class="n">ps</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="n">ps</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">y</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">x_E</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="n">y_E</span><span class="p">],</span><span class="s1">&#39;k--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">x_Sat</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="n">y_Sat</span><span class="p">],</span><span class="s1">&#39;k--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">x_E</span><span class="p">,</span><span class="n">x_Sat</span><span class="p">],[</span><span class="n">y_E</span><span class="p">,</span><span class="n">y_Sat</span><span class="p">],</span><span class="s1">&#39;k--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_E</span><span class="p">,</span><span class="n">y_E</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">col_E</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_Sat</span><span class="p">,</span><span class="n">y_Sat</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">col_Sat</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="n">fs</span> <span class="o">=</span> <span class="s1">&#39;large&#39;</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+<span class="c1">#draw orbits</span>
+<span class="n">df</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">f_rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">+</span><span class="n">df</span><span class="p">,</span><span class="n">df</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">f_rng</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">f_rng</span><span class="p">),</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mf">9.58</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">f_rng</span><span class="p">),</span><span class="mf">9.58</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">f_rng</span><span class="p">),</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1">#plot points</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;y.&#39;</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">plot_points</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plot_points</span><span class="p">(</span><span class="mi">89</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">2.5</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">2.5</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;X (AU)&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Y (AU)&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/3ba1900ef0805f37fc64dd50d021df9d4ae09eb073809d350acba0b6022bf69d.png" src="../_images/3ba1900ef0805f37fc64dd50d021df9d4ae09eb073809d350acba0b6022bf69d.png" />
+</div>
+</div>
+</section>
 </section>
 <section id="kepler-s-3rd-law">
 <h2><span class="section-number">3.2. </span>Kepler’s 3rd Law<a class="headerlink" href="#kepler-s-3rd-law" title="Permalink to this heading">#</a></h2>
+<p>Kepler’s 3rd law relates the a planet’s sideral (orbital) period <span class="math notranslate nohighlight">\(P\)</span> squared to its semimajor axis (distance from the Sun) <span class="math notranslate nohighlight">\(a\)</span> cubed.  By definition this limits the application of the Kepler’s 3rd law (without Newton’s contribution) to studies of planets orbiting Sun-like stars.  Mathematically, it can be given as</p>
+<div class="math notranslate nohighlight">
+\[ P^2 = a^3.\]</div>
+<p><strong>Note that the above formula assumes that the orbital period is given in years and the semimajor axis is in AU.</strong></p>
+<p>The discovery of Neptune in 1846 required observations of only a small portion of its orbit.  That was enough to estimate its orbital period using Kepler’s 2nd law and measuring Neptune’s speed along its orbit.  See the video below for a recap.</p>
+<div align="center">
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/ckOch3OAyFM" 
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+</div>
+<p>Assuming that the orbital period of Neptune is 165 years.  How big is its orbit?  In other words, how large is its semimajor axis?</p>
+<p>We can use Kepler’s 3rd law directly to solve this problem.  By substitution, we can easily find that</p>
+<div class="math notranslate nohighlight">
+\[ (165\ {\rm yr})^2 = a^3, \]</div>
+<p>but we need to get the semimajor axis <span class="math notranslate nohighlight">\(a\)</span> alone to answer the question.  One way to “undo” an exponent is to raise it to the inverse power.  To undo the square of a number, we simply raise the squared value to the <span class="math notranslate nohighlight">\(1/2\)</span> power.  In our case, we can do the following:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+(165\ {\rm yr})^2 &amp;= a^3, \\
+(165\ {\rm yr})^{2/3} &amp;= a^{3/3}, \\
+a &amp;= 165^{2/3}\ {\rm AU}, \\
+ &amp;= 30.1\ {\rm AU}.
+\end{align*}\]</div>
+<p><strong>The semimajor axis of Neptune’s orbit is 165 AU.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P_Nep</span> <span class="o">=</span> <span class="mi">165</span>
+<span class="n">a_Nep</span> <span class="o">=</span> <span class="n">P_Nep</span><span class="o">**</span><span class="p">(</span><span class="mf">2.</span><span class="o">/</span><span class="mf">3.</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The semimajor axis of Neptune is </span><span class="si">%2.1f</span><span class="s2"> AU.&quot;</span> <span class="o">%</span> <span class="n">a_Nep</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The semimajor axis of Neptune is 30.1 AU.
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="using-newton-s-laws">
 <h2><span class="section-number">3.3. </span>Using Newton’s Laws<a class="headerlink" href="#using-newton-s-laws" title="Permalink to this heading">#</a></h2>
+<p>Your acceleration can be measured by how your velocity changes over time.  This is given mathematically by</p>
+<div class="math notranslate nohighlight">
+\[ \text{acceleration} = \frac{\text{How much velocity changes}}{\text{How long it takes to happen}}. \]</div>
+<p>Suppose you are traveling at <span class="math notranslate nohighlight">\(60\ {\rm mph}\)</span> (or <span class="math notranslate nohighlight">\({\sim}27\ {\rm m/s}\)</span>) down the highway.  Then you increase your speed to <span class="math notranslate nohighlight">\(70\ {\rm mph}\)</span> (or <span class="math notranslate nohighlight">\({\sim}31\ {\rm m/s}\)</span>) over only 2 seconds.  Then your acceleration <span class="math notranslate nohighlight">\(a\)</span> over that time is</p>
+<div class="math notranslate nohighlight">
+\[ a = \frac{31\ {\rm m/s} - 27 {\rm m/s}}{2\ {\rm s}} = \frac{4}{2} = 2\ {\rm m/s^2}. \]</div>
+<p>The acceleration due to gravity that you feel standing still is <span class="math notranslate nohighlight">\(a_g = 9.8\ {\rm m/s^2}\)</span>.  Your (horizontal) accleration was approximately <span class="math notranslate nohighlight">\(20\%\)</span> that of Earth’s gravity in that short burst.</p>
+<p>Now that you are in outer space, without a speedometer.  To measure your acceleration, you have to be more clever.  A way to do this indirectly is to instead measure the net force and your resistance to motion.  This is applying Newton’s 2nd law, where</p>
+<div class="math notranslate nohighlight">
+\[ \text{acceleration} = \frac{\text{Force}}{\text{Mass}}. \]</div>
+<p>You’re a 100-kg astronaut (adrift in space) trying to get back to a nearby space shuttle.  With no tether to pull on, how can you get back to the ship?</p>
+<p>You throw a 1-kg wrench directly away from the shuttle at a speed of <span class="math notranslate nohighlight">\(10\ {\rm m/s}\)</span>.  Newton’s 3rd law says the wrench will apply a force back on you and because you threw the wrench <em>away</em> from the shuttle, the force will push you <em>towards</em> the shuttle.</p>
+<p>Because you have more mass (inertia) than the wrench, that means your acceleration will be less than that of the wrench.  Also, we can assume that the time <span class="math notranslate nohighlight">\(t\)</span> for things to happen are equal for both you and the wrench.  Then we have</p>
+<div class="math notranslate nohighlight">
+\[ \text{your mass} \times \frac{\text{your speed}}{t} = \text{wrench's mass} \times \frac{\text{wrench's speed}}{t}. \]</div>
+<p>Canceling the <span class="math notranslate nohighlight">\(t\)</span> and substituting the known masses and speeds:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+\text{your speed} &amp;= \frac{1\ {\rm kg}}{100\ {\rm kg}} \times 10\ {\rm m/s}, \\
+&amp; = 0.1\ {\rm m/s}.
+\end{align*}\]</div>
+<p><strong>You will drift toward the shuttle, but at a leisurely rate of only <span class="math notranslate nohighlight">\(10\ {\rm cm/s}\)</span>.</strong></p>
 </section>
 </section>
 
@@ -574,7 +713,10 @@ The Saturn-Sun distance is 9.3 AU.
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orbital-periods">3.1. Orbital Periods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orbital-periods">3.1. Orbital Periods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-code-demonstration">3.1.1. Python code demonstration</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kepler-s-3rd-law">3.2. Kepler’s 3rd Law</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-newton-s-laws">3.3. Using Newton’s Laws</a></li>
 </ul>
