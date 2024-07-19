@@ -14,5 +14,6 @@ parts:
   - file: Tutorials/thinking-like-astronomer.ipynb
   - file: Tutorials/patterns-in-sky.ipynb
   - file: Tutorials/motion-astronomical-bodies.ipynb
+  - file: Tutorials/gravity-and-orbits.ipynb
 
 

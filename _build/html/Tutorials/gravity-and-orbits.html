@@ -1,0 +1,812 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>4. Gravity and Orbits &#8212; ASTR1304 Astronomy of the Solar System</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-8VDVRMR2BH"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-8VDVRMR2BH');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorials/gravity-and-orbits';</script>
+    <link rel="canonical" href="https://saturnaxis.github.io/ASTR1304/Tutorials/gravity-and-orbits.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="3. Motion of Astronomical Bodies" href="motion-astronomical-bodies.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../home.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ASTR1304 Astronomy of the Solar System</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    ASTR 1304: Astronomy of the Solar System
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preamble</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/who-for.html">Who are these notes for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/cite-reuse.html">How to cite and reuse this material</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="thinking-like-astronomer.html">1. Thinking Like an Astronomer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="patterns-in-sky.html">2. Patterns in the Sky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="motion-astronomical-bodies.html">3. Motion of Astronomical Bodies</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Gravity and Orbits</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/saturnaxis/ASTR1304/main?urlpath=tree/Tutorials/gravity-and-orbits.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/saturnaxis/ASTR1304/blob/main/Tutorials/gravity-and-orbits.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/saturnaxis/ASTR1304" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Tutorials/gravity-and-orbits.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Gravity and Orbits</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#playing-with-newton-s-laws-of-motion-and-gravitation">4.1. Playing with Newton’s Laws of Motion and Gravitation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-distance">4.1.1. Changing the Distance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-mass">4.1.2. Changing the Mass</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gravitational-acceleration">4.1.3. Gravitational Acceleration</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circular-and-escape-velocity">4.2. Circular and Escape Velocity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#circular-velocity">4.2.1. Circular Velocity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#escape-velocity">4.2.2. Escape Velocity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#center-of-mass">4.2.3. Center of Mass</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-mass-from-orbital-periods">4.3. Calculating Mass from Orbital Periods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-version-of-kepler-s-third-law">4.3.1. Newton’s Version of Kepler’s Third Law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-of-the-jupiter">4.3.2. Mass of the Jupiter</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tidal-forces">4.4. Tidal Forces</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="gravity-and-orbits">
+<h1><span class="section-number">4. </span>Gravity and Orbits<a class="headerlink" href="#gravity-and-orbits" title="Permalink to this heading">#</a></h1>
+<section id="playing-with-newton-s-laws-of-motion-and-gravitation">
+<h2><span class="section-number">4.1. </span>Playing with Newton’s Laws of Motion and Gravitation<a class="headerlink" href="#playing-with-newton-s-laws-of-motion-and-gravitation" title="Permalink to this heading">#</a></h2>
+<p>For any two objects, the force of gravity is <em>directly proportional to the masses</em> and <em>indirectly proportional to the square of the distance</em> between them. Mathematically, this is given by</p>
+<div class="math notranslate nohighlight">
+\[ F_g = \frac{G \times M_1 \times M_2}{d^2} = \frac{G  M_1 M_2}{d^2}, \]</div>
+<p>where <span class="math notranslate nohighlight">\(d\)</span> represents the distance between them and <span class="math notranslate nohighlight">\(M_1,\ M_2\)</span> are the individual masses.  The constant <span class="math notranslate nohighlight">\(G\)</span> represents the <a class="reference external" href="https://en.wikipedia.org/wiki/Gravitational_constant">constant of universal gravitation</a>, but in our cases it won’t be necessary to the actual value because we will be comparing force with some other standard.</p>
+<section id="changing-the-distance">
+<h3><span class="section-number">4.1.1. </span>Changing the Distance<a class="headerlink" href="#changing-the-distance" title="Permalink to this heading">#</a></h3>
+<p>How would the gravitational force between the Earth and Moon change if the distance <span class="math notranslate nohighlight">\(d\)</span> between them was doubled?</p>
+<p>We can compare the current Earth-Moon gravitational force <span class="math notranslate nohighlight">\(F_g\)</span> to the force <span class="math notranslate nohighlight">\(F^\prime_g\)</span> supposed in our hypothetical scenario using a ratio.  From there, we can show that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{F^\prime_g}{F_g} = \frac{G M_\oplus M_{\rm Moon}}{(2d)^2} \times \frac{d^2}{G M_\oplus M_{\rm Moon}}.
+\end{align*}\]</div>
+<p>In the above ratio, we see that the <span class="math notranslate nohighlight">\(G M_\oplus M_{\rm Moon}\)</span> factor is on top <strong>and</strong> bottom, which means that it simply cancels (or becomes unity).  The factor <span class="math notranslate nohighlight">\(d^2\)</span> also cancels in the same way.  However the factor <span class="math notranslate nohighlight">\(2^2 = 4\)</span> in the denominator remains.  The result is</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+\frac{F^\prime_g}{F_g} &amp;= \frac{1}{4}, \\
+F^\prime_g &amp;= \frac{1}{4} F_g.
+\end{align*}\]</div>
+<p>This means that the gravitational force in the hypothetical scenario <span class="math notranslate nohighlight">\(F^\prime_g\)</span> is only <span class="math notranslate nohighlight">\(1/4\)</span> of the original force <span class="math notranslate nohighlight">\(F_g\)</span>.  This should make sense because the Earth and Moon are <span class="math notranslate nohighlight">\(2\times\)</span> farther apart, where the strength of the force decreases by a factor of <span class="math notranslate nohighlight">\(1/2^2\)</span>.  <strong>Note: the force changed with the square when the distance changed.</strong></p>
+</section>
+<section id="changing-the-mass">
+<h3><span class="section-number">4.1.2. </span>Changing the Mass<a class="headerlink" href="#changing-the-mass" title="Permalink to this heading">#</a></h3>
+<p>How would the gravitational force on you change if the Earth’s mass is doubled?</p>
+<p>We can make a comparision using a ratio, where the new force is <span class="math notranslate nohighlight">\(F^\prime_g\)</span> and the original force is <span class="math notranslate nohighlight">\(F_g\)</span>.  From there, we have</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{F^\prime_g}{F_g} = \frac{G (2M_\oplus) M_{\rm you}}{d^2} \times \frac{d^2}{G M_\oplus M_{\rm you}}.
+\end{align*}\]</div>
+<p>In this case, the <span class="math notranslate nohighlight">\(G M_\oplus M_{\rm you}\)</span> and <span class="math notranslate nohighlight">\(d\)</span> factors cancel again.  But there remains a factor of <span class="math notranslate nohighlight">\(2\)</span> in the numerator.  The result is</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+\frac{F^\prime_g}{F_g} &amp;= 2, \\
+F^\prime_g &amp;= 2 F_g.
+\end{align*}\]</div>
+<p>This means that the gravitational force on you simply increases doubled with the increase in Earth’s mass.  <strong>Note: the force changed proportionally when the mass was changed.</strong></p>
+</section>
+<section id="gravitational-acceleration">
+<h3><span class="section-number">4.1.3. </span>Gravitational Acceleration<a class="headerlink" href="#gravitational-acceleration" title="Permalink to this heading">#</a></h3>
+<p>We can think about the gravitational force the Earth exerts on an object through: Newton’s 2nd law or the universal law of gravitation.</p>
+<p>Through Newton’s 2nd law, we have <span class="math notranslate nohighlight">\(F = m\times a = ma\)</span>.  When applying this formula to the gravitational force, we often write <span class="math notranslate nohighlight">\(F_g = mg\)</span>.  The <span class="math notranslate nohighlight">\(g\)</span> represents the acceleration due to gravity at Earth’s surface.</p>
+<p>Earth has a mass <span class="math notranslate nohighlight">\(M_\oplus\)</span> and radius <span class="math notranslate nohighlight">\(R_\oplus\)</span>, where the gravitational force on another object with mass <span class="math notranslate nohighlight">\(m\)</span> using the universal law of gravitation is written as</p>
+<div class="math notranslate nohighlight">
+\[ F_g = \frac{GM_\oplus m}{R_\oplus^2}. \]</div>
+<p>In this case the multiplication is <a class="reference external" href="https://en.wikipedia.org/wiki/Commutative_property">commutative</a>, which means we can rearrange the order or regroup the terms.  In this way, we find</p>
+<div class="math notranslate nohighlight">
+\[ F_g = m \times \frac{G M_\oplus}{R_\oplus^2}. \]</div>
+<p>Let’s  replace the <span class="math notranslate nohighlight">\(\frac{G M_\oplus}{R_\oplus^2}\)</span> factor with <span class="math notranslate nohighlight">\(g\)</span>, or</p>
+<div class="math notranslate nohighlight">
+\[ F_g = m\times g = mg. \]</div>
+<p>We recovered the formula from Newton’s 2nd law.  This is a consequence of the <a class="reference external" href="https://en.wikipedia.org/wiki/Equivalence_principle">equivalence principle</a> if you would like to know more.</p>
+<p>What does this mean?</p>
+<p><strong>All objects (near the Earth) fall at the same rate!</strong>  This is independent of the mass.  See the video below that demonstrates that a bowling ball and feather fall at the same rate, when in vacuum.</p>
+<div align="center">
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/E43-CfukEgs" 
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+</div></section>
+</section>
+<section id="circular-and-escape-velocity">
+<h2><span class="section-number">4.2. </span>Circular and Escape Velocity<a class="headerlink" href="#circular-and-escape-velocity" title="Permalink to this heading">#</a></h2>
+<section id="circular-velocity">
+<h3><span class="section-number">4.2.1. </span>Circular Velocity<a class="headerlink" href="#circular-velocity" title="Permalink to this heading">#</a></h3>
+<p>The velocity <span class="math notranslate nohighlight">\(v\)</span> of an object is basically defined by ratio of the distance <span class="math notranslate nohighlight">\(d\)</span> it has traveled with the travel time <span class="math notranslate nohighlight">\(t\)</span>, or</p>
+<div class="math notranslate nohighlight">
+\[ v = \frac{d}{t}. \]</div>
+<p>More precisely, the velocity includes direction (e.g., to the left, right, up, or down), which is encoded using at sign (<span class="math notranslate nohighlight">\(+\)</span> or <span class="math notranslate nohighlight">\(-\)</span>).  But this is beyond the purposes of the basic definition here.  From <a class="reference external" href="https://saturnaxis.github.io/ASTR1304/Tutorials/motion-astronomical-bodies.html#using-newton-s-laws">Motion of Astronomical Bodies</a>, we showed that acceleration is the change in velocity over time, or</p>
+<div class="math notranslate nohighlight">
+\[ a = \frac{v}{t}. \]</div>
+<p>Let’s modify the form of the top equation so that it is <span class="math notranslate nohighlight">\(t = d/v\)</span>, using algebra.  Then substitute it into the equation for acceleration.  (See Appendix 8 from 21st Century Astronomy for a full description of the reasoning here.)  Through this substitution, whe find that</p>
+<div class="math notranslate nohighlight">
+\[ a = \frac{v}{t} = \frac{v}{2d/v} = \frac{v^2}{d}.\]</div>
+<p>The above expression represents the centripetal acceleration <span class="math notranslate nohighlight">\(a_c\)</span> (or acceleration from circular motion).  The circular velocity <span class="math notranslate nohighlight">\(v_c\)</span> is defined as the speed of an object in a circular orbit with a radius <span class="math notranslate nohighlight">\(r\)</span>, where we determine this speed by setting the centripetal force <span class="math notranslate nohighlight">\(F_c = ma_c\)</span> equal to the gravitational force <span class="math notranslate nohighlight">\(F_g\)</span>.  Mathematically, this is given as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+F_g &amp;= F_c, \\
+\frac{GM m}{r^2} &amp;= \frac{mv_c^2}{r}.
+\end{align*}\]</div>
+<p>Notice that we can cancel a factor of <span class="math notranslate nohighlight">\(\frac{m}{r}\)</span> from each side, which produces</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+v_c^2 = \frac{GM}{r}, \\
+v_c = \sqrt{\frac{GM}{r}},
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(M\)</span> represents the mass of the central object (e.g., Sun, Earth, <span class="math notranslate nohighlight">\(\ldots\)</span>) that the object with mass <span class="math notranslate nohighlight">\(m\)</span> is orbiting.  The distance traveled by the object is simply the radius <span class="math notranslate nohighlight">\(r\)</span> of the orbit.  Finally, we have the <a class="reference external" href="https://en.wikipedia.org/wiki/Gravitational_constant">constant of universal gravitation</a> <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<p>An <a class="reference external" href="https://en.wikipedia.org/wiki/Earth_radius">Earth radius</a> <span class="math notranslate nohighlight">\(R_\oplus\)</span> is defined as <span class="math notranslate nohighlight">\(6371\ {\rm km}\)</span>, which is a little smaller than the value determined via the circumference because the Earth’s radius varies with latitude due to its spin.  This value is the accepted mean radius between the value at the equator and that at the pole.  But, let’s define the circular velocity at Earth’s surface <span class="math notranslate nohighlight">\(v_c^{\rm surf}\)</span>, which would be</p>
+<div class="math notranslate nohighlight">
+\[ v_c^{\rm surf} = \sqrt{\frac{GM_\oplus}{R_\oplus}} = 7.9\ {\rm km/s}. \]</div>
+<p>This is the speed required to keep an object moving along Earth’s surface in a circular path (neglecting air resistance, buildings, trees, <span class="math notranslate nohighlight">\(\ldots\)</span>).  As the object moved horizontally, Earth’s surface would be <em>falling</em> away because it’s curved.  However, gravity would exert a force on the object that changes its path from a straight line and the trajectory becomes a circle instead.</p>
+<p>Cannonballs and other objects don’t move <span class="math notranslate nohighlight">\(7.9\ {\rm km/s}\)</span> (or ~28 kph), but rockets can routinely reach that speed to put satellites (and people) into orbit.  Let’s see how the circular velocity (at the surface) on the Moon compares to the value on Earth.  For this, we can determine the ratio of the two velocities as</p>
+<div class="math notranslate nohighlight">
+\[ \frac{v_c^{\rm Moon}}{v_c^{\rm Earth}} = \sqrt{\frac{GM_{\rm Moon}}{R_{\rm Moon}}} \times \sqrt{\frac{R_\oplus}{GM_\oplus}} = \sqrt{\left(\frac{M_{\rm Moon}}{M_\oplus}\right)\left(\frac{R_\oplus}{R_{\rm Moon}}\right)}. \]</div>
+<p>Written this way, we can easily calculate the ratio if we know the Moon’s mass and radius relative to the Earth.  For this, we can consult the <a class="reference external" href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html">NASA Moon Fact Sheet</a> to get <span class="math notranslate nohighlight">\(M_{\rm Moon}/M_\oplus = 0.0123\)</span> and <span class="math notranslate nohighlight">\(R_{\rm Moon}/R_\oplus = 0.2727\)</span>.  Then we can find</p>
+<div class="math notranslate nohighlight">
+\[ \frac{v_c^{\rm Moon}}{v_c^{\rm Earth}} = \sqrt{\left(0.0123\right)\left(\frac{1}{0.2727 }\right)} = 0.212. \]</div>
+<p>Therefore the circular velocity at the Moon’s surface <span class="math notranslate nohighlight">\(v_c^{\rm Moon}\)</span> is <span class="math notranslate nohighlight">\({\sim}21.2\%\)</span> of the circular velocity at Earth’s surface <span class="math notranslate nohighlight">\(v_c^{\rm Earth}\)</span>, or <span class="math notranslate nohighlight">\(1.67\ {\rm km/s}\)</span>.</p>
+<p><strong>Does this make sense?</strong></p>
+<p>Yes! The Moon is both less massive and smaller than the Earth.  The mass ratio is <span class="math notranslate nohighlight">\({\sim}1/80\)</span> as compared the the radius ratio <span class="math notranslate nohighlight">\({\sim}1/4\)</span>, so the mass decreases a lot faster than the radius.  This tells us that we should expect a lower circular velocity.</p>
+<p>Moreover, it should give us insight into why we want to have Moon bases/gateways for Solar System exploration.  Getting to a lunar orbit (orbiting around the Moon) requires less velocity than getting to an equivalent Earth orbit (e.g., <a class="reference external" href="https://en.wikipedia.org/wiki/Low_Earth_orbit">LEO</a>).  <strong>Less velocity translates into less fuel required!</strong></p>
+</section>
+<section id="escape-velocity">
+<h3><span class="section-number">4.2.2. </span>Escape Velocity<a class="headerlink" href="#escape-velocity" title="Permalink to this heading">#</a></h3>
+<p>Sending a spacecraft to another planet (e.g., Mars) requires launching with a speed that is greater than the escape velocity <span class="math notranslate nohighlight">\(v_{\rm esc}\)</span>.  The escape velocity is determined as the speed which all of the gravitational potential energy is transformed into kinetic energy.  We can determine this by setting the two energy equal to each other, or</p>
+<div class="math notranslate nohighlight">
+\[ \frac{GMm}{r} = \frac{1}{2}mv_{\rm esc}^2, \]</div>
+<p>and solving for <span class="math notranslate nohighlight">\(v_{\rm esc}\)</span> (by canceling the <span class="math notranslate nohighlight">\(m\)</span> from each side) as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+v_{\rm esc} = \sqrt{\frac{2GM}{r}}.
+\end{align*}\]</div>
+<p>Notice that this equation looks very similar to the formula we found for the circular velocity.  In fact, we can show how they are related by using the ratio</p>
+<div class="math notranslate nohighlight">
+\[ \frac{v_{\rm esc}}{v_c} = \sqrt{\frac{2GM}{r}} \times \sqrt{\frac{r}{GM}} = \sqrt{2}, \]</div>
+<p>where all the factors cancel except for a <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>.  This tells us that <span class="math notranslate nohighlight">\(v_{\rm esc} = \sqrt{2}v_c\)</span>, or the escape velocity is <span class="math notranslate nohighlight">\({\sim}1.4\times\)</span> greater than the circular velocity at a given radius <span class="math notranslate nohighlight">\(r\)</span>.</p>
+<p>To leave the Earth, a rocket must have a speed of <span class="math notranslate nohighlight">\(\sqrt{2} \times 7.9\ {\rm km/s} = 11\ {\rm km/s}\)</span>.</p>
+<p>If we know the relative circular velocity on another body (i.e., planet, moon, asteroid), then we can use the same ratio to determine the relative escape velocity because the factor of <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> occurs in both the numerator and denominator (i.e., cancels).  Below is the ratio of circular velocities, with the Moon subscripts removed.</p>
+<div class="math notranslate nohighlight">
+\[ \frac{v_c}{v_c^{\rm Earth}} = \sqrt{\frac{GM}{R}} \times \sqrt{\frac{R_\oplus}{GM_\oplus}} = \sqrt{\left(\frac{M}{M_\oplus}\right)\left(\frac{R_\oplus}{R}\right)}. \]</div>
+</section>
+<section id="center-of-mass">
+<h3><span class="section-number">4.2.3. </span>Center of Mass<a class="headerlink" href="#center-of-mass" title="Permalink to this heading">#</a></h3>
+<p>When two objects are closer to having the same mass (e.g., the stellar binary <a class="reference external" href="https://en.wikipedia.org/wiki/Alpha_Centauri">Alpha Centuri AB</a>), both objects experience an acceleration due to one another’s gravity.  This changes their path from a straight line so that the <em>fall</em> along a curve with a common point called the <a class="reference external" href="https://en.wikipedia.org/wiki/Center_of_mass#Astronomy"><strong>center of mass</strong></a>.</p>
+<p><a class="reference internal" href="https://upload.wikimedia.org/wikipedia/commons/5/59/Orbit3.gif"><img alt="Picture" src="https://upload.wikimedia.org/wikipedia/commons/5/59/Orbit3.gif" style="width: 400px;" /></a></p>
+</section>
+</section>
+<section id="calculating-mass-from-orbital-periods">
+<h2><span class="section-number">4.3. </span>Calculating Mass from Orbital Periods<a class="headerlink" href="#calculating-mass-from-orbital-periods" title="Permalink to this heading">#</a></h2>
+<section id="newton-s-version-of-kepler-s-third-law">
+<h3><span class="section-number">4.3.1. </span>Newton’s Version of Kepler’s Third Law<a class="headerlink" href="#newton-s-version-of-kepler-s-third-law" title="Permalink to this heading">#</a></h3>
+<p>The orbital (sidereal) period <span class="math notranslate nohighlight">\(P\)</span> is the time for a planet to return to the same location in space, or complete one orbit.  Let’s assume a circular orbit for simplicity.  The distance traveled along the orbit is the circumference of a circle, or <span class="math notranslate nohighlight">\(d = 2\pi r\)</span>.  In this case the circle’s radius is the semimajor axis <span class="math notranslate nohighlight">\(a\)</span>, where <span class="math notranslate nohighlight">\(d = 2\pi a\)</span>.</p>
+<p>Recall the formula for the circular velocity, where we also substitute <span class="math notranslate nohighlight">\(r = a\)</span> to get</p>
+<div class="math notranslate nohighlight">
+\[ v_c = \sqrt{\frac{GM}{a}}. \]</div>
+<p>Then we can determine the orbital period <span class="math notranslate nohighlight">\(P\)</span> using the basic definition for velocity, or</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+\text{Orbital period } (P) &amp;= \frac{\text{Circumference of orbit}}{\text{Circular velocity}},
+&amp; = \frac{2\pi a}{\sqrt{\frac{GM}{a}}},
+&amp;= (2\pi a)\sqrt{\frac{a}{GM}}.
+\end{align*}\]</div>
+<p>It would be easier if we squared both sides to remove the square root, which gives</p>
+<div class="math notranslate nohighlight">
+\[ P^2 = (2\pi a)^2 \times \left(\frac{a}{GM}\right) = \frac{4\pi^2}{GM}a^3. \]</div>
+<p>This is Newton’s version of Kepler’s 3rd law, which includes the central mass <span class="math notranslate nohighlight">\(M\)</span>.  When Kepler empircally determined his 3rd law, he was using the Solar System planets, which coincidently in that case <span class="math notranslate nohighlight">\(4\pi^2/(GM) \approx 1\)</span> and Kepler’s form is recovered (<span class="math notranslate nohighlight">\(P^2 = a^3\)</span>).  <strong>Recall that Kepler used time units of years and distance units of AU.</strong></p>
+<p>Using the same units as Kepler, but also introducing the mass unit: solar mass, we can write this version of Kepler’s 3rd law in a simpler form:</p>
+<div class="math notranslate nohighlight">
+\[ P^2 = \frac{a^3}{M}. \]</div>
+<p><strong>Remember the units are years, AU, and solar masses for this formula.</strong>  You must convert to years, AU, and solar masses, if the given values have different units (e.g., days, meters, kg).</p>
+</section>
+<section id="mass-of-the-jupiter">
+<h3><span class="section-number">4.3.2. </span>Mass of the Jupiter<a class="headerlink" href="#mass-of-the-jupiter" title="Permalink to this heading">#</a></h3>
+<p>If we can measure the size and period of any orbit, then Newton’s version of Kepler’s 3rd law can be used to measure the mass of the central body.  To do so, we just need to re-arrange the formula so that the mass <span class="math notranslate nohighlight">\(M\)</span> is the dependent variable:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+M = 
+\begin{cases}
+\frac{4\pi^2}{G} \times \frac{a^3}{P^2}, &amp;\text{(general form)} \\
+\frac{a^3}{P^2}. &amp; (\text{units in years, AU, and } M_\odot)
+\end{cases}
+\end{align*}\]</div>
+<p>Suppose that we observe the Jupiter’s moon <a class="reference external" href="https://en.wikipedia.org/wiki/Europa_(moon)">Europa</a> over a month.  We find that it takes <span class="math notranslate nohighlight">\(3.55\ {\rm days}\)</span> for Europa to completely orbit Jupiter and return to the same position.  Also, we measure that Europa is <span class="math notranslate nohighlight">\(4.48 \times 10^{-3}\ {\rm AU}\)</span> from Jupiter on average.  From these measurements, it would be easier if we converted the orbital period to years.</p>
+<div class="math notranslate nohighlight">
+\[ P = 3.55\ {\rm days} \times \frac{1\ {\rm yr}}{365.25\ {\rm days}} = 9.72 \times 10^{-3}\ {\rm yr}. \]</div>
+<p>Then we can apply our simpler formula directly to measure the mass of Jupiter.  We find,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+M &amp;= \frac{\left(4.48 \times 10^{-3}\ {\rm AU}\right)^3}{\left(9.72 \times 10^{-3}\ {\rm yr} \right)^2}, \\
+&amp;= \frac{8.99 \times 10^{-8}\ {\rm AU^3}}{9.44 \times 10^{-5}\ {\rm yr^2}}, \\
+&amp;= 9.52 \times 10^{-4}\ M_\odot.
+\end{align*}\]</div>
+<p>We found that Jupiter’s mass is <span class="math notranslate nohighlight">\(9.52 \times 10^{-4}\ M_\odot\)</span>, where the <a class="reference external" href="https://en.wikipedia.org/wiki/Jupiter_mass">true value</a> is <span class="math notranslate nohighlight">\(9.54 \times 10^{-4}\ M_\odot\)</span>.  Below is a python code that performs the same calculation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P_meas</span> <span class="o">=</span> <span class="mf">3.55</span> <span class="c1">#measured orbital period of Europa (in days)</span>
+<span class="n">P_yr</span> <span class="o">=</span> <span class="mf">3.55</span><span class="o">/</span><span class="mf">365.25</span> <span class="c1">#converted period to years</span>
+
+<span class="n">a_meas</span> <span class="o">=</span> <span class="mf">4.48e-3</span> <span class="c1">#measured semimajor axis (in AU)</span>
+
+<span class="n">M</span> <span class="o">=</span> <span class="n">a_meas</span><span class="o">**</span><span class="mi">3</span><span class="o">/</span><span class="n">P_yr</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The mass of Jupiter (in solar masses) is </span><span class="si">%1.2e</span><span class="s2"> M_sun.&quot;</span> <span class="o">%</span> <span class="n">M</span><span class="p">)</span>  <span class="c1">#The notation &quot;e-04&quot; is the same as &quot;times 10^{-4}&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mass of Jupiter (in solar masses) is 9.52e-04 M_sun.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="tidal-forces">
+<h2><span class="section-number">4.4. </span>Tidal Forces<a class="headerlink" href="#tidal-forces" title="Permalink to this heading">#</a></h2>
+<p>The strength of the gravitational force depends on the mass and the square of the distance between them.  However, the strength of the tidal force depends on the mass and <strong>the cube</strong> of the distance between them.  Therefore the tidal force acts over much shorter ranges because as the distance increases the tidal force strength decreases rapidly.</p>
+<p>The equation of the tidal force comes from the difference of the gravitational force on <em>one side</em> of a body compared with the <em>other side</em>.  We can approximate the tidal force of the Moon acting on a mass on Earth’s surface by</p>
+<div class="math notranslate nohighlight">
+\[ F_{\rm tidal} \left(\text{Moon}\right) = 2\left(\frac{GM_{\rm Moon}m}{d_{\rm Earth-Moon}^2}\right) \left(\frac{R_\oplus}{d_{\rm Earth-Moon}}\right). \]</div>
+<p>If we combined the denominator, we can see that it does indeed involve the cube of the distance.  The middle term looks like a familiar form of gravity that we’ve see before.  The leading 2 comes from how we are comparing the force from each side of the Moon that is acting on <span class="math notranslate nohighlight">\(m\)</span>.</p>
+<p>We can write a similar equation for the Sun’s tidal force acting on the same mass <span class="math notranslate nohighlight">\(m\)</span> on the Earth.  The Sun’s tidal force is not negligible because it is so much more massive, although it is a lot farther away.  This tidal force from the Sun is</p>
+<div class="math notranslate nohighlight">
+\[ F_{\rm tidal} \left(\text{Sun}\right) = 2\left(\frac{GM_\odot m}{d_{\rm Earth-Sun}^2}\right) \left(\frac{R_\oplus}{d_{\rm Earth-Sun}}\right). \]</div>
+<p>Given these two tidal forces, we can compare their strengths throught the ratio</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{F_{\rm tidal} \left(\text{Moon}\right)}{F_{\rm tidal} \left(\text{Sun}\right)} = 2\left(\frac{GM_{\rm Moon}m}{d_{\rm Earth-Moon}^2}\right) \left(\frac{R_\oplus}{d_{\rm Earth-Moon}}\right) \times \frac{1}{2} \left(\frac{d_{\rm Earth-Sun}^2}{GM_\odot m}\right) \left(\frac{d_{\rm Earth-Sun}}{R_\oplus}\right), \]</div>
+<p>which looks complicated, but many of the terms cancel.  The remaining terms form the relation:</p>
+<div class="math notranslate nohighlight">
+\[\frac{F_{\rm tidal} \left(\text{Moon}\right)}{F_{\rm tidal} \left(\text{Sun}\right)} = \left(\frac{M_{\rm Moon}}{M_\odot} \right)\left(\frac{d_{\rm Earth-Sun}}{d_{\rm Earth-Moon}}\right)^3. \]</div>
+<p>This still seems a little complicated when we want to substitute values, but we only need to convert the Moon’s mass (in Earth masses) that we saw before into solar masses.  To do this, we use a conversion factor</p>
+<div class="math notranslate nohighlight">
+\[ 0.0123\ {\rm M_\oplus} \times \frac{1 M_\odot}{333,000\ M_\oplus} = 3.69 \times 10^{-8}\ M_\odot, \]</div>
+<p>using the definition of an <a class="reference external" href="https://en.wikipedia.org/wiki/Earth_mass">Earth mass</a>.  The Moon’s semimajor axis is already measured to be <span class="math notranslate nohighlight">\(0.00257\ \rm AU\)</span>.  Now we can begin plugging in some values:</p>
+<div class="math notranslate nohighlight">
+\[\frac{F_{\rm tidal} \left(\text{Moon}\right)}{F_{\rm tidal} \left(\text{Sun}\right)} = \left(\frac{3.69 \times 10^{-8}\ M_\odot}{M_\odot} \right)\left(\frac{1\ {\rm AU}}{0.00257\ \rm AU}\right)^3 = 2.18. \]</div>
+<p>The tidal force betwen the Earth and Moon is <span class="math notranslate nohighlight">\(2.18\times\)</span> stronger than the tidal force between the Earth and Sun.  This is why the Moon’s tide affects the Earth more than the Sun’s tide.  However the Sun’s tide is not neglibible!</p>
+<p>Below is a python script that demonstates the calculation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M_moon</span> <span class="o">=</span> <span class="mf">0.0123</span> <span class="c1">#Moon&#39;s mass (in Earth masses)</span>
+<span class="n">M_moon_sol</span> <span class="o">=</span> <span class="n">M_moon</span><span class="o">/</span><span class="mf">3.33e5</span> <span class="c1">#convert the Moon&#39;s mass into solar masses</span>
+
+<span class="n">a_EM</span> <span class="o">=</span> <span class="mf">0.00257</span> <span class="c1"># semimajor axis of the Moon&#39;s orbit</span>
+
+<span class="n">tide_ratio</span> <span class="o">=</span> <span class="n">M_moon_sol</span><span class="o">/</span><span class="n">a_EM</span><span class="o">**</span><span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The Moon&#39;s tide on the Earth is </span><span class="si">%1.2f</span><span class="s2"> times stronger than the Sun&#39;s tide.&quot;</span> <span class="o">%</span> <span class="n">tide_ratio</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The Moon&#39;s tide on the Earth is 2.18 times stronger than the Sun&#39;s tide.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "saturnaxis/ASTR1304",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Tutorials"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="motion-astronomical-bodies.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Motion of Astronomical Bodies</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#playing-with-newton-s-laws-of-motion-and-gravitation">4.1. Playing with Newton’s Laws of Motion and Gravitation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-distance">4.1.1. Changing the Distance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-mass">4.1.2. Changing the Mass</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gravitational-acceleration">4.1.3. Gravitational Acceleration</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circular-and-escape-velocity">4.2. Circular and Escape Velocity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#circular-velocity">4.2.1. Circular Velocity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#escape-velocity">4.2.2. Escape Velocity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#center-of-mass">4.2.3. Center of Mass</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-mass-from-orbital-periods">4.3. Calculating Mass from Orbital Periods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-version-of-kepler-s-third-law">4.3.1. Newton’s Version of Kepler’s Third Law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-of-the-jupiter">4.3.2. Mass of the Jupiter</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tidal-forces">4.4. Tidal Forces</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Billy Quarles
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
