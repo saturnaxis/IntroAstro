@@ -72,12 +72,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorials/patterns-in-sky';</script>
     <link rel="canonical" href="https://saturnaxis.github.io/ASTR1304/Tutorials/patterns-in-sky.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. Motion of Astronomical Bodies" href="motion-astronomical-bodies.html" />
-    <link rel="prev" title="1. Ch 1: Thinking Like an Astronomer" href="thinking-like-astronomer.html" />
+    <link rel="prev" title="1. Thinking Like an Astronomer" href="thinking-like-astronomer.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -179,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="thinking-like-astronomer.html">1. Ch 1: Thinking Like an Astronomer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thinking-like-astronomer.html">1. Thinking Like an Astronomer</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Patterns in the Sky</a></li>
 <li class="toctree-l1"><a class="reference internal" href="motion-astronomical-bodies.html">3. Motion of Astronomical Bodies</a></li>
 </ul>
@@ -387,7 +389,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -403,6 +407,17 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-estimate-earth-s-size">2.1. How to estimate Earth’s Size</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modern-day-experiments">2.1.1. Modern day experiments</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -414,6 +429,46 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="patterns-in-the-sky">
 <h1><span class="section-number">2. </span>Patterns in the Sky<a class="headerlink" href="#patterns-in-the-sky" title="Permalink to this heading">#</a></h1>
+<section id="how-to-estimate-earth-s-size">
+<h2><span class="section-number">2.1. </span>How to estimate Earth’s Size<a class="headerlink" href="#how-to-estimate-earth-s-size" title="Permalink to this heading">#</a></h2>
+<p>In <span class="math notranslate nohighlight">\({\sim}230\)</span> BC, a Greek astronomer named <a class="reference external" href="https://en.wikipedia.org/wiki/Eratosthenes">Erathosthenes</a> performed an experiment to measure the <em>circumference</em> of the Earth.  He had come across an account in the library at Alexandria that on the summer solstice (~June 21) a well in Syene (now Aswan) cast no shadow.  This observation was peculiar because the many columns in Alexandria did cast shadows on the very same day.</p>
+<p>During Eratosthenes time, it was already known (or at least presumed) that the Earth was a sphere.  This is apparent through:</p>
+<ul class="simple">
+<li><p>the use of the celestial sphere for astronomical observations, or</p></li>
+<li><p>walking due south to see buildings fall below the horizon, or</p></li>
+<li><p>watching ships sail away and fall below the horizon.</p></li>
+</ul>
+<p>These observations are explained by a spherical Earth.  However, it was not known how big the Earth actually is or the distance around the Earth.</p>
+<p>Eratosthenes assumed that the Sun was really far away, or at least far away enough that individual light rays from the Sun arrived at Earth’s surface in parallel.  As a result, he could use basic geometry and trigonometry to determine the circumference of the Earth.  The diagram below illustrates that the <strong>angle</strong> <span class="math notranslate nohighlight">\(\theta\)</span> the Sun makes with a column in Alexandria to cast the shadow would be the same angle subtended by the distance between Alexandria and Syene.</p>
+<p><a class="reference internal" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Eratosthenes_measure_of_Earth_circumference.svg/2560px-Eratosthenes_measure_of_Earth_circumference.svg.png"><img alt="Picture" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Eratosthenes_measure_of_Earth_circumference.svg/2560px-Eratosthenes_measure_of_Earth_circumference.svg.png" style="width: 512px; height: 341px;" /></a></p>
+<p>First, Eratosthenes needed to measure the angle <span class="math notranslate nohighlight">\(\theta\)</span>.  This can easily be done by measuring the shadow length <span class="math notranslate nohighlight">\(s\)</span> along the ground in Alexandria and the column height <span class="math notranslate nohighlight">\(h\)</span>.  The angle <span class="math notranslate nohighlight">\(\theta\)</span> is then given by:</p>
+<div class="math notranslate nohighlight">
+\[ \tan{\theta} = \frac{s}{h}. \]</div>
+<p><strong>Note that this calculation is simplified because no shadow is cast at Syene.</strong>  If both locations had shadows, shadow lengths and column heigts would be measured at both locations to obtain a <span class="math notranslate nohighlight">\(\theta_1\)</span> and <span class="math notranslate nohighlight">\(\theta_2\)</span> corresponding to each location.  Then, the angle <span class="math notranslate nohighlight">\(\theta\)</span> would be the difference between the two angles (if along the same longitude), or <span class="math notranslate nohighlight">\(\theta = |\theta_1-\theta_2|\)</span>.</p>
+<p>Next, Eratosthenes needed to measure the distance <span class="math notranslate nohighlight">\(d\)</span> from Alexandria to Syene.  This was accomplished by simply hiring someone to walk out (measure) the distance, observe that the account in Syene was correct, and walk back.  Eratosthenes determined that <span class="math notranslate nohighlight">\(\theta \approx 7^\circ\)</span> and <span class="math notranslate nohighlight">\(d = 5000\ {\rm stadia}\)</span> (singular: stadion).  Accounts vary on how big a <a class="reference external" href="https://en.wikipedia.org/wiki/Stadion_(unit)">stadion</a> was, where for this example we assume that it is <span class="math notranslate nohighlight">\(160\ {\rm m/stadion}\)</span>.</p>
+<p>With the above values Eratosthenes measured the circumference <span class="math notranslate nohighlight">\(C\)</span> by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+C &amp;= \frac{360^\circ}{\theta} \times d, \\
+&amp;= \frac{360}{7} \times 5000\ {\rm stadia} \times \frac{0.16\ {\rm km}}{1\ {\rm stadion}}, \\
+&amp;= 41,000\ {\rm km}.
+\end{align*}\]</div>
+<p>The actual <a class="reference external" href="https://en.wikipedia.org/wiki/Earth%27s_circumference">circumference of Earth</a> is <span class="math notranslate nohighlight">\({\sim}40,075\ {\rm km}\)</span>.  <strong>Eratosthenes’ measurement was only a few percent from the true value!</strong></p>
+<section id="modern-day-experiments">
+<h3><span class="section-number">2.1.1. </span>Modern day experiments<a class="headerlink" href="#modern-day-experiments" title="Permalink to this heading">#</a></h3>
+<p>Undergraduates can perform this experiment with relative ease, but getting a similar accuracy can still be a little tricky.  The video below (from Dr. David Sederberg at Purdue) shows several ways to construct a vertical column, or gnomon. But, you will need a collaborator at a different location (preferably same longitude) to take the measurement simultaneosly.</p>
+<div align="center">
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/s6nOhnDJCow" 
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+</div>
+<p>Valdosta State University (in Valdosta, Georgia) and Henry Ford College (in Dearborn, Michigan) conducted this experiment in Spring 2022 (and several subsequent semesters).  Here are some of their results.</p>
+<p>The measurement at Valdosta State:</p>
+<p><video src="patterns-in-sky/Shadow_040122.mp4" width="320" height="240" controls></video></p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -452,7 +507,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Ch 1: Thinking Like an Astronomer</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Thinking Like an Astronomer</p>
       </div>
     </a>
     <a class="right-next"
@@ -470,6 +525,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-estimate-earth-s-size">2.1. How to estimate Earth’s Size</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modern-day-experiments">2.1.1. Modern day experiments</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
