@@ -439,7 +439,7 @@ document.write(`
 <li><p>watching ships sail away and fall below the horizon.</p></li>
 </ul>
 <p>These observations are explained by a spherical Earth.  However, it was not known how big the Earth actually is or the distance around the Earth.</p>
-<p>Eratosthenes assumed that the Sun was really far away, or at least far away enough that individual light rays from the Sun arrived at Earth’s surface in parallel.  As a result, he could use basic geometry and trigonometry to determine the circumference of the Earth.  The diagram below illustrates that the <strong>angle</strong> <span class="math notranslate nohighlight">\(\theta\)</span> the Sun makes with a column in Alexandria to cast the shadow would be the same angle subtended by the distance between Alexandria and Syene.</p>
+<p>Eratosthenes assumed that the Sun was really far away, or at least far away enough that individual light rays from the Sun arrived at Earth’s surface in parallel.  As a result, he could use basic geometry and trigonometry to determine the circumference of the Earth.  The diagram below illustrates that the <strong>angle</strong> <span class="math notranslate nohighlight">\(\theta\)</span> the Sun’s rays makes with a column in Alexandria to cast the shadow would be the same angle subtended by the distance between Alexandria and Syene.</p>
 <p><a class="reference internal" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Eratosthenes_measure_of_Earth_circumference.svg/2560px-Eratosthenes_measure_of_Earth_circumference.svg.png"><img alt="Picture" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Eratosthenes_measure_of_Earth_circumference.svg/2560px-Eratosthenes_measure_of_Earth_circumference.svg.png" style="width: 512px; height: 341px;" /></a></p>
 <p>First, Eratosthenes needed to measure the angle <span class="math notranslate nohighlight">\(\theta\)</span>.  This can easily be done by measuring the shadow length <span class="math notranslate nohighlight">\(s\)</span> along the ground in Alexandria and the column height <span class="math notranslate nohighlight">\(h\)</span>.  The angle <span class="math notranslate nohighlight">\(\theta\)</span> is then given by:</p>
 <div class="math notranslate nohighlight">
@@ -465,8 +465,21 @@ allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 </div>
 <p>Valdosta State University (in Valdosta, Georgia) and Henry Ford College (in Dearborn, Michigan) conducted this experiment in Spring 2022 (and several subsequent semesters).  Here are some of their results.</p>
-<p>The measurement at Valdosta State:</p>
-<p><video src="patterns-in-sky/Shadow_040122.mp4" width="320" height="240" controls></video></p>
+<p>The measurement at Valdosta State used a gnomon that was <span class="math notranslate nohighlight">\(94.3\ {\rm cm}\)</span> tall, which measured a shadow length of <span class="math notranslate nohighlight">\(35.8\ {\rm cm}\)</span>.  The angle <span class="math notranslate nohighlight">\(\theta_1\)</span> at Valdosta State was <span class="math notranslate nohighlight">\(20.8^\circ\)</span>  Below is a video showing the measurement.</p>
+<div align="center">
+<video src="https://rawcdn.githack.com/saturnaxis/ASTR1304/fa214403510ac46ffe9e62a7128d9fb9236d7a89/Tutorials/patterns-in-sky/Shadow_0401022.mp4" width="560" height="315" controls></video>
+</div>
+<p>The measurement at Henry Ford College used a meter stick as the gnomon (<span class="math notranslate nohighlight">\(100\ {\rm cm}\)</span>), which measured a shadow length of <span class="math notranslate nohighlight">\(65.2\ {\rm cm}\)</span>.  The angle <span class="math notranslate nohighlight">\(\theta_2\)</span> at Henry Ford College was <span class="math notranslate nohighlight">\(33.1^\circ\)</span>.</p>
+<p align="center">
+  <img src="patterns-in-sky/HFC_Shadow_040122.jpg" width="350">
+</p>
+<p>With these measurements and the distance between the two locations (<span class="math notranslate nohighlight">\(d = 1276\ {\rm km}\)</span> as the crow flies), they made an estimate for Earth’s circumference.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\theta = |\theta_1 - \theta_2| = 12.3^\circ, \\
+C = \frac{360^\circ}{12.3^\circ} \times 1276\ {\rm km} = 37,300\ {\rm km}.
+\end{align*}\]</div>
+<p>The experiment produced a 7% error when compared to the actual value, but it was the very first try.  Subsequent semesters obtained values much closer to the actual circumference with only ~2% error.</p>
 </section>
 </section>
 </section>
