@@ -554,7 +554,12 @@ v_r &amp;= \left(\frac{\lambda_{\rm obs}-\lambda_{\rm rest}}{\lambda_{\rm rest}}
 &amp;= \left(\frac{\lambda_{\rm obs}}{\lambda_{\rm rest}} - 1\right)c.
 \end{align*}\]</div>
 <p>One of the most prominent spectral lines is due to hydrogen’s transition from <span class="math notranslate nohighlight">\(n=3\)</span> to <span class="math notranslate nohighlight">\(n=2\)</span>, or the <span class="math notranslate nohighlight">\(H\alpha\)</span> line of the Balmer series.  In the lab (rest frame), we measure the rest wavelength as <span class="math notranslate nohighlight">\(656.3\ {\rm nm}\)</span>.  In the image below, <span class="math notranslate nohighlight">\(H\alpha\)</span> is the reddish line on the right.</p>
-<p><a class="reference internal" href="https://upload.wikimedia.org/wikipedia/commons/2/21/Visible_spectrum_of_hydrogen.jpg"><img alt="hyd-spectrum" src="https://upload.wikimedia.org/wikipedia/commons/2/21/Visible_spectrum_of_hydrogen.jpg" style="width: 800px;" /></a></p>
+<p align="center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Visible_spectrum_of_hydrogen.jpg" 
+        alt="hyd-spectrum" 
+        width="800" 
+        style="display: block; margin: 0 auto" />
+</p>
 <section id="starting-with-a-measured-wavelength">
 <h3><span class="section-number">5.2.1. </span>Starting with a measured wavelength<a class="headerlink" href="#starting-with-a-measured-wavelength" title="Permalink to this heading">#</a></h3>
 <p>Suppose that you measure the spectrum of a distant object, where you find the <span class="math notranslate nohighlight">\(H\alpha\)</span> line at <span class="math notranslate nohighlight">\(659.0\ {\rm nm}\)</span> instead of at the rest wavelength.  What is the radial velocity of the source?</p>
@@ -566,7 +571,12 @@ v_r &amp;= \left(\frac{\lambda_{\rm obs}-\lambda_{\rm rest}}{\lambda_{\rm rest}}
 <section id="starting-with-a-measured-radial-velocity">
 <h3><span class="section-number">5.2.2. </span>Starting with a measured radial velocity<a class="headerlink" href="#starting-with-a-measured-radial-velocity" title="Permalink to this heading">#</a></h3>
 <p>Suppose you read that the radial velocity of our closest stellar neighbor (<a class="reference external" href="https://en.wikipedia.org/wiki/Proxima_Centauri">Proxima Centauri</a>) is moving toward us with a radial velocity of <span class="math notranslate nohighlight">\(-21.6\ {\rm km/s}\)</span>.  You want to verify this result using a magnesium source as a reference, which has a bright green line with a rest wavelength of <span class="math notranslate nohighlight">\(517.27\ {\rm nm}\)</span>.</p>
-<p><a class="reference internal" href="https://ircamera.as.arizona.edu/Astr2016/images/Frauenhofer.jpg"><img alt="Mg-spectrum" src="https://ircamera.as.arizona.edu/Astr2016/images/Frauenhofer.jpg" style="width: 500px;" /></a></p>
+<p align="center">
+<img src="https://ircamera.as.arizona.edu/Astr2016/images/Frauenhofer.jpg" 
+        alt="Mg-spectrum" 
+        width="500" 
+        style="display: block; margin: 0 auto" />
+</p>
 <p>What was the observed wavelength in order for the researchers to report a radial velocity of <span class="math notranslate nohighlight">\(-21.6\ {\rm km/s}\)</span>?</p>
 <p>We can solve this problem by re-arranging the Doppler equation to</p>
 <div class="math notranslate nohighlight">
@@ -682,6 +692,70 @@ The Earth-Sun luminosity ratio is 5.18e-10.
 </section>
 <section id="wien-s-law">
 <h3><span class="section-number">5.3.2. </span>Wien’s Law<a class="headerlink" href="#wien-s-law" title="Permalink to this heading">#</a></h3>
+<p>To determine the temperature of an object, astronomers use the most common wavelength of light emitted by the object.  The most common wavelength corresponds to the wavelength at maximum intensity, or <span class="math notranslate nohighlight">\(\lambda_{\rm peak}\)</span>.</p>
+<p align="center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Wiens_law.svg/1920px-Wiens_law.svg.png" 
+        alt="Mg-spectrum" 
+        width="500" 
+        style="display: block; margin: 0 auto" />
+</p>
+<p>Wien’s law can be written as</p>
+<div class="math notranslate nohighlight">
+\[ T (\text{in K}) = \frac{2.9\times 10^6\ {\rm nm\cdot K}}{\lambda_{\rm peak}}. \]</div>
+<p><strong>Note: the wavelength of light must be converted into <span class="math notranslate nohighlight">\(\rm nm\)</span>.</strong></p>
+<p>What is the effective surface temperature of the Sun?</p>
+<p>The spectrum of the light coming from teh Sun peaks at a wavelength of <span class="math notranslate nohighlight">\(\lambda_{\rm peak} \approx 500\ {\rm nm}\)</span>, so</p>
+<div class="math notranslate nohighlight">
+\[ T = \frac{2.9\times 10^6\ {\rm nm\cdot K}}{500\ {\rm nm}} = 5800\ {\rm K}.\]</div>
+<p>Given that we used round numbers, this value is consistent with the one we used previously (only rounded to the nearest hundred <span class="math notranslate nohighlight">\(\rm K\)</span>).</p>
+<p>What is the peak wavelength at which Earth radiates?</p>
+<p>Using an average temperature of <span class="math notranslate nohighlight">\(288\ {\rm K}\)</span>, we find</p>
+<div class="math notranslate nohighlight">
+\[ {\lambda_{\rm peak}} = \frac{2.9\times 10^6\ {\rm nm\cdot K}}{288\ {\rm}} = 10,100\ {\rm nm} = 10.1\ {\rm \mu m}.\]</div>
+<p>Earth’s radiation peaks in the infrared region of the spectrum.</p>
+<p>Below is a python code that demonstrates the theoretical blackbody curve for the Sun and Earth.  It also marks the peak wavelength with a vertical dashed line.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">h</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">k</span>
+
+<span class="k">def</span> <span class="nf">planck</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
+    <span class="n">B</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">lam</span><span class="o">**</span><span class="mi">5</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">b</span><span class="o">/</span><span class="p">(</span><span class="n">lam</span><span class="o">*</span><span class="n">T</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">B</span>
+
+<span class="n">fs</span> <span class="o">=</span> <span class="s1">&#39;large&#39;</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">h</span><span class="o">*</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="n">k</span>
+<span class="n">T_Sun</span> <span class="o">=</span> <span class="mi">5777</span> <span class="c1">#effective temperature of the Sun&#39;s photosphere (in K)</span>
+<span class="n">T_Earth</span> <span class="o">=</span> <span class="mi">288</span> <span class="c1">#average temperature of the Earth (in K)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+<span class="n">l</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">50000</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">I_Sun</span> <span class="o">=</span> <span class="n">planck</span><span class="p">(</span><span class="n">l</span><span class="o">*</span><span class="mf">1e-9</span><span class="p">,</span><span class="n">T_Sun</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">I_Sun</span><span class="p">,</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Sun&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">I_Sun</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">l</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">50000</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">I_Earth</span> <span class="o">=</span> <span class="n">planck</span><span class="p">(</span><span class="n">l</span><span class="o">*</span><span class="mf">1e-9</span><span class="p">,</span><span class="n">T_Earth</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">I_Earth</span><span class="p">,</span><span class="s1">&#39;r-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Earth&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="mf">1.01e4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">I_Earth</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">1e15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20000</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Wavelength $\lambda$ (in nm)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Brightness ($</span><span class="se">\\</span><span class="s2">rm W/m^2/Hz/sr$)&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/7f1642e388ab1a3513c161856f1a5a6530fd665341b1567123cdabd9fc29f344.png" src="../_images/7f1642e388ab1a3513c161856f1a5a6530fd665341b1567123cdabd9fc29f344.png" />
+</div>
+</div>
 </section>
 </section>
 </section>
