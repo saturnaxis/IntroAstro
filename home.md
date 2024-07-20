@@ -1,4 +1,4 @@
-# ASTR 1304: Astronomy of the Solar System
+# Introductory Astronomy
 
 This repository (and JupyterBook) serves as repository for selected **Working It Out** examples from [21st Century Astronomy: Solar System](https://wwnorton.com/books/9780393877083).  It includes examples from the textbook, as well as applicable YouTube videos and demonstrations of calculations using [python](https://www.python.org/).
 
