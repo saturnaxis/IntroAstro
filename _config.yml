@@ -15,7 +15,7 @@ exclude_patterns            : [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoin
 #######################################################################################
 # Execution settings
 execute:
-  execute_notebooks         : cache  # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
+  execute_notebooks         : auto  # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
   cache                     : ""    # A path to the jupyter cache that will be used to store execution artifacs. Defaults to `_build/.jupyter_cache/`
   exclude_patterns          : []    # A list of patterns to *skip* in execution (e.g. a notebook that takes a really long time)
   timeout                   : 600    # The maximum time (in seconds) each notebook cell is allowed to run.
@@ -60,10 +60,10 @@ html:
   favicon                   : ""  # A path to a favicon image
   use_edit_page_button      : false  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
   use_repository_button     : true  # Whether to add a link to your repository button
-  use_issues_button         : false  # Whether to add an "open an issue" button
+  use_issues_button         : true  # Whether to add an "open an issue" button
   extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
   #extra_footer              : "This page was created by <a href="http://www.atmos.albany.edu/facstaff/brose">Brian E. J. Rose</a> using <a href="https://jupyterbook.org">Jupyter Book</a>."  # Will be displayed underneath the footer.
-  google_analytics_id       : "G-8VDVRMR2BH"  # A GA id that can be used to track book views.
+  google_analytics_id       : "G-TQDV8M90DP"  # A GA id that can be used to track book views.
   home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
   baseurl                   : "https://saturnaxis.github.io/IntroAstro/"  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
   comments:

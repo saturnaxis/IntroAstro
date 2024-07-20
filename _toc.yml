@@ -8,7 +8,7 @@ parts:
   chapters:
   - file: Preamble/who-for
   - file: Preamble/cite-reuse
-- caption: Tutorials
+- caption: Basic Astronomy
   numbered: true
   chapters:
   - file: Tutorials/thinking-like-astronomer.ipynb
@@ -17,5 +17,14 @@ parts:
   - file: Tutorials/gravity-and-orbits.ipynb
   - file: Tutorials/light.ipynb
   - file: Tutorials/tools-of-astronomer.ipynb
+- caption: Solar System Astronomy
+  numbered: true
+  chapters:
+  - file: Tutorials/formation-planetary-systems.ipynb
+  - file: Tutorials/terrestrial-interiors-surfaces.ipynb
+  - file: Tutorials/terrestrial-atmospheres.ipynb
+  - file: Tutorials/giant-planets.ipynb
+  - file: Tutorials/moons-and-rings.ipynb
+  - file: Tutorials/small-bodies.ipynb
 
 
