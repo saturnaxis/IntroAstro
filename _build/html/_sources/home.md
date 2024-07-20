@@ -1,8 +1,8 @@
 # Introductory Astronomy
 
-This repository (and JupyterBook) serves as repository for selected **Working It Out** examples from [21st Century Astronomy: Solar System](https://wwnorton.com/books/9780393877083).  It includes examples from the textbook, as well as applicable YouTube videos and demonstrations of calculations using [python](https://www.python.org/).
+This repository (and JupyterBook) serves as repository for selected **Working It Out** examples from [21st Century Astronomy](https://seagull.wwnorton.com/astro7-orderingoptions).  It includes examples from the textbook, as well as applicable YouTube videos and demonstrations of calculations using [python](https://www.python.org/).
 
-If you find any of the information useful, please cite the source material and/or the textbook, [21st Century Astronomy: Solar System](https://wwnorton.com/books/9780393877083).
+If you find any of the information useful, please cite the source material and/or the textbook, [21st Century Astronomy](https://seagull.wwnorton.com/astro7-orderingoptions).
 
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]

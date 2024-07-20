@@ -72,6 +72,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorials/tools-of-astronomer';</script>
     <link rel="canonical" href="https://saturnaxis.github.io/IntroAstro/Tutorials/tools-of-astronomer.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -158,8 +160,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+    
+    
+      
+    
+    
+    <img src="../_static/jwst-galaxy-ngc1512.jpg" class="logo__image only-light" alt="Introductory Astronomy - Home"/>
+    <script>document.write(`<img src="../_static/jwst-galaxy-ngc1512.jpg" class="logo__image only-dark" alt="Introductory Astronomy - Home"/>`);</script>
   
-    <p class="title logo__title">Introductory Astronomy</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -190,9 +198,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="formation-planetary-systems.html">7. The Formation of Planetary Systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="terrestrial-interiors-surfaces.html">8. The Terrestrial Planets and Earth’s Moon</a></li>
-<li class="toctree-l1"><a class="reference internal" href="giant-planets.html">9. Worlds of Gas and Liquid – The Giant Planets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="moons-and-rings.html">10. Planetary Moons and Rings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="small-bodies.html">11. Dwarf Planets and Small Solar System Bodies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrestrial-atmospheres.html">9. Atmospheres of the Terrestrial Planets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="giant-planets.html">10. Worlds of Gas and Liquid – The Giant Planets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moons-and-rings.html">11. Planetary Moons and Rings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="small-bodies.html">12. Dwarf Planets and Small Solar System Bodies</a></li>
 </ul>
 
     </div>
@@ -453,8 +462,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#telescope-aperture-and-magnification">6.1. Telescope Aperture and Magnification</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diffraction-limit">6.2. Diffraction Limit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#telescope-aperture-and-magnification">6.1. Telescope Aperture and Magnification</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aperture">6.1.1. Aperture</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#magnification">6.2. Magnification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diffraction-limit">6.3. Diffraction Limit</a></li>
 </ul>
             </nav>
         </div>
@@ -470,9 +483,138 @@ document.write(`
 <h1><span class="section-number">6. </span>Tools of an Astronomer<a class="headerlink" href="#tools-of-an-astronomer" title="Permalink to this heading">#</a></h1>
 <section id="telescope-aperture-and-magnification">
 <h2><span class="section-number">6.1. </span>Telescope Aperture and Magnification<a class="headerlink" href="#telescope-aperture-and-magnification" title="Permalink to this heading">#</a></h2>
+<section id="aperture">
+<h3><span class="section-number">6.1.1. </span>Aperture<a class="headerlink" href="#aperture" title="Permalink to this heading">#</a></h3>
+<p>The light-gathering power of a telescope is proportional to the <strong>area</strong> <span class="math notranslate nohighlight">\(A\)</span> of its lens or mirror.  Such optics are constructed as thin or thick <em>cylinder</em> because it’s easier to even out the glass or metal by using the centripetal force from spinning.  It is eaiser measure the <strong>aperture</strong> (diameter) of a lens or mirror because you don’t need to locate the exact center.  As a result, we use the area of a circle but substitute for the radius using the diameter (<span class="math notranslate nohighlight">\(r = D/2\)</span>) to get</p>
+<div class="math notranslate nohighlight">
+\[ A = \pi \left(\frac{D}{2}\right)^2 = \frac{\pi D^2}{4}. \]</div>
+<p>The amount of light that telescope collects is proportional to the <strong>square</strong> of the aperture.</p>
+<p>How does the light-gathering power of a 20-cm (or 8 in) telescope compare with the pupil of your eye (<span class="math notranslate nohighlight">\(D_{\rm eye} = 6\ {\rm mm}\)</span>) in the dark?</p>
+<p>There are two ways to answer this question:</p>
+<ol class="arabic simple">
+<li><p>substitute <strong>directly</strong>, calculate the two areas, and find the ratio,</p></li>
+<li><p>substitute <strong>symbolically</strong>, look for cancelations, and find the ratio.</p></li>
+</ol>
+<p>The first option requires more effort, so we’ll go with option 2.</p>
+<p>Let’s define the area of each aperture symbolically as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+A_{\rm 20cm} &amp; = \frac{\pi D_{\rm 20cm}^2}{4}, \qquad
+A_{\rm eye} &amp;= \frac{\pi D_{\rm eye}^2}{4}.
+\end{align*}\]</div>
+<p>Then the ratio of the two areas is</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{A_{\rm 20cm}}{A_{\rm eye}} &amp;= \frac{\pi D_{\rm 20cm}^2}{4} \times \frac{4}{\pi D_{\rm eye}^2} = \left( \frac{D_{\rm 20cm}}{D_{\rm eye}}\right)^2.
+\end{align*}\]</div>
+<p><strong>Note that the <span class="math notranslate nohighlight">\(\pi/4\)</span> factor cancels because we used a ratio.</strong>  To calculate the answer, we subsitute the values for the respective diameters</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{A_{\rm 20cm}}{A_{\rm eye}} &amp;=  \left( \frac{200}{6}\right)^2 = 1,111, \\
+A_{\rm 20cm} &amp;= 1,111 A_{\rm eye}.
+\end{align*}\]</div>
+<p>Thus, the light-gathering power of a 20-cm (8 in) telescope is more than 1,000 times greater than the power of your eye.</p>
+<p>Now let’s compare a 20-cm telescope to the James Webb Space Telescope (JWST) that has an effective aperture of 6.5 m.  We can follow the same procedure to get</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{A_{\rm JWST}}{A_{\rm 20cm}} = \left(\frac{6.5}{0.2} \right)^2 = 1,060.
+\end{align*}\]</div>
+<p>The JWST has more than 1,000 times the light-gathering power of a 20-cm telescope.  This means that JWST has more than a million times the light-gathering power of your eye!</p>
+<p>Below is a python script demonstrating the above calculations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D_20cm</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="c1">#diameter of a 20-cm aperture (in m)</span>
+<span class="n">D_eye</span> <span class="o">=</span> <span class="mf">0.006</span> <span class="c1">#diameter of your pupil in the dark (in m)</span>
+
+<span class="n">LGP_ratio</span> <span class="o">=</span> <span class="p">(</span><span class="n">D_20cm</span><span class="o">/</span><span class="n">D_eye</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The light-gathering power ratio between a 20-cm telescope and your eye is </span><span class="si">%i</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">LGP_ratio</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------&quot;</span><span class="p">)</span>
+
+<span class="n">D_JWST</span> <span class="o">=</span> <span class="mf">6.5</span> <span class="c1">#effective diameter of JWST (in m)</span>
+<span class="n">LGP_ratio</span> <span class="o">=</span> <span class="p">(</span><span class="n">D_JWST</span><span class="o">/</span><span class="n">D_20cm</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The light-gathering power ratio between JWST and a20-cm telescope is </span><span class="si">%i</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">LGP_ratio</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The light-gathering power ratio between a 20-cm telescope and your eye is 1111.
+------------
+The light-gathering power ratio between JWST and a20-cm telescope is 1056.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="magnification">
+<h2><span class="section-number">6.2. </span>Magnification<a class="headerlink" href="#magnification" title="Permalink to this heading">#</a></h2>
+<p>Most telescopes have a set focal length, where the magnification is dependent on the focal length of the eyepiece.  The magnification of the image is given by the ratio of the focal lengths, or</p>
+<div class="math notranslate nohighlight">
+\[ \text{Magnification} = \frac{\text{Telescope focal length}}{\text{Eyepiece focal length}}. \]</div>
+<p>Suppose the focal length of a 20-cm telescope is 2000 mm (or 2 m).  A standard eyepiece has a focal length of 25 mm (or 0.025 m).  The 20-cm telescope will have a magnification <span class="math notranslate nohighlight">\(m\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ m = \frac{2000}{25} = 80. \]</div>
+<p>That telescope and eyepiece combination magnifies the image by a factor of 80.  A crater on the Moon will appear <span class="math notranslate nohighlight">\(80\times\)</span> larger than when viewed with the naked (unaided) eye.</p>
+<p><strong>What happens if we swap out an eyepiece with a smaller focal length (e.g., 8 mm)?</strong>  Will the magnification increase or decrease?</p>
+<p>We can see from the equation for magnification that a smaller eyepiece focal length leads to a smaller denominator.  When you decrease the denominator, the manification increases (e.g., <span class="math notranslate nohighlight">\(1/4 &lt; 1/3 &lt; 1/2\)</span>).  With this intuition in mind, we can calculate the new magnification as</p>
+<div class="math notranslate nohighlight">
+\[ m = \frac{2000}{8} = 250. \]</div>
+<p>We found that the 8-mm eyepiece increases the magnfication to 250.</p>
+<p><strong>A higher magnification will not necessarily imporove the image quality.</strong>  A faint and fuzzy image will not look clearer when magnified.  To improve the image quality, you need to collect more photons, which can only be done by increasing the aperture.</p>
 </section>
 <section id="diffraction-limit">
-<h2><span class="section-number">6.2. </span>Diffraction Limit<a class="headerlink" href="#diffraction-limit" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.3. </span>Diffraction Limit<a class="headerlink" href="#diffraction-limit" title="Permalink to this heading">#</a></h2>
+<p>The practical limit on the angular resolution of a telescope <span class="math notranslate nohighlight">\(\theta\)</span> is called the <a class="reference external" href="https://openstax.org/books/university-physics-volume-3/pages/4-5-circular-apertures-and-resolution">diffraction limit</a>.  The formula for the diffraction limit is defined using the first zero point within the diffraction pattern between two sources.</p>
+<p><a class="reference internal" href="https://openstax.org/apps/archive/20231218.154301/resources/fbbc4a4a82062ee333990123fef7f3ba326c502f"><img alt="diffraction limit" src="https://openstax.org/apps/archive/20231218.154301/resources/fbbc4a4a82062ee333990123fef7f3ba326c502f" style="width: 500px;" /></a></p>
+<p>Using the above description we have</p>
+<div class="math notranslate nohighlight">
+\[ \theta (\text{rad}) \approx 1.22 \frac{\lambda}{D}. \]</div>
+<p>The factor <span class="math notranslate nohighlight">\(1.22\)</span> comes from the first zero of the order-one Bessel function of the first kind <span class="math notranslate nohighlight">\(J_1(x)\)</span> divided by <span class="math notranslate nohighlight">\(\pi\)</span> (see <a class="reference external" href="https://en.wikipedia.org/wiki/Angular_resolution">here</a>).  Also, this formula provides the limit in <em>radians</em>.</p>
+<p>Astronomer’s usually measure angles on the sky using <strong>arcseconds</strong>, which is <span class="math notranslate nohighlight">\(1/3600\)</span> of a degree.  Thus, we can convert the above equation so that it returns arcseconds instead of radians to avoid doing the unit conversion multiple times.  Astronomer’s also use an approximate formula where they round <span class="math notranslate nohighlight">\(1.22\)</span> to <span class="math notranslate nohighlight">\(1\)</span>.  With these caveats in mind, we get the formula</p>
+<div class="math notranslate nohighlight">
+\[ \theta(\text{arcsec}) = 2.06 \times 10^5 \left(\frac{\lambda}{D}\right). \]</div>
+<p><strong>Both <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(D\)</span> must have the same units.</strong></p>
+<p>Using the average size of the human pupil (6 mm), what is the angular resolution limit <span class="math notranslate nohighlight">\(\theta (\text{arcsec})\)</span> in green light <span class="math notranslate nohighlight">\((550\ {\rm nm})\)</span>?</p>
+<p>Before we can begin calculating, we must convert the wavelength from <span class="math notranslate nohighlight">\(\rm nm\)</span> to <span class="math notranslate nohighlight">\(\rm mm\)</span>.  There are <span class="math notranslate nohighlight">\(10^6\ {\rm nm}\)</span> in <span class="math notranslate nohighlight">\(1\ {\rm mm}\)</span>, where the wavelength (in mm) is</p>
+<div class="math notranslate nohighlight">
+\[ \lambda_{\rm 550nm} = \frac{550\ \rm nm}{1} \times \frac{1\ {\rm mm}}{10^6\ {\rm nm}} =  0.00055\ {\rm mm}.\]</div>
+<p>Now that <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(D\)</span> are in the same units, we can proceed with the calculation to get</p>
+<div class="math notranslate nohighlight">
+\[ \theta(\text{arcsec}) = 2.06 \times 10^5 \left(\frac{0.00055\ {\rm mm}}{6\ {\rm mm}}\right) = 19\ {\rm arcsec}. \]</div>
+<p>The typical actual resolution of the human eye is <span class="math notranslate nohighlight">\(60\ {\rm arcsec}\)</span> (or <span class="math notranslate nohighlight">\(1\ {\rm arcmin}\)</span>), where the above calculation is about 1/3 of this value.  We do not achieve the theoretical resolution with our eyes because the physical properties of our eyes are not perfect.</p>
+<p><strong>How does the resolution of the human eye compare with that of JWST?</strong></p>
+<p>We can compare using a ratio of <span class="math notranslate nohighlight">\(\theta_{\rm JWST}/\theta_{\rm eye}\)</span> and we’ll assume that <span class="math notranslate nohighlight">\(\lambda\)</span> is same in both cases.  As a result, we find</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\theta_{\rm eye}}{\theta_{\rm JWST}} = \frac{\lambda}{D_{\rm eye}} \times \frac{D_{\rm JWST}}{\lambda} = \frac{D_{\rm JWST}}{D_{\rm eye}} = \frac{6.5}{0.006} = 1083.\]</div>
+<p>This means that JWST has <span class="math notranslate nohighlight">\({\sim}1,000\)</span> times the resolving power than the human eye.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">lamb_green</span> <span class="o">=</span> <span class="mi">550</span> <span class="c1">#green light at 550 nm</span>
+<span class="n">D_eye</span> <span class="o">=</span> <span class="mi">6</span> <span class="c1">#diameter of a human pupil (in mm)</span>
+
+<span class="n">lamb_green_mm</span> <span class="o">=</span> <span class="n">lamb_green</span><span class="o">/</span><span class="mf">1e6</span> 
+<span class="n">theta_arcsec</span> <span class="o">=</span> <span class="mf">2.06e5</span><span class="o">*</span><span class="n">lamb_green_mm</span><span class="o">/</span><span class="n">D_eye</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The angular resolution of the human eye (at 550 nm) is </span><span class="si">%i</span><span class="s2"> arcsec.&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">theta_arcsec</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;----------------&quot;</span><span class="p">)</span>
+
+<span class="n">D_JWST</span> <span class="o">=</span> <span class="mf">6.5</span> <span class="c1">#effective diameter of JWST</span>
+<span class="n">D_eye_m</span> <span class="o">=</span> <span class="mf">0.006</span> <span class="c1">#diamter of a human pupil (in m)</span>
+
+<span class="n">res_ratio</span> <span class="o">=</span> <span class="n">D_JWST</span><span class="o">/</span><span class="n">D_eye_m</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The resolution ratio betwen JWST and the human eye is </span><span class="si">%i</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">res_ratio</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The angular resolution of the human eye (at 550 nm) is 19 arcsec.
+----------------
+The resolution ratio betwen JWST and the human eye is 1083.
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -539,8 +681,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#telescope-aperture-and-magnification">6.1. Telescope Aperture and Magnification</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diffraction-limit">6.2. Diffraction Limit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#telescope-aperture-and-magnification">6.1. Telescope Aperture and Magnification</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aperture">6.1.1. Aperture</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#magnification">6.2. Magnification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diffraction-limit">6.3. Diffraction Limit</a></li>
 </ul>
   </nav></div>
 
