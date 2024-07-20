@@ -1,0 +1,773 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>5. Light &#8212; ASTR1304 Astronomy of the Solar System</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-8VDVRMR2BH"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-8VDVRMR2BH');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorials/light';</script>
+    <link rel="canonical" href="https://saturnaxis.github.io/ASTR1304/Tutorials/light.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Tools of an Astronomer" href="tools-of-astronomer.html" />
+    <link rel="prev" title="4. Gravity and Orbits" href="gravity-and-orbits.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../home.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ASTR1304 Astronomy of the Solar System</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    ASTR 1304: Astronomy of the Solar System
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preamble</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/who-for.html">Who are these notes for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/cite-reuse.html">How to cite and reuse this material</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="thinking-like-astronomer.html">1. Thinking Like an Astronomer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="patterns-in-sky.html">2. Patterns in the Sky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="motion-astronomical-bodies.html">3. Motion of Astronomical Bodies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gravity-and-orbits.html">4. Gravity and Orbits</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Light</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools-of-astronomer.html">6. Tools of an Astronomer</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/saturnaxis/ASTR1304/main?urlpath=tree/Tutorials/light.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/saturnaxis/ASTR1304/blob/main/Tutorials/light.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/saturnaxis/ASTR1304" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Tutorials/light.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Light</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-electromagnetic-radiation">5.1. Working with Electromagnetic Radiation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wavelength-and-frequency">5.1.1. Wavelength and Frequency</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#photon-energy">5.1.2. Photon Energy</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-use-of-the-doppler-effect">5.2. Making Use of the Doppler Effect</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-with-a-measured-wavelength">5.2.1. Starting with a measured wavelength</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-with-a-measured-radial-velocity">5.2.2. Starting with a measured radial velocity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-the-stefan-bolztmann-law-and-wien-s-law">5.3. Working with the Stefan-Bolztmann Law and Wien’s Law</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stefan-boltzmann-law">5.3.1. Stefan-Boltzmann Law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wien-s-law">5.3.2. Wien’s Law</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="light">
+<h1><span class="section-number">5. </span>Light<a class="headerlink" href="#light" title="Permalink to this heading">#</a></h1>
+<section id="working-with-electromagnetic-radiation">
+<h2><span class="section-number">5.1. </span>Working with Electromagnetic Radiation<a class="headerlink" href="#working-with-electromagnetic-radiation" title="Permalink to this heading">#</a></h2>
+<section id="wavelength-and-frequency">
+<h3><span class="section-number">5.1.1. </span>Wavelength and Frequency<a class="headerlink" href="#wavelength-and-frequency" title="Permalink to this heading">#</a></h3>
+<p>Each radio station on you receive on your car radio transmits at a different frequency, where the radio tuner selects which frequency is decoded and sent to the speakers.  KEGL (97.1 the Eagle in Dallas) broadcasts over FM (frequency modulation) at 97.1 MHz or <span class="math notranslate nohighlight">\(9.71 \times 10^7\ {\rm Hz}\)</span>.  We can use the relationship between wavelength and frequency, <span class="math notranslate nohighlight">\(c = \lambda f,\)</span> to calculate the wavelength of the FM signal:</p>
+<div class="math notranslate nohighlight">
+\[ \lambda = \frac{c}{f} = \frac{3\times 10^8\ {\rm m/s}}{9.71\times 10^7\ {\rm s^{-1}}} = 3.09\ {\rm m}. \]</div>
+<p>AM (<a class="reference external" href="https://en.wikipedia.org/wiki/Amplitude_modulation">amplitude modulation</a>) wavelengths are longer than FM wavelengths.</p>
+<p>The human ey is most sensitive to light in green and yellow wavelengths, about <span class="math notranslate nohighlight">\(500-590\ {\rm nm}\)</span>.  If we examne green light with a wavelength of <span class="math notranslate nohighlight">\(530\ {\rm nm}\)</span>, we can compute its frequency:</p>
+<div class="math notranslate nohighlight">
+\[ f = \frac{c}{\lambda} = \frac{3\times 10^8\ {\rm m/s}}{5.3\times 10^{-7}\ {\rm m}} = 5.66 \times 10^{14}\ {\rm Hz}. \]</div>
+<p>That freqeuncy corresponds to 566 <em>trillion</em> wave crests passing by each second.</p>
+<p>Below is a python script demonstrating the above calculations.  <strong>Note: this script uses the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/constants.html">scipy.constants</a> library, which is handy for obtaining precise values for fundamental constants (e.g., the speed of light).</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">c</span> <span class="c1">#get the value for the speed of light using the scipy.constants library</span>
+<span class="n">KEGL_f</span> <span class="o">=</span> <span class="mf">9.71e7</span> <span class="c1">#FM frequency for 97.1 (KEGL)</span>
+
+<span class="n">lamb</span> <span class="o">=</span> <span class="n">c</span><span class="o">/</span><span class="n">KEGL_f</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The wavelength lambda for KEGL is </span><span class="si">%1.2f</span><span class="s2"> m.&quot;</span> <span class="o">%</span> <span class="n">KEGL_f</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----------------&#39;</span><span class="p">)</span>
+
+<span class="n">green_lamb</span> <span class="o">=</span> <span class="mi">530</span><span class="o">*</span><span class="mf">1e-9</span> <span class="c1">#green wavelength at 530 nm (converted to m)</span>
+
+<span class="n">green_freq</span> <span class="o">=</span> <span class="n">c</span><span class="o">/</span><span class="n">green_lamb</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The frequency for a green wavelength at 530 nm is </span><span class="si">%1.2e</span><span class="s2"> Hz.&quot;</span> <span class="o">%</span> <span class="n">green_freq</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The wavelength lambda for KEGL is 97100000.00 m.
+----------------
+The frequency for a green wavelength at 530 nm is 5.66e+14 Hz.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="photon-energy">
+<h3><span class="section-number">5.1.2. </span>Photon Energy<a class="headerlink" href="#photon-energy" title="Permalink to this heading">#</a></h3>
+<p>How does the energy of a photon relate to its wavelength?  The energy of a photon is directly related to its frequency through the equation <span class="math notranslate nohighlight">\(E = hf\)</span>.  We can transform this equation to be in terms of the wavelength instead using the relationship between the wavelength, frequency and speed of light.  Then, the equation becomes</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+E = \begin{cases}
+hf, \\
+\frac{hc}{\lambda}.
+\end{cases}
+\end{align*}\]</div>
+<p>In both cases the energy also depends on Planck’s constant <span class="math notranslate nohighlight">\(h\)</span>, which is <span class="math notranslate nohighlight">\(6.626 \times 10^{-34}\ {\rm J\cdot Hz}\)</span>.</p>
+<p>Suppose we want to compare the energy between an X-ray photon (<span class="math notranslate nohighlight">\(\lambda_X = 1\ {\rm nm}\)</span>) and a green photon <span class="math notranslate nohighlight">\((\lambda_{\rm green} = 530\ {\rm nm})\)</span>, we can take a ratio so that the constants <span class="math notranslate nohighlight">\(hc\)</span> cancle out:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{E_X}{E_{\rm green}} = \frac{hc}{\lambda_X} \times \frac{\lambda_{\rm green}}{hc} = \frac{\lambda_{green}}{\lambda_X} = \frac{530\ {\rm nm}}{1\ {\rm nm}} = 530.\]</div>
+<p>The <span class="math notranslate nohighlight">\(X\)</span>-ray photon has <span class="math notranslate nohighlight">\(530\times\)</span> more energy thatn the green photon at <span class="math notranslate nohighlight">\(530\ {\rm nm}\)</span>.</p>
+</section>
+</section>
+<section id="making-use-of-the-doppler-effect">
+<h2><span class="section-number">5.2. </span>Making Use of the Doppler Effect<a class="headerlink" href="#making-use-of-the-doppler-effect" title="Permalink to this heading">#</a></h2>
+<p>In many cases, the observed object is moving much less than the speed of light.  We can use the nonrelativistic form of the Doppler equation to determine the radial velocity <span class="math notranslate nohighlight">\(v_r\)</span>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+v_r &amp;= \left(\frac{\lambda_{\rm obs}-\lambda_{\rm rest}}{\lambda_{\rm rest}}\right) c, \\
+&amp;= \left(\frac{\lambda_{\rm obs}}{\lambda_{\rm rest}} - 1\right)c.
+\end{align*}\]</div>
+<p>One of the most prominent spectral lines is due to hydrogen’s transition from <span class="math notranslate nohighlight">\(n=3\)</span> to <span class="math notranslate nohighlight">\(n=2\)</span>, or the <span class="math notranslate nohighlight">\(H\alpha\)</span> line of the Balmer series.  In the lab (rest frame), we measure the rest wavelength as <span class="math notranslate nohighlight">\(656.3\ {\rm nm}\)</span>.  In the image below, <span class="math notranslate nohighlight">\(H\alpha\)</span> is the reddish line on the right.</p>
+<p><a class="reference internal" href="https://upload.wikimedia.org/wikipedia/commons/2/21/Visible_spectrum_of_hydrogen.jpg"><img alt="Picture" src="https://upload.wikimedia.org/wikipedia/commons/2/21/Visible_spectrum_of_hydrogen.jpg" style="width: 800px;" /></a></p>
+<section id="starting-with-a-measured-wavelength">
+<h3><span class="section-number">5.2.1. </span>Starting with a measured wavelength<a class="headerlink" href="#starting-with-a-measured-wavelength" title="Permalink to this heading">#</a></h3>
+<p>Suppose that you measure the spectrum of a distant object, where you find the <span class="math notranslate nohighlight">\(H\alpha\)</span> line at <span class="math notranslate nohighlight">\(659.0\ {\rm nm}\)</span> instead of at the rest wavelength.  What is the radial velocity of the source?</p>
+<p>Using the relationship for the radial velocity, we find</p>
+<div class="math notranslate nohighlight">
+\[ v_r = \left(\frac{659.0\ {\rm nm} - 656.3\ {\rm nm}}{656.3\ {\rm nm}}\right) \left(3\times 10^5\ {\rm km/s}\right) = 1200\ {\rm km/s}. \]</div>
+<p>The object is moving away (red shift; positive numerator) from you with a radial velocity of <span class="math notranslate nohighlight">\(1200\ {\rm km/s}\)</span>.  <strong>Note that we used the speed of light converted to <span class="math notranslate nohighlight">\(\rm km/s\)</span> instead of in the usual units of <span class="math notranslate nohighlight">\(\rm m/s\)</span>.</strong></p>
+</section>
+<section id="starting-with-a-measured-radial-velocity">
+<h3><span class="section-number">5.2.2. </span>Starting with a measured radial velocity<a class="headerlink" href="#starting-with-a-measured-radial-velocity" title="Permalink to this heading">#</a></h3>
+<p>Suppose you read that the radial velocity of our closest stellar neighbor (<a class="reference external" href="https://en.wikipedia.org/wiki/Proxima_Centauri">Proxima Centauri</a>) is moving toward us with a radial velocity of <span class="math notranslate nohighlight">\(-21.6\ {\rm km/s}\)</span>.  You want to verify this result using a magnesium source as a reference, which has a bright green line with a rest wavelength of <span class="math notranslate nohighlight">\(517.27\ {\rm nm}\)</span>.</p>
+<p><a class="reference internal" href="https://ircamera.as.arizona.edu/Astr2016/images/Frauenhofer.jpg"><img alt="Picture" src="https://ircamera.as.arizona.edu/Astr2016/images/Frauenhofer.jpg" style="width: 500px;" /></a></p>
+<p>What was the observed wavelength in order for the researchers to report a radial velocity of <span class="math notranslate nohighlight">\(-21.6\ {\rm km/s}\)</span>?</p>
+<p>We can solve this problem by re-arranging the Doppler equation to</p>
+<div class="math notranslate nohighlight">
+\[ \lambda_{\rm obs} = \left(1 + \frac{v_r}{c}\right) \lambda_{\rm rest} \]</div>
+<p>and substituting to get</p>
+<div class="math notranslate nohighlight">
+\[ \lambda_{\rm obs} = \left(1 + \frac{-21.6\ {\rm km/s}}{3\times 10^5\ {\rm km/s}}\right) \left(517.27\ {\rm nm}\right) = 517.23\ {\rm nm}. \]</div>
+<p>The observed wavelength will be shorter than the rest wavelength because it is a blueshift.  The observed Doppler shift will be <span class="math notranslate nohighlight">\(\lambda_{\rm obs} - \lambda_{\rm rest} = -0.04\ {\rm nm}\)</span>.  This is a small shift, but it is easily measured with modern instruments.</p>
+<p>Below are python scripts demonstrating how to perform the calculations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">c</span>
+
+<span class="n">Halpha_rest</span> <span class="o">=</span> <span class="mf">656.3</span> <span class="c1">#rest wavelength of H-alpha</span>
+<span class="n">Halpha_obs</span> <span class="o">=</span> <span class="mf">659.0</span> <span class="c1">#observed wavelength of H-alpha</span>
+<span class="n">c_kms</span> <span class="o">=</span> <span class="n">c</span><span class="o">/</span><span class="mi">1000</span> <span class="c1">#converted speed of light to km/s</span>
+
+<span class="n">v_r</span> <span class="o">=</span> <span class="p">(</span><span class="n">Halpha_obs</span><span class="o">-</span><span class="n">Halpha_rest</span><span class="p">)</span><span class="o">/</span><span class="n">Halpha_rest</span><span class="o">*</span><span class="n">c_kms</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The measured radial velocity is </span><span class="si">%04i</span><span class="s2"> km/s.&quot;</span> <span class="o">%</span> <span class="n">v_r</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---------------&quot;</span><span class="p">)</span>
+
+<span class="n">Mg_rest</span> <span class="o">=</span> <span class="mf">517.27</span> <span class="c1">#rest wavelength of the Mg I line (in nm)</span>
+<span class="n">vr_measured</span> <span class="o">=</span> <span class="o">-</span><span class="mf">21.6</span> <span class="c1">#reported radial velocity of Proxima Cen (in km/s)</span>
+<span class="n">lamb_obs</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">vr_measured</span><span class="o">/</span><span class="n">c_kms</span><span class="p">)</span><span class="o">*</span><span class="n">Mg_rest</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The expected observed wavelength for Mg I with the given radial velocity is </span><span class="si">%3.2f</span><span class="s2"> nm.&quot;</span> <span class="o">%</span> <span class="n">lamb_obs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The measured radial velocity is 1233 km/s.
+---------------
+The expected observed wavelength for Mg I with the given radial velocity is 517.23 nm.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="working-with-the-stefan-bolztmann-law-and-wien-s-law">
+<h2><span class="section-number">5.3. </span>Working with the Stefan-Bolztmann Law and Wien’s Law<a class="headerlink" href="#working-with-the-stefan-bolztmann-law-and-wien-s-law" title="Permalink to this heading">#</a></h2>
+<section id="stefan-boltzmann-law">
+<h3><span class="section-number">5.3.1. </span>Stefan-Boltzmann Law<a class="headerlink" href="#stefan-boltzmann-law" title="Permalink to this heading">#</a></h3>
+<p>The Stefan-Boltzmann law can be used to estimate the luminosity (if you are given radius and temperature) or flux (if you are given just temperature) of objects that behave like a blackbody.  The Sun has an effective surface temperature of <span class="math notranslate nohighlight">\(5777\ {\rm K}\)</span> and a <a class="reference external" href="https://en.wikipedia.org/wiki/Solar_radius">radius</a> of <span class="math notranslate nohighlight">\(6.957 \times 10^5\ {\rm km}\)</span>.  Using the <a class="reference external" href="https://en.wikipedia.org/wiki/Stefan%E2%80%93Boltzmann_law">Stefan-Boltzmann constant</a> <span class="math notranslate nohighlight">\((\sigma = 5.67 \times 10^{-8}\ {\rm W\ m^{-2}\ K^{-4}})\)</span>, we can determine the solar flux and luminosity at the surface.</p>
+<p>The solar flux (how much power per <span class="math notranslate nohighlight">\(\rm km^2\)</span>) is given by</p>
+<div class="math notranslate nohighlight">
+\[ \mathcal{F}_{\rm Sun} = \sigma T^4 = \left(5.67 \times 10^{-8}\ {\rm W\ m^{-2}\ K^{-4}}\right)\left(5777\ {\rm K}\right)^4 = 6.32 \times 10^7\ {\rm W/m^2}, \]</div>
+<p>where the luminosity is simply the surface area <span class="math notranslate nohighlight">\(A_{\rm Sun} (= 4\pi R_{\rm sun}^2)\)</span> mutliplied by the flux.  The solar luminosity can be calculated as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+L_\odot &amp;= \mathcal{F}_{\rm Sun} \times A_{\rm Sun}, \\
+&amp;= \left(6.32 \times 10^7\ {\rm W/m^2}\right)\left(4\pi \times [6.957 \times 10^8\ {\rm m}]^2\right), \\
+&amp;= 3.84 \times 10^{26}\ {\rm W}.
+\end{align*}\]</div>
+<p>How does the Earth compare to the Sun?</p>
+<p>Given that the Earth’s average temperature is <span class="math notranslate nohighlight">\(288\ {\rm K}\)</span>, we can calculate the flux ratio as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\mathcal{F}_{\rm Earth}}{\mathcal{F}_{\rm Sun}} &amp;= \left(\frac{\sigma T_{\rm Earth}}{T_{\rm Sun}}\right)^4, \\
+&amp;= \left(\frac{288\ {\rm K}}{5777\ {\rm K}}\right)^4 = 6.18 \times 10^{-6}, \\
+\mathcal{F}_{\rm Earth} &amp;= 6.18 \times 10^{-6}\ \mathcal{F}_{\rm Sun}.\
+\end{align*}\]</div>
+<p>The Earth emits about 6 millionths of the energy per square meter that the Sun does each second.</p>
+<p>Using the Earth’s radius <span class="math notranslate nohighlight">\((6371\ {\rm km})\)</span>, we can also compare the luminosity</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{L_{\rm Earth}}{L_\odot} &amp;= \left(\frac{R_\oplus}{R_\odot}\right)^2 \left(\frac{\mathcal{F}_{\rm Earth}}{\mathcal{F}_{\rm Sun}}\right), \\
+&amp;= \left(\frac{6371\ {\rm km}}{6.957 \times 10^5\ {\rm km}}\right)^2 \left(6.18 \times 10^{-6}\right), 
+&amp;= 5.18 \times 10^{-10}, \\
+L_{\rm Earth} &amp;= 5.18 \times 10^{-10}\ {L_\odot}.
+\end{align*}\]</div>
+<p>The Earth emits <span class="math notranslate nohighlight">\(10^{10}\)</span> times less light than the Sun.  This is important for the search for exoplanets using direct imaging because it shows the contrast-ratio between a Sun-like star and the Earth is <span class="math notranslate nohighlight">\({\sim}10^{-10}\)</span>.  This is not yet acheivable with modern instruments, however future missions (e.g., Habitable Worlds Observatory) may be up to the job.</p>
+<p>Below are python scripts demonstrating how to perform the calculations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">sigma</span> 
+
+<span class="n">Tsun_eff</span> <span class="o">=</span> <span class="mi">5777</span> <span class="c1">#effective temperature of the Sun&#39;s surface (in K)</span>
+<span class="n">F_sun</span> <span class="o">=</span> <span class="n">sigma</span><span class="o">*</span><span class="n">Tsun_eff</span><span class="o">**</span><span class="mi">4</span>
+<span class="n">R_sun</span> <span class="o">=</span> <span class="mf">6.957e8</span> <span class="c1">#solar radius (in m)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The solar flux is </span><span class="si">%1.2e</span><span class="s2"> W/m^2.&quot;</span> <span class="o">%</span> <span class="n">F_sun</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;----------------&quot;</span><span class="p">)</span>
+
+<span class="n">A_sun</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">R_sun</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">L_sun</span> <span class="o">=</span> <span class="n">A_sun</span><span class="o">*</span><span class="n">F_sun</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The solar luminosity is </span><span class="si">%1.2e</span><span class="s2"> W.&quot;</span> <span class="o">%</span> <span class="n">L_sun</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---------------&quot;</span><span class="p">)</span>
+
+<span class="n">TEarth</span> <span class="o">=</span> <span class="mi">288</span> <span class="c1">#average temperature of the Earth (in K)</span>
+<span class="n">F_ratio</span> <span class="o">=</span> <span class="p">(</span><span class="n">TEarth</span><span class="o">/</span><span class="n">Tsun_eff</span><span class="p">)</span><span class="o">**</span><span class="mi">4</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The Earth-Sun flux ratio is </span><span class="si">%1.2e</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">F_ratio</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---------------&quot;</span><span class="p">)</span>
+
+<span class="n">R_Earth</span> <span class="o">=</span> <span class="mi">6371</span> <span class="c1">#Earth radius (in km)</span>
+<span class="n">L_ratio</span> <span class="o">=</span> <span class="p">(</span><span class="n">R_Earth</span><span class="o">/</span><span class="p">(</span><span class="n">R_sun</span><span class="o">/</span><span class="mi">1000</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">F_ratio</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The Earth-Sun luminosity ratio is </span><span class="si">%1.2e</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">L_ratio</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The solar flux is 6.32e+07 W/m^2.
+----------------
+The solar luminosity is 3.84e+26 W.
+---------------
+The Earth-Sun flux ratio is 6.18e-06.
+---------------
+The Earth-Sun luminosity ratio is 5.18e-10.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="wien-s-law">
+<h3><span class="section-number">5.3.2. </span>Wien’s Law<a class="headerlink" href="#wien-s-law" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "saturnaxis/ASTR1304",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Tutorials"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="gravity-and-orbits.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Gravity and Orbits</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tools-of-astronomer.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Tools of an Astronomer</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-electromagnetic-radiation">5.1. Working with Electromagnetic Radiation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wavelength-and-frequency">5.1.1. Wavelength and Frequency</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#photon-energy">5.1.2. Photon Energy</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-use-of-the-doppler-effect">5.2. Making Use of the Doppler Effect</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-with-a-measured-wavelength">5.2.1. Starting with a measured wavelength</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-with-a-measured-radial-velocity">5.2.2. Starting with a measured radial velocity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-the-stefan-bolztmann-law-and-wien-s-law">5.3. Working with the Stefan-Bolztmann Law and Wien’s Law</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stefan-boltzmann-law">5.3.1. Stefan-Boltzmann Law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wien-s-law">5.3.2. Wien’s Law</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Billy Quarles
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

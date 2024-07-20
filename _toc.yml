@@ -15,5 +15,7 @@ parts:
   - file: Tutorials/patterns-in-sky.ipynb
   - file: Tutorials/motion-astronomical-bodies.ipynb
   - file: Tutorials/gravity-and-orbits.ipynb
+  - file: Tutorials/light.ipynb
+  - file: Tutorials/tools-of-astronomer.ipynb
 
 
