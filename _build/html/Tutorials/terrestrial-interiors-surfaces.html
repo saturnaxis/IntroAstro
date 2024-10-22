@@ -7,8 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>8. The Terrestrial Planets and Earth’s Moon &#8212; Introductory Astronomy</title>
   
   
@@ -72,6 +71,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorials/terrestrial-interiors-surfaces';</script>
     <link rel="canonical" href="https://saturnaxis.github.io/IntroAstro/Tutorials/terrestrial-interiors-surfaces.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -437,7 +438,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -453,6 +456,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-the-ages-of-rocks">8.1. Computing the Ages of Rocks</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -462,9 +473,60 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="the-terrestrial-planets-and-earth-s-moon">
+  <div class="tex2jax_ignore mathjax_ignore section" id="the-terrestrial-planets-and-earth-s-moon">
 <h1><span class="section-number">8. </span>The Terrestrial Planets and Earth’s Moon<a class="headerlink" href="#the-terrestrial-planets-and-earth-s-moon" title="Permalink to this heading">#</a></h1>
-</section>
+<div class="section" id="computing-the-ages-of-rocks">
+<h2><span class="section-number">8.1. </span>Computing the Ages of Rocks<a class="headerlink" href="#computing-the-ages-of-rocks" title="Permalink to this heading">#</a></h2>
+<p>Some elements are radioactive, which means that a parent element decays into a daughter element plus and a much smaller particle is ejected.  Scientists can quantify the decay process by measuring the ratio of the final amount <span class="math notranslate nohighlight">\(P_F\)</span> to the original amount <span class="math notranslate nohighlight">\(P_o\)</span> of the parent elements, or <span class="math notranslate nohighlight">\(P_F/P_o\)</span>.  This ratio changes over time as more of the parent elements decay into daughter elements.  The <em>time it takes</em> for half of the orignal amount to decay is called the <strong>half-life</strong>.</p>
+<p>We can express the ratio in terms of the number of half-lives <span class="math notranslate nohighlight">\(n\)</span> that have elapsed, or</p>
+<div class="amsmath math notranslate nohighlight" id="equation-76775912-6bb3-4f2f-99d3-abe9966ce1a0">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-76775912-6bb3-4f2f-99d3-abe9966ce1a0" title="Permalink to this equation">#</a></span>\[\begin{align} 
+\frac{P_F}{P_o} = \left(\frac{1}{2}\right)^n,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(P_F\)</span> and <span class="math notranslate nohighlight">\(P_o\)</span> represent the final and original amounts, respectively.</p>
+<p>The most abundant isotope of uranium is U-238, which decays through a series of intermediate daughters to an isotope of lead (Pb-206).  The half-life of <span class="math notranslate nohighlight">\(U-238\)</span> is 4.5 billion years.  Therefore, after 4.5 billion years, a sample that originally contained only U-238 and no Pb-206 would be found with equal numbers of both <span class="math notranslate nohighlight">\(U-238\)</span> and Pb-206.  If we found a mineral with such a composition, we would know that the mineral crystallized (i.e., formed) 4.5 billion years ago.</p>
+<p>Another isotope of uranium is U-235, which decays to a different lead isotope Pb-207 with a half-life of 700 million years.</p>
+<p><a class="reference external" href="https://www.sciencedirect.com/science/article/pii/0012821X74900594">Tera et al. (1974)</a> analyzed lunar rock brought back from the Apollo missions.  They found in one of the samples (67455,6) that it contains <span class="math notranslate nohighlight">\(114.6\ {\rm picomoles}\)</span> of <span class="math notranslate nohighlight">\(Pb-206\)</span>.  The same sample contained <span class="math notranslate nohighlight">\(0.194\ {\rm nanomoles}\)</span> of U-238 per gram of sample.  The ratio of lead to uranium is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0ab04b98-475a-48c7-bdb5-67b4c3c84bf1">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-0ab04b98-475a-48c7-bdb5-67b4c3c84bf1" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{\rm ^{206}Pb}{\rm ^{238}U} = \frac{114.6 \times 10^{-12}\ {\rm mole}}{0.194 \times 10^{-9}\ {\rm mole}} = \frac{1.146 \times 10^{-10}}{1.94 \times 10^{-10}} = 0.590.
+\end{align}\]</div>
+<p>This means that <span class="math notranslate nohighlight">\({\sim}60%\)</span> of the parent isotope U-238 has decayed into Pb-206.  As a result, there is <span class="math notranslate nohighlight">\(4/10\)</span> of the parent isotope U-238 remaining in the mineral sample.  Approximately 1 half-life has passed since the mineral formed, in which case the lunar sample is approximately 4.5 billion years old.</p>
+<p>Notice that this calculation was not a neat power of 2.  We can arrive at a more precise value transforming Eqn. 1 through the logarithm by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-61768e93-9e5b-4fec-8b1b-fc4dc177d63a">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-61768e93-9e5b-4fec-8b1b-fc4dc177d63a" title="Permalink to this equation">#</a></span>\[\begin{align}
+\log_{10}\frac{P_F}{P_o} &amp;= \log_{10}\left(\frac{1}{2}\right)^n, \\
+&amp;= n\log_{10}\left(\frac{1}{2}\right),
+&amp;= -0.3n.
+\end{align}\]</div>
+<p>Written in words, we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e2247fe2-4e02-4c07-8d34-91f8503dacfb">
+<span class="eqno">(8.4)<a class="headerlink" href="#equation-e2247fe2-4e02-4c07-8d34-91f8503dacfb" title="Permalink to this equation">#</a></span>\[\begin{align}
+\log_{10}\left(\frac{\text{Actual measured quantity of isotope}}{\text{Original quantity of isotope}} \right) = -0.3 \left(\frac{\text{Time spent decaying (age)}}{\text{Half-life}}\right).
+\end{align}\]</div>
+<p>Solving for the age, we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a6f02744-e5e5-4d81-9e14-d91ccb40f4f3">
+<span class="eqno">(8.5)<a class="headerlink" href="#equation-a6f02744-e5e5-4d81-9e14-d91ccb40f4f3" title="Permalink to this equation">#</a></span>\[\begin{align}
+\text{Time spent decaying (age)} = -\left(\frac{\text{Half-life}}{0.3}\right) \times \log_{10}\left(\frac{\text{Actual measured quantity of isotope}}{\text{Original quantity of isotope}} \right).
+\end{align}\]</div>
+<p>For the U-238 that decays to Pb-206 with a half-life of <span class="math notranslate nohighlight">\(4.498 \times 10^9\ {\rm yr}\)</span>, we can calculate the age as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0c1aae32-f9b0-499d-ae26-244e5a27d1a8">
+<span class="eqno">(8.6)<a class="headerlink" href="#equation-0c1aae32-f9b0-499d-ae26-244e5a27d1a8" title="Permalink to this equation">#</a></span>\[\begin{align}
+\text{Time spent decaying (age)} &amp;= -\left(\frac{4.498 \times 10^9\ {\rm yr}}{0.3}\right) \times \log_{10}\left(1-0.591 \right), \\
+&amp;= 1.322 \left(4.498 \times 10^9\ {\rm yr}\right), \\
+&amp;= 5.81 \times 10^9\ {\rm yr}.
+\end{align}\]</div>
+<p>The mineral is approximately 5.81 billion years old.</p>
+<p>The video below demonstrates a more precise method for determining radiometric ages using the <a class="reference external" href="http://hyperphysics.phy-astr.gsu.edu/hbase/Nuclear/clkroc.html">Holmes and Houtermans</a> system:</p>
+<div align="center">
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/xAtbqDXqmvY" 
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -520,6 +582,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-the-ages-of-rocks">8.1. Computing the Ages of Rocks</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
