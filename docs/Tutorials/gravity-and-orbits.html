@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>4. Gravity and Orbits &#8212; Introductory Astronomy</title>
   
@@ -15,50 +14,48 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css?v=20ffa6e1" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-TQDV8M90DP"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -66,12 +63,16 @@
                 gtag('js', new Date());
                 gtag('config', 'G-TQDV8M90DP');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-TQDV8M90DP');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorials/gravity-and-orbits';</script>
@@ -89,28 +90,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -132,12 +128,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -152,6 +156,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../home.html">
@@ -170,7 +177,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -199,9 +217,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="formation-planetary-systems.html">7. The Formation of Planetary Systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="terrestrial-interiors-surfaces.html">8. The Terrestrial Planets and Earth’s Moon</a></li>
 <li class="toctree-l1"><a class="reference internal" href="terrestrial-atmospheres.html">9. Atmospheres of the Terrestrial Planets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="giant-planets.html">10. Worlds of Gas and Liquid – The Giant Planets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="moons-and-rings.html">11. Planetary Moons and Rings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="small-bodies.html">12. Dwarf Planets and Small Solar System Bodies</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="giant-planets.html">11. Worlds of Gas and Liquid – The Giant Planets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moons-and-rings.html">12. Planetary Moons and Rings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="small-bodies.html">13. Dwarf Planets and Small Solar System Bodies</a></li>
 </ul>
 
     </div>
@@ -217,7 +236,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -226,14 +245,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -258,14 +277,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/saturnaxis/IntroAstro/main?urlpath=tree/Tutorials/gravity-and-orbits.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -276,14 +295,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://colab.research.google.com/github/saturnaxis/IntroAstro/blob/main/Tutorials/gravity-and-orbits.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onColab"
+   title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_colab.png">
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
@@ -422,26 +441,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -489,18 +510,18 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="gravity-and-orbits">
-<h1><span class="section-number">4. </span>Gravity and Orbits<a class="headerlink" href="#gravity-and-orbits" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">4. </span>Gravity and Orbits<a class="headerlink" href="#gravity-and-orbits" title="Link to this heading">#</a></h1>
 <section id="playing-with-newton-s-laws-of-motion-and-gravitation">
-<h2><span class="section-number">4.1. </span>Playing with Newton’s Laws of Motion and Gravitation<a class="headerlink" href="#playing-with-newton-s-laws-of-motion-and-gravitation" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.1. </span>Playing with Newton’s Laws of Motion and Gravitation<a class="headerlink" href="#playing-with-newton-s-laws-of-motion-and-gravitation" title="Link to this heading">#</a></h2>
 <p>For any two objects, the force of gravity is <em>directly proportional to the masses</em> and <em>indirectly proportional to the square of the distance</em> between them. Mathematically, this is given by</p>
 <div class="math notranslate nohighlight">
 \[ F_g = \frac{G \times M_1 \times M_2}{d^2} = \frac{G  M_1 M_2}{d^2}, \]</div>
 <p>where <span class="math notranslate nohighlight">\(d\)</span> represents the distance between them and <span class="math notranslate nohighlight">\(M_1,\ M_2\)</span> are the individual masses.  The constant <span class="math notranslate nohighlight">\(G\)</span> represents the <a class="reference external" href="https://en.wikipedia.org/wiki/Gravitational_constant">constant of universal gravitation</a>, but in our cases it won’t be necessary to the actual value because we will be comparing force with some other standard.</p>
 <section id="changing-the-distance">
-<h3><span class="section-number">4.1.1. </span>Changing the Distance<a class="headerlink" href="#changing-the-distance" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.1.1. </span>Changing the Distance<a class="headerlink" href="#changing-the-distance" title="Link to this heading">#</a></h3>
 <p>How would the gravitational force between the Earth and Moon change if the distance <span class="math notranslate nohighlight">\(d\)</span> between them was doubled?</p>
 <p>We can compare the current Earth-Moon gravitational force <span class="math notranslate nohighlight">\(F_g\)</span> to the force <span class="math notranslate nohighlight">\(F^\prime_g\)</span> supposed in our hypothetical scenario using a ratio.  From there, we can show that</p>
 <div class="amsmath math notranslate nohighlight">
@@ -516,7 +537,7 @@ F^\prime_g &amp;= \frac{1}{4} F_g.
 <p>This means that the gravitational force in the hypothetical scenario <span class="math notranslate nohighlight">\(F^\prime_g\)</span> is only <span class="math notranslate nohighlight">\(1/4\)</span> of the original force <span class="math notranslate nohighlight">\(F_g\)</span>.  This should make sense because the Earth and Moon are <span class="math notranslate nohighlight">\(2\times\)</span> farther apart, where the strength of the force decreases by a factor of <span class="math notranslate nohighlight">\(1/2^2\)</span>.  <strong>Note: the force changed with the square when the distance changed.</strong></p>
 </section>
 <section id="changing-the-mass">
-<h3><span class="section-number">4.1.2. </span>Changing the Mass<a class="headerlink" href="#changing-the-mass" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.1.2. </span>Changing the Mass<a class="headerlink" href="#changing-the-mass" title="Link to this heading">#</a></h3>
 <p>How would the gravitational force on you change if the Earth’s mass is doubled?</p>
 <p>We can make a comparision using a ratio, where the new force is <span class="math notranslate nohighlight">\(F^\prime_g\)</span> and the original force is <span class="math notranslate nohighlight">\(F_g\)</span>.  From there, we have</p>
 <div class="amsmath math notranslate nohighlight">
@@ -532,7 +553,7 @@ F^\prime_g &amp;= 2 F_g.
 <p>This means that the gravitational force on you simply increases doubled with the increase in Earth’s mass.  <strong>Note: the force changed proportionally when the mass was changed.</strong></p>
 </section>
 <section id="gravitational-acceleration">
-<h3><span class="section-number">4.1.3. </span>Gravitational Acceleration<a class="headerlink" href="#gravitational-acceleration" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.1.3. </span>Gravitational Acceleration<a class="headerlink" href="#gravitational-acceleration" title="Link to this heading">#</a></h3>
 <p>We can think about the gravitational force the Earth exerts on an object through: Newton’s 2nd law or the universal law of gravitation.</p>
 <p>Through Newton’s 2nd law, we have <span class="math notranslate nohighlight">\(F = m\times a = ma\)</span>.  When applying this formula to the gravitational force, we often write <span class="math notranslate nohighlight">\(F_g = mg\)</span>.  The <span class="math notranslate nohighlight">\(g\)</span> represents the acceleration due to gravity at Earth’s surface.</p>
 <p>Earth has a mass <span class="math notranslate nohighlight">\(M_\oplus\)</span> and radius <span class="math notranslate nohighlight">\(R_\oplus\)</span>, where the gravitational force on another object with mass <span class="math notranslate nohighlight">\(m\)</span> using the universal law of gravitation is written as</p>
@@ -556,9 +577,9 @@ allowfullscreen></iframe>
 </div></section>
 </section>
 <section id="circular-and-escape-velocity">
-<h2><span class="section-number">4.2. </span>Circular and Escape Velocity<a class="headerlink" href="#circular-and-escape-velocity" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.2. </span>Circular and Escape Velocity<a class="headerlink" href="#circular-and-escape-velocity" title="Link to this heading">#</a></h2>
 <section id="circular-velocity">
-<h3><span class="section-number">4.2.1. </span>Circular Velocity<a class="headerlink" href="#circular-velocity" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.2.1. </span>Circular Velocity<a class="headerlink" href="#circular-velocity" title="Link to this heading">#</a></h3>
 <p>The velocity <span class="math notranslate nohighlight">\(v\)</span> of an object is basically defined by ratio of the distance <span class="math notranslate nohighlight">\(d\)</span> it has traveled with the travel time <span class="math notranslate nohighlight">\(t\)</span>, or</p>
 <div class="math notranslate nohighlight">
 \[ v = \frac{d}{t}. \]</div>
@@ -597,7 +618,7 @@ v_c = \sqrt{\frac{GM}{r}},
 <p>Moreover, it should give us insight into why we want to have Moon bases/gateways for Solar System exploration.  Getting to a lunar orbit (orbiting around the Moon) requires less velocity than getting to an equivalent Earth orbit (e.g., <a class="reference external" href="https://en.wikipedia.org/wiki/Low_Earth_orbit">LEO</a>).  <strong>Less velocity translates into less fuel required!</strong></p>
 </section>
 <section id="escape-velocity">
-<h3><span class="section-number">4.2.2. </span>Escape Velocity<a class="headerlink" href="#escape-velocity" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.2.2. </span>Escape Velocity<a class="headerlink" href="#escape-velocity" title="Link to this heading">#</a></h3>
 <p>Sending a spacecraft to another planet (e.g., Mars) requires launching with a speed that is greater than the escape velocity <span class="math notranslate nohighlight">\(v_{\rm esc}\)</span>.  The escape velocity is determined as the speed which all of the gravitational potential energy is transformed into kinetic energy.  We can determine this by setting the two energy equal to each other, or</p>
 <div class="math notranslate nohighlight">
 \[ \frac{GMm}{r} = \frac{1}{2}mv_{\rm esc}^2, \]</div>
@@ -616,15 +637,15 @@ v_{\rm esc} = \sqrt{\frac{2GM}{r}}.
 \[ \frac{v_c}{v_c^{\rm Earth}} = \sqrt{\frac{GM}{R}} \times \sqrt{\frac{R_\oplus}{GM_\oplus}} = \sqrt{\left(\frac{M}{M_\oplus}\right)\left(\frac{R_\oplus}{R}\right)}. \]</div>
 </section>
 <section id="center-of-mass">
-<h3><span class="section-number">4.2.3. </span>Center of Mass<a class="headerlink" href="#center-of-mass" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.2.3. </span>Center of Mass<a class="headerlink" href="#center-of-mass" title="Link to this heading">#</a></h3>
 <p>When two objects are closer to having the same mass (e.g., the stellar binary <a class="reference external" href="https://en.wikipedia.org/wiki/Alpha_Centauri">Alpha Centuri AB</a>), both objects experience an acceleration due to one another’s gravity.  This changes their path from a straight line so that the <em>fall</em> along a curve with a common point called the <a class="reference external" href="https://en.wikipedia.org/wiki/Center_of_mass#Astronomy"><strong>center of mass</strong></a>.</p>
 <p><a class="reference internal" href="https://upload.wikimedia.org/wikipedia/commons/5/59/Orbit3.gif"><img alt="Picture" src="https://upload.wikimedia.org/wikipedia/commons/5/59/Orbit3.gif" style="width: 400px;" /></a></p>
 </section>
 </section>
 <section id="calculating-mass-from-orbital-periods">
-<h2><span class="section-number">4.3. </span>Calculating Mass from Orbital Periods<a class="headerlink" href="#calculating-mass-from-orbital-periods" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.3. </span>Calculating Mass from Orbital Periods<a class="headerlink" href="#calculating-mass-from-orbital-periods" title="Link to this heading">#</a></h2>
 <section id="newton-s-version-of-kepler-s-third-law">
-<h3><span class="section-number">4.3.1. </span>Newton’s Version of Kepler’s Third Law<a class="headerlink" href="#newton-s-version-of-kepler-s-third-law" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.3.1. </span>Newton’s Version of Kepler’s Third Law<a class="headerlink" href="#newton-s-version-of-kepler-s-third-law" title="Link to this heading">#</a></h3>
 <p>The orbital (sidereal) period <span class="math notranslate nohighlight">\(P\)</span> is the time for a planet to return to the same location in space, or complete one orbit.  Let’s assume a circular orbit for simplicity.  The distance traveled along the orbit is the circumference of a circle, or <span class="math notranslate nohighlight">\(d = 2\pi r\)</span>.  In this case the circle’s radius is the semimajor axis <span class="math notranslate nohighlight">\(a\)</span>, where <span class="math notranslate nohighlight">\(d = 2\pi a\)</span>.</p>
 <p>Recall the formula for the circular velocity, where we also substitute <span class="math notranslate nohighlight">\(r = a\)</span> to get</p>
 <div class="math notranslate nohighlight">
@@ -645,7 +666,7 @@ v_{\rm esc} = \sqrt{\frac{2GM}{r}}.
 <p><strong>Remember the units are years, AU, and solar masses for this formula.</strong>  You must convert to years, AU, and solar masses, if the given values have different units (e.g., days, meters, kg).</p>
 </section>
 <section id="mass-of-the-jupiter">
-<h3><span class="section-number">4.3.2. </span>Mass of the Jupiter<a class="headerlink" href="#mass-of-the-jupiter" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.3.2. </span>Mass of the Jupiter<a class="headerlink" href="#mass-of-the-jupiter" title="Link to this heading">#</a></h3>
 <p>If we can measure the size and period of any orbit, then Newton’s version of Kepler’s 3rd law can be used to measure the mass of the central body.  To do so, we just need to re-arrange the formula so that the mass <span class="math notranslate nohighlight">\(M\)</span> is the dependent variable:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -688,7 +709,7 @@ M &amp;= \frac{\left(4.48 \times 10^{-3}\ {\rm AU}\right)^3}{\left(9.72 \times 1
 </section>
 </section>
 <section id="tidal-forces">
-<h2><span class="section-number">4.4. </span>Tidal Forces<a class="headerlink" href="#tidal-forces" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.4. </span>Tidal Forces<a class="headerlink" href="#tidal-forces" title="Link to this heading">#</a></h2>
 <p>The strength of the gravitational force depends on the mass and the square of the distance between them.  However, the strength of the tidal force depends on the mass and <strong>the cube</strong> of the distance between them.  Therefore the tidal force acts over much shorter ranges because as the distance increases the tidal force strength decreases rapidly.</p>
 <p>The equation of the tidal force comes from the difference of the gravitational force on <em>one side</em> of a body compared with the <em>other side</em>.  We can approximate the tidal force of the Moon acting on a mass on Earth’s surface by</p>
 <div class="math notranslate nohighlight">
@@ -760,8 +781,8 @@ M &amp;= \frac{\left(4.48 \times 10^{-3}\ {\rm AU}\right)^3}{\left(9.72 \times 1
               
               
               
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                <footer class="prev-next-footer d-print-none">
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="motion-astronomical-bodies.html"
@@ -789,6 +810,7 @@ M &amp;= \frac{\left(4.48 \times 10^{-3}\ {\rm AU}\right)^3}{\left(9.72 \times 1
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -835,6 +857,7 @@ By Billy Quarles
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -861,8 +884,8 @@ By Billy Quarles
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
