@@ -503,30 +503,30 @@ document.write(`
 <section class="tex2jax_ignore mathjax_ignore" id="atmosphere-retention">
 <h1><span class="section-number">10. </span>Atmosphere Retention<a class="headerlink" href="#atmosphere-retention" title="Link to this heading">#</a></h1>
 <p>Planets hold onto their atmosphere through their own gravity.  We can estimate a planet’s ability to hold onto its atmosphere by comparing the average speed of particles in a gas to the escape velocity from the planet (see <a class="reference external" href="https://saturnaxis.github.io/IntroAstro/Tutorials/gravity-and-orbits.html#escape-velocity">4.2.2</a>).  The escape velocity is given as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7d7a5fe7-17d4-49bc-8185-dddc2ecb2087">
-<span class="eqno">(10.1)<a class="headerlink" href="#equation-7d7a5fe7-17d4-49bc-8185-dddc2ecb2087" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-648b3db1-f7cd-4e93-8206-ffaf4848075a">
+<span class="eqno">(10.1)<a class="headerlink" href="#equation-648b3db1-f7cd-4e93-8206-ffaf4848075a" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{\rm esc} &amp;= \sqrt{\frac{2GM}{R}},
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(M\)</span> is the mass of the planet and <span class="math notranslate nohighlight">\(R\)</span> is the distance from the center (often just the planetary radius).  The units of <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(R\)</span> depend on the choice of <span class="math notranslate nohighlight">\(G\)</span> (the Universal Gravitational constant).  However, we can rewrite the above equation in terms of parameters for the Earth as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6de00bbe-e977-4cc3-8cee-2aa0e451aa77">
-<span class="eqno">(10.2)<a class="headerlink" href="#equation-6de00bbe-e977-4cc3-8cee-2aa0e451aa77" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f600156b-bdc9-497c-b16b-5f2e42b3dd74">
+<span class="eqno">(10.2)<a class="headerlink" href="#equation-f600156b-bdc9-497c-b16b-5f2e42b3dd74" title="Permalink to this equation">#</a></span>\[\begin{align}
 v^\prime_{\rm esc} &amp;= \frac{v_{\rm esc}}{v_{\rm esc}^{\rm Earth}} &amp;= \sqrt{\frac{M}{M_\oplus}\left(\frac{R_\oplus}{R}\right)^2},
 \end{align}\]</div>
 <p>where we just need to know the escape velocity of the Earth (<span class="math notranslate nohighlight">\(v_{\rm esc}^{\rm Earth} \sim 11\ {\rm km/s}\)</span>) if we need more standard units.</p>
-<p>The temperature <span class="math notranslate nohighlight">\(T\)</span> of a gas is proportional to the kinetic energy of the particles <span class="math notranslate nohighlight">\((KE=1/2\ mv^2)\)</span>.  The average kinetic energy <span class="math notranslate nohighlight">\(\bar{KE}\)</span> for a gas is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-55446f26-b865-47de-89ea-ad7e5db7bf44">
-<span class="eqno">(10.3)<a class="headerlink" href="#equation-55446f26-b865-47de-89ea-ad7e5db7bf44" title="Permalink to this equation">#</a></span>\[\begin{align}
-\bar{KE} =\frac{3}{2}kT,
+<p>The temperature <span class="math notranslate nohighlight">\(T\)</span> of a gas is proportional to the kinetic energy of the particles <span class="math notranslate nohighlight">\((KE=1/2\ mv^2)\)</span>.  The average kinetic energy <span class="math notranslate nohighlight">\(\overline{KE}\)</span> for a gas is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4aeaa630-0fbe-4191-9c46-e63757a8c713">
+<span class="eqno">(10.3)<a class="headerlink" href="#equation-4aeaa630-0fbe-4191-9c46-e63757a8c713" title="Permalink to this equation">#</a></span>\[\begin{align}
+\overline{KE} =\frac{3}{2}kT,
 \end{align}\]</div>
-<p>where <span class="math notranslate nohighlight">\(k\)</span> represents the <a class="reference external" href="https://en.wikipedia.org/wiki/Boltzmann_constant">Boltzmann constant</a>.  Using the average squared velocity <span class="math notranslate nohighlight">\(\bar{v^2}\)</span> for the kinetic energy <span class="math notranslate nohighlight">\(KE\)</span>, we can equate these two energies through</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0e253c0e-68dc-4075-93c6-7901d439828a">
-<span class="eqno">(10.4)<a class="headerlink" href="#equation-0e253c0e-68dc-4075-93c6-7901d439828a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<p>where <span class="math notranslate nohighlight">\(k\)</span> represents the <a class="reference external" href="https://en.wikipedia.org/wiki/Boltzmann_constant">Boltzmann constant</a>.  Using the average squared velocity <span class="math notranslate nohighlight">\(\overline{v^2}\)</span> for the kinetic energy <span class="math notranslate nohighlight">\(KE\)</span>, we can equate these two energies through</p>
+<div class="amsmath math notranslate nohighlight" id="equation-bc61640d-102a-409e-9d9a-c484dee0a0c1">
+<span class="eqno">(10.4)<a class="headerlink" href="#equation-bc61640d-102a-409e-9d9a-c484dee0a0c1" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{1}{2}m\bar{v^2} &amp;= \frac{3}{2}kT, \\
-\bar{v^2} &amp;= \frac{3kT}{m}.
+\overline{v^2} &amp;= \frac{3kT}{m}.
 \end{align}\]</div>
 <p>We can then arrive at an expression for the velocity of a gas molecule as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f6e73043-fd90-44b0-9259-50d4cc197613">
-<span class="eqno">(10.5)<a class="headerlink" href="#equation-f6e73043-fd90-44b0-9259-50d4cc197613" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0612074b-3f78-4d84-9cd2-695d87555dce">
+<span class="eqno">(10.5)<a class="headerlink" href="#equation-0612074b-3f78-4d84-9cd2-695d87555dce" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{\rm molecule} = \sqrt{\frac{3kT}{m}}.
 \end{align}\]</div>
 </section>
