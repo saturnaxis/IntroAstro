@@ -73,6 +73,8 @@
                 gtag('config', 'G-TQDV8M90DP');
             </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorials/giant-planets';</script>
     <link rel="canonical" href="https://saturnaxis.github.io/IntroAstro/Tutorials/giant-planets.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -457,7 +459,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -473,6 +477,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measuring-wind-speeds-on-different-planets">10.1. Measuring Wind Speeds on Different Planets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-thermal-energy-heats-the-giant-planets">10.2. Internal Thermal Energy Heats the Giant Planets</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -484,6 +497,53 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="worlds-of-gas-and-liquid-the-giant-planets">
 <h1><span class="section-number">10. </span>Worlds of Gas and Liquid – The Giant Planets<a class="headerlink" href="#worlds-of-gas-and-liquid-the-giant-planets" title="Link to this heading">#</a></h1>
+<section id="measuring-wind-speeds-on-different-planets">
+<h2><span class="section-number">10.1. </span>Measuring Wind Speeds on Different Planets<a class="headerlink" href="#measuring-wind-speeds-on-different-planets" title="Link to this heading">#</a></h2>
+<p><em>How do you measure the rotation of another planet?</em></p>
+<p>It depends on the planet.  On Mars, we could measure its rotation using a visible landmark.  However, this wasn’t possible on Venus due to the hazy cloud layer.  Astronomers didn’t have an accurate measure of Venus’ rotation until the 1960s, where radar was needed to penetrate the cloud layers and the Doppler effect provided the true answer.</p>
+<p>The gas giants are very far away, so using radar may not be an option.  For some of the giant planets, we can use features of their atmospheres as “landmarks”.  Jupiter and Neptune have large, conspicuous hurricanes (e.g., Great Red Spot and Great Dark Spot) that persist for a very long time.  We can measure how long it takes for these storms to appear and disappear.</p>
+<p>Another (more accurate) method to measure rotation is by using the Doppler effect to analyze planetary spectra in the infrared.  The giant planets are emit their own light in the form of heat.  The Sun emits in the infrared but the amount reflected by the giant planet atmospheres is small compared to the light emitted by the planets themselves.  Therefore, we can use the redshift and blueshift changes in the planet’s spectrum to give us another measure of the planet’s rotation.</p>
+<p>For this example, we assume that we know the radius of the planet in question.  With this <em>prior</em> knowledge, we can find the speed of the surface features.  Consider a small cloud in Neptune’s atmosphere that is different enough in composition to have a contrasting color.  The cloud is measured on the eastern most edge (i.e., limb) of the atmosphere.  About 13.5 hours later you see that the cloud has moved <span class="math notranslate nohighlight">\(1/4\)</span> of the way across the disk of Neptune.  <strong>What is the wind speed at the equator?</strong></p>
+<p>We know that <span class="math notranslate nohighlight">\(\text{speed} = \text{distance}/\text{time}\)</span>.  Therefore, let’s estimate how far the cloud has moved.  Initially, it was initially measured at the eastern limb and later measured <span class="math notranslate nohighlight">\(1/4\)</span> of the way across the disk.  <em>How do we translate this into a fraction?</em></p>
+<ul class="simple">
+<li><p>For the cloud to move back to the same position, it moves along the circumference of a circle (i.e., <span class="math notranslate nohighlight">\(360^\circ\)</span>).</p></li>
+<li><p>If the cloud moves from the eastern limb to the western limb, then it has traversed half-way around the circle (or <span class="math notranslate nohighlight">\(180^\circ\)</span>).</p></li>
+</ul>
+<p>One-quarter of the way across the disk <span class="math notranslate nohighlight">\(\rightarrow (1/4)\times (1/2) = 1/8\)</span>.</p>
+<p>Now we just need to determine the circumference of the Neptune.  It’s equatorial radius is <span class="math notranslate nohighlight">\(24,300\ {\rm km}\)</span>, which means we calculate the circumference as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1012ad18-ad03-4619-8921-a7e2d9005a5d">
+<span class="eqno">(10.1)<a class="headerlink" href="#equation-1012ad18-ad03-4619-8921-a7e2d9005a5d" title="Permalink to this equation">#</a></span>\[\begin{align}
+C = 2\pi r = 2\pi \times (24,300\ {\rm km}) = 152,700\ {\rm km}.
+\end{align}\]</div>
+<p>Then we can determine how far the cloud has moved as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9a463546-9dc8-4e90-bc97-5cfa1d2da5a3">
+<span class="eqno">(10.2)<a class="headerlink" href="#equation-9a463546-9dc8-4e90-bc97-5cfa1d2da5a3" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{1}{8} \times 152,700\ {\rm km} = 19,090\ {\rm km}.
+\end{align}\]</div>
+<p>Therefore the wind speed is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-561c0de5-630d-48d8-8cac-a9a3cc38b19e">
+<span class="eqno">(10.3)<a class="headerlink" href="#equation-561c0de5-630d-48d8-8cac-a9a3cc38b19e" title="Permalink to this equation">#</a></span>\[\begin{align}
+\text{speed} &amp;= \frac{\text{distance traveled}}{\text{time}} \\
+&amp;= \frac{19,090\ {\rm km}}{13.5\ {\rm h}} = 1414\ \frac{\rm km}{\rm h} \\
+&amp;= 393\ {\rm m/s}.
+\end{align}\]</div>
+<p>The equatorial winds are very strong and blow in a direction opposite to the planet’s rotation.  We know this because the planetary rotation period of Neptune is about 16 hours, where this cloud moved a much shorter distance than would be expected if it was just rotating with the planet.  On Earth, the much slower equivalents of those winds are called trade winds.</p>
+</section>
+<section id="internal-thermal-energy-heats-the-giant-planets">
+<h2><span class="section-number">10.2. </span>Internal Thermal Energy Heats the Giant Planets<a class="headerlink" href="#internal-thermal-energy-heats-the-giant-planets" title="Link to this heading">#</a></h2>
+<p>We can measure the infrared (or thermal) energy emitted by the giant planets.  When doing so, we find that they are not in equilibrium (i.e., the measured value does not match the expected value).  If we used the calculations from <a class="reference external" href="https://saturnaxis.github.io/IntroAstro/Tutorials/light.html">Chapter 5</a> for Jupiter, it should be <span class="math notranslate nohighlight">\(109\ {\rm K}\)</span>, but the average temperature is instead <span class="math notranslate nohighlight">\(124\ {\rm K}\)</span>.</p>
+<p>This may not seem like much of a difference, but recall that the Stefan-Boltzmann law scales with the temperature to the <strong>fourth power</strong>.  Comparing the actual versus expected temperature using the Stefan-Boltzmann Law, we get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c9807c1e-00d3-4332-9fef-8e6b9a04c116">
+<span class="eqno">(10.4)<a class="headerlink" href="#equation-c9807c1e-00d3-4332-9fef-8e6b9a04c116" title="Permalink to this equation">#</a></span>\[\begin{align}
+\left(\frac{T_{\rm actual}}{T_{\rm expected}}\right)^4 = \left(\frac{124\ {\rm K}}{109\ {\rm K}}\right)^4 = 1.67.
+\end{align}\]</div>
+<p>This result implies that Jupiter is emitting (or radiating) roughly <span class="math notranslate nohighlight">\(2/3\)</span> more energy into space than it absorbs from sunlight.  Neptune emits <span class="math notranslate nohighlight">\(2.6\times\)</span> more energy than it absorbs from the Sun.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Stefan-Boltzmann Law is actually proportional to <span class="math notranslate nohighlight">\(R^2 T^4\)</span>, but the ratio compares Jupiter relative to itself under two scenarios.  This means that the <span class="math notranslate nohighlight">\(R^2\)</span> term cancels, leaving only a temperature ratio to the fourth power.</p>
+</div>
+<p>Planets that emit/absorb more energy than the receive from the Sun are not in equilibrium.  In the case of the giant planets, they are slowly contracting, which generates more heat.  The internal energy escaping from Uranus is smaller than the solar energy the planet absorbs.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -540,6 +600,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measuring-wind-speeds-on-different-planets">10.1. Measuring Wind Speeds on Different Planets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-thermal-energy-heats-the-giant-planets">10.2. Internal Thermal Energy Heats the Giant Planets</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
