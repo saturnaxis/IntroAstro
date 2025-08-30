@@ -499,8 +499,8 @@ document.write(`
 <section id="atmosphere-retention">
 <h2><span class="section-number">9.1. </span>Atmosphere Retention<a class="headerlink" href="#atmosphere-retention" title="Link to this heading">#</a></h2>
 <p>Planets hold onto their atmosphere through their own gravity.  We can estimate a planet’s ability to hold onto its atmosphere by comparing the average speed of particles in a gas to the escape velocity from the planet (see <a class="reference external" href="https://saturnaxis.github.io/IntroAstro/Tutorials/gravity-and-orbits.html#escape-velocity">4.2.2</a>).  The escape velocity is given as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c6c87f50-f6ec-43f9-b5e6-73e8f3ee2ea3">
-<span class="eqno">(9.1)<a class="headerlink" href="#equation-c6c87f50-f6ec-43f9-b5e6-73e8f3ee2ea3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-059aa296-f232-4ec7-9478-66200f753db8">
+<span class="eqno">(9.1)<a class="headerlink" href="#equation-059aa296-f232-4ec7-9478-66200f753db8" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{\rm esc} &amp;= \sqrt{\frac{2GM}{R}},
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(M\)</span> is the mass of the planet and <span class="math notranslate nohighlight">\(R\)</span> is the distance from the center (often just the planetary radius).  The units of <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(R\)</span> depend on the choice of <span class="math notranslate nohighlight">\(G\)</span> (the Universal Gravitational constant).  However, we can rewrite the above equation in terms of parameters for the Earth as</p>
@@ -521,8 +521,8 @@ v^\prime_{\rm esc} &amp;= \frac{v_{\rm esc}}{v_{\rm esc}^{\rm Earth}} &amp;= \sq
 \overline{v^2} &amp;= \frac{3kT}{m}.
 \end{align*}\]</div>
 <p>We can then arrive at an expression for the velocity of a gas molecule as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6ed76c5d-5ac0-46a3-9791-4d4086ebd4fa">
-<span class="eqno">(9.2)<a class="headerlink" href="#equation-6ed76c5d-5ac0-46a3-9791-4d4086ebd4fa" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b477037c-79df-4fe2-ba62-638d7429fde5">
+<span class="eqno">(9.2)<a class="headerlink" href="#equation-b477037c-79df-4fe2-ba62-638d7429fde5" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{\rm molecule} = \sqrt{\frac{3kT}{m}}.
 \end{align}\]</div>
 <p>The temperature <span class="math notranslate nohighlight">\(T\)</span> is measured in <strong>Kelvin</strong>, where the mass <span class="math notranslate nohighlight">\(m\)</span> of the molecule is measured in kilograms (<strong>kg</strong>).  There are no tricks here because of the Bolztmann constant <span class="math notranslate nohighlight">\(k = 1.38 \times 10^{-23}\ {\rm J/K}\)</span>.</p>
@@ -556,8 +556,8 @@ v_{\rm molecule} = \sqrt{\frac{3kT}{m}}.
 </table>
 </div>
 <p>The mass of a hydrogen atom is <span class="math notranslate nohighlight">\(m_H = 1.67 \times 10^{-27}\ {\rm kg}\)</span>, where we can simply multiply the molecular mass by <span class="math notranslate nohighlight">\(m_H\)</span> to arrive at the mass of the molecule.  However, we don’t need to do this for every calculation, instead we can write</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3f7c1d16-facd-4c51-acac-685d2e96c742">
-<span class="eqno">(9.3)<a class="headerlink" href="#equation-3f7c1d16-facd-4c51-acac-685d2e96c742" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1ad15ab3-abf8-434c-b7e1-a5c1e5ec2256">
+<span class="eqno">(9.3)<a class="headerlink" href="#equation-1ad15ab3-abf8-434c-b7e1-a5c1e5ec2256" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{\rm molecule} &amp;= \sqrt{\frac{3k}{m_H}}\sqrt{\frac{T}{\text{Molecular Mass}}} \\
 &amp;= (157\ {\rm m/s})\sqrt{\frac{T}{\text{Molecular Mass}}} \\
 &amp;= (0.157\ {\rm km/s})\sqrt{\frac{T}{\text{Molecular Mass}}} .
@@ -576,8 +576,8 @@ v_{\rm molecule} &amp;= \sqrt{\frac{3k}{m_H}}\sqrt{\frac{T}{\text{Molecular Mass
 <div class="math notranslate nohighlight">
 \[ v_{\rm molecule} = (0.157\ {\rm km/s}) \times \sqrt{\frac{1400}{2.016}} = 4.14\ {\rm km/s}.\]</div>
 <p>The Earth’s escape velocity at the surface is <span class="math notranslate nohighlight">\(v_{\rm esc} \sim 11\ {\rm km/s}\)</span> and a general rule is that the average speed needs to be less than <span class="math notranslate nohighlight">\(1/6\ v_{\rm esc}\)</span>, or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9b190d66-ce92-4004-848a-5d807eed1b64">
-<span class="eqno">(9.4)<a class="headerlink" href="#equation-9b190d66-ce92-4004-848a-5d807eed1b64" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cc923c13-beca-44ae-8152-915f10b4057e">
+<span class="eqno">(9.4)<a class="headerlink" href="#equation-cc923c13-beca-44ae-8152-915f10b4057e" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{\rm molecule} \leq \frac{1}{6}v_{\rm esc} 
 \end{align}\]</div>
 <p>to remain bound to the Earth over the lifetime of the Solar System.  This limit on gas speed is <span class="math notranslate nohighlight">\(1.83\ {\rm km/s}\)</span> for the Earth.  At either temperature, the average speed of molecular hydrogen gas is larger than the limiting speed.  Therefore, molecular hydrogen gas can escape the Earth after it reaches the upper atmosphere.</p>
