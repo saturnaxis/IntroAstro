@@ -501,25 +501,25 @@ document.write(`
 <section id="using-moons-to-compute-the-mass-of-a-planet">
 <h2><span class="section-number">11.1. </span>Using Moons to Compute the Mass of a Planet<a class="headerlink" href="#using-moons-to-compute-the-mass-of-a-planet" title="Link to this heading">#</a></h2>
 <p>Recall from <a class="reference external" href="https://saturnaxis.github.io/IntroAstro/Tutorials/gravity-and-orbits.html#mass-of-the-jupiter">Chapter 4</a>, we used the orbital motion of Europa to calculate the mass of Jupiter.  We used the following equation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-23c18513-d0d3-4fbe-8cac-b65d7d82905d">
-<span class="eqno">(11.1)<a class="headerlink" href="#equation-23c18513-d0d3-4fbe-8cac-b65d7d82905d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bd2817bb-40cc-4512-8c8b-166344de010e">
+<span class="eqno">(11.1)<a class="headerlink" href="#equation-bd2817bb-40cc-4512-8c8b-166344de010e" title="Permalink to this equation">#</a></span>\[\begin{align}
 M = \frac{4\pi^2}{G} \times \frac{a^3}{P^2},
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(a\)</span> is the semimajor axis, <span class="math notranslate nohighlight">\(P\)</span> is the orbital period, and <span class="math notranslate nohighlight">\(M\)</span> is the mass of the central body.  If we choose to measure <span class="math notranslate nohighlight">\(a\)</span> in AU, <span class="math notranslate nohighlight">\(P\)</span> in years, and <span class="math notranslate nohighlight">\(M\)</span> in <span class="math notranslate nohighlight">\(M_\odot\)</span>, then <span class="math notranslate nohighlight">\(G = 4\pi^2\)</span>.  Then the equation becomes simpler,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fb123bcc-f948-4bd5-8130-c2524c3a1820">
-<span class="eqno">(11.2)<a class="headerlink" href="#equation-fb123bcc-f948-4bd5-8130-c2524c3a1820" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2b1a4fae-8b77-4437-8157-a9a964cea317">
+<span class="eqno">(11.2)<a class="headerlink" href="#equation-2b1a4fae-8b77-4437-8157-a9a964cea317" title="Permalink to this equation">#</a></span>\[\begin{align}
 M = \frac{a^3}{P^2}.
 \end{align}\]</div>
 <p>This equation was used to determine the mass of Pluto with greater accuracy.  Prior to the discovery of Charon, Pluto’s mass was estimated based on its brightness.  But with a newly discovered moon, the mass could be determined more precisely using the orbital motion of Charon.</p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Charon_(moon)">Charon</a> has an orbital (sidereal) period of 6.387 days and a semimajor axis of about <span class="math notranslate nohighlight">\(16.5\)</span> Pluto radii.  Pluto’s radius is about 0.185 times the radius of Earth.  We need to first do some unit conversions before getting down to business:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b0dcff7b-7527-4598-bd23-68080137162f">
-<span class="eqno">(11.3)<a class="headerlink" href="#equation-b0dcff7b-7527-4598-bd23-68080137162f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1dae0de3-26fd-4513-b02c-1a9c41682d0c">
+<span class="eqno">(11.3)<a class="headerlink" href="#equation-1dae0de3-26fd-4513-b02c-1a9c41682d0c" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{6.387\ {\rm days}}{1} \times \frac{1\ {\rm yr}}{365.25\ {\rm days}} &amp;= 0.0175\ {\rm yr}, \\
-\frac{17\ R_{\rm Pl}}{1} \times \frac{0.185\ R_\oplus}{1\ R_{\rm Pl} } \times \frac{4.264 \times 10^{-5}\ {\rm AU}}{1\ R_\oplus} &amp;= 1.302 \times 10^{-4}\ {\rm AU}.
+\frac{16.5\ R_{\rm Pl}}{1} \times \frac{0.185\ R_\oplus}{1\ R_{\rm Pl} } \times \frac{4.264 \times 10^{-5}\ {\rm AU}}{1\ R_\oplus} &amp;= 1.302 \times 10^{-4}\ {\rm AU}.
 \end{align}\]</div>
 <p>Since we have the semimajor axis in AU and orbital period in years, then we can apply our version of Kepler’s 3rd Law.  The mass of Pluto is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-16009561-97c0-40e9-8910-8705cc458aa6">
-<span class="eqno">(11.4)<a class="headerlink" href="#equation-16009561-97c0-40e9-8910-8705cc458aa6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-293cc004-7340-4f1d-bca3-04c0865d5885">
+<span class="eqno">(11.4)<a class="headerlink" href="#equation-293cc004-7340-4f1d-bca3-04c0865d5885" title="Permalink to this equation">#</a></span>\[\begin{align}
 M_{\rm Pl} = \frac{a^3}{P^2} = \frac{\left( 1.302 \times 10^{-4}\right)^3}{\left(0.0175\ {\rm yr} \right)^2} = 7.21 \times 10^{-9}\ M_\odot.
 \end{align}\]</div>
 <div class="admonition note">
@@ -527,14 +527,14 @@ M_{\rm Pl} = \frac{a^3}{P^2} = \frac{\left( 1.302 \times 10^{-4}\right)^3}{\left
 <p>Recall from <a class="reference external" href="https://saturnaxis.github.io/IntroAstro/Tutorials/thinking-like-astronomer.html#mathematical-tools">Chapter 1</a> that this calculation can be made easier (i.e., fewer parentheses) to enter in the calculator by using the <code class="docutils literal notranslate"><span class="pre">EE</span></code> button.</p>
 </div>
 <p>Pluto’s mass is very small compared to the Sun.  However, we can convert the value to instead compare to the Earth’s mass or even the Moon’s mass (<span class="math notranslate nohighlight">\(M_{\rm Moon}\)</span>), by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-281f1546-07dd-4824-96cd-0c086191e14c">
-<span class="eqno">(11.5)<a class="headerlink" href="#equation-281f1546-07dd-4824-96cd-0c086191e14c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-90b9634b-ea88-4e09-adb0-49a7e62bf0c7">
+<span class="eqno">(11.5)<a class="headerlink" href="#equation-90b9634b-ea88-4e09-adb0-49a7e62bf0c7" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{7.21 \times 10^{-9}\ M_\odot}{1} \times \frac{1\ M_\oplus}{3.03 \times 10^{-6} M_\odot} &amp;= 2.4 \times 10^{-3} M_\oplus, \\
 \frac{2.4 \times 10^{-3} M_\oplus}{1} \times \frac{1\ M_{\rm Moon}}{0.0123 M_\oplus} &amp;= 0.195\ M_{\rm Moon}.
 \end{align}\]</div>
 <p>We find that Pluto’s mass is about <span class="math notranslate nohighlight">\(19.5\%\)</span> of our Moon’s mass.  This isn’t completely correct, rather the combined mass of Pluto and Charon (<span class="math notranslate nohighlight">\(M_{\rm Pl} + M_{\rm Ch}\)</span>) is <span class="math notranslate nohighlight">\(19.5\%\)</span> of our Moon’s mass.  To get Pluto’s mass, we need to perform a separate experiment to identify Charon’s mass relative to Pluto.  Since Charon eclipses Pluto periodically, we can determine the mass ratio <span class="math notranslate nohighlight">\(M_{\rm Ch}/M_{\rm Pl} = 0.122\)</span> from a combination of spectra and photometry.  Transforming what we know in terms of this ratio, we get</p>
-<div class="amsmath math notranslate nohighlight" id="equation-17deb145-a216-4a30-8e05-e97cd5287422">
-<span class="eqno">(11.6)<a class="headerlink" href="#equation-17deb145-a216-4a30-8e05-e97cd5287422" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-11e632a5-dcd7-4b63-bc23-5548641ba0eb">
+<span class="eqno">(11.6)<a class="headerlink" href="#equation-11e632a5-dcd7-4b63-bc23-5548641ba0eb" title="Permalink to this equation">#</a></span>\[\begin{align}
 M_{\rm Pl} + M_{\rm Ch} &amp;= 0.195\ M_{\rm Moon}, \\
 M_{\rm Pl} \left(1+\frac{M_{\rm Ch}}{M_{\rm Pl}} \right) &amp;= 0.195\ M_{\rm Moon},
 M_{\rm Pl} &amp;= \frac{0.195}{1+0.122}\ M_{\rm Moon}, \\
@@ -590,15 +590,15 @@ Pluto&#39;s mass relative to Earth&#39;s moon is: 0.174
 <p>Recall from <a class="reference external" href="https://saturnaxis.github.io/IntroAstro/Tutorials/gravity-and-orbits.html#tidal-forces">4.4 Tidal Forces</a>, we compared the tidal forces on the Earth due to the Sun and the Moon.  A similar logic/equation can be applied to compare the tidal forces from Jupiter acting on Io or Europa.  Starting from</p>
 <p><span class="math notranslate nohighlight">\(F_{\rm tidal}({\rm moon}) = 2\left(\frac{GM_{\rm Jup}m}{d^2_{\rm Jupiter-moon}}\right)\left(\frac{R_{\rm moon}}{d_{\rm Jupiter-moon}}\right), \)</span></p>
 <p>where we substituted <span class="math notranslate nohighlight">\({\rm Moon} \rightarrow {\rm moon}\)</span> to indicate that we are calculating the tidal force for a mass <span class="math notranslate nohighlight">\(m\)</span> on the respective moon (Io or Europa).  The central body in this case is Jupiter instead of the Earth.  Now we can compare the relative tidal strengths on each of the two moons:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c61b8910-66bd-49fb-b3ec-9661d6632efa">
-<span class="eqno">(11.7)<a class="headerlink" href="#equation-c61b8910-66bd-49fb-b3ec-9661d6632efa" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cc91283f-b742-4b13-86a9-d11e3a9cd939">
+<span class="eqno">(11.7)<a class="headerlink" href="#equation-cc91283f-b742-4b13-86a9-d11e3a9cd939" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{F_{\rm tidal}({\rm Io})}{F_{\rm tidal}({\rm Europa})} &amp;= 2\left(\frac{GM_{\rm Jup}m}{d_{\rm Jup-Io}^2}\right) \left(\frac{R_{\rm Io}}{d_{\rm Jup-Io}}\right) \times \frac{1}{2} \left(\frac{d_{\rm Jup-Europa}^2}{GM_{\rm Jup} m}\right) \left(\frac{d_{\rm Jup-Europa}}{R_{\rm Europa}}\right), \\
 &amp;=\left(\frac{R_{\rm Io}}{R_{\rm Europa}}\right) \times  \left(\frac{d_{\rm Jup-Europa}}{d_{\rm Jup-Io}}\right)^3.
 \end{align}\]</div>
 <p>Therefore, we need to know the radius and distance ratio of the the two moons to determine how much stronger/weaker is the tidal force from Jupiter on each.  We can find the mean radius of Io (<span class="math notranslate nohighlight">\(R_{\rm Io} = 1821.49\ {\rm km}\)</span>) and Europa (<span class="math notranslate nohighlight">\(R_{\rm Europa} = 1560.80\ {\rm km}\)</span>) tabulated by <a class="reference external" href="https://ssd.jpl.nasa.gov/sats/phys_par/">NASA JPL</a>.  The semimajor axes for Io and Europa are tabulated in Appendix 4 of the textbook, which are <span class="math notranslate nohighlight">\(422,000\ {\rm km}\)</span> and <span class="math notranslate nohighlight">\(671,000\ {\rm km}\)</span>, respectively.</p>
 <p>We find the relative tidal force between Io and Europa by,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-346e0b9c-906a-424d-8284-4200f6a26096">
-<span class="eqno">(11.8)<a class="headerlink" href="#equation-346e0b9c-906a-424d-8284-4200f6a26096" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b2539057-d595-4e5c-b532-8edab12ff222">
+<span class="eqno">(11.8)<a class="headerlink" href="#equation-b2539057-d595-4e5c-b532-8edab12ff222" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{F_{\rm tidal}({\rm Io})}{F_{\rm tidal}({\rm Europa})} = \left(\frac{1821.49\ {\rm km}}{1560.80\ {\rm km}}\right) \times  \left(\frac{671,000\ {\rm km}}{422,000\ {\rm km}}\right)^3 = 4.69.
 \end{align}\]</div>
 <p>This, the tidal forces on Io are <span class="math notranslate nohighlight">\(4.69\times\)</span> stronger than those on Europa.</p>
@@ -626,20 +626,20 @@ Pluto&#39;s mass relative to Earth&#39;s moon is: 0.174
 <p>Rings are not forever, where they disspate over time through a process called viscous spreading.  The rings act like a slowly moving fluid where the expand outward and inward due to collisions between ring particles. <code class="docutils literal notranslate"><span class="pre">Recall</span> <span class="pre">from</span> <span class="pre">Chapter</span> <span class="pre">7</span> <span class="pre">this</span> <span class="pre">was</span> <span class="pre">part</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">reason</span> <span class="pre">that</span> <span class="pre">protoplanetary</span> <span class="pre">disks</span> <span class="pre">form</span> <span class="pre">at</span> <span class="pre">all.</span></code> Think of a pizza dough that you keep spinning, where it stretches out and becomes thinner over time.</p>
 <p>We’ve seen that some ring material can be kept in place through <code class="docutils literal notranslate"><span class="pre">shepherding</span> <span class="pre">moons</span></code>.  Another way to replenish the rings is through material that continually escapes from a nearby moon.  Io’s volcanic eruptions feeds material into a plasma torus that surrounds Jupiter and emits radio waves.</p>
 <p>Saturn’s moon Enceladus has cryovolcanism, which is seen near the tiger stripes.  Material (i.e., water + organic molecules) escape Enceladus due to its low surface gravity and escape velocity.  The escape velocity of a body relative to Earth’s value (<span class="math notranslate nohighlight">\(v_{\rm esc}^{\rm Earth} = 11.186\ {\rm km/s}\)</span>) is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-08f80f31-870d-4639-af52-3708712700a0">
-<span class="eqno">(11.9)<a class="headerlink" href="#equation-08f80f31-870d-4639-af52-3708712700a0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c402a01c-269f-4d73-9ee3-fdffaddcbf52">
+<span class="eqno">(11.9)<a class="headerlink" href="#equation-c402a01c-269f-4d73-9ee3-fdffaddcbf52" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left( \frac{v^{\rm moon}}{v^{\rm Earth}}\right)_{\rm esc} &amp;= \sqrt{\frac{GM_{\rm moon}}{R_{\rm moon}}} \times \sqrt{\frac{R_\oplus}{GM_\oplus}}
 = \sqrt{\left(\frac{M_{\rm moon}}{M_\oplus}\right) \left(\frac{R_\oplus}{R_{\rm moon}}\right)}.
 \end{align}\]</div>
 <p>By writing the equation this way, we don’t need to know the value for <span class="math notranslate nohighlight">\(G\)</span>.  Moreover, we only need to know the mass and radius of Enceladus relative to the Earth.  These values are tabulated on <a class="reference external" href="https://en.wikipedia.org/wiki/Enceladus">Wikipedia:Enceladus</a>, which are updated periodically.  Enceladus is <span class="math notranslate nohighlight">\(1.812\times 10^{-5}\)</span> of Earth’s mass and <span class="math notranslate nohighlight">\(0.0396 R_\oplus\)</span>.  With these values, we find that the relative escape velocity is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2ba32d92-ff59-47b1-b171-a1d20a153c27">
-<span class="eqno">(11.10)<a class="headerlink" href="#equation-2ba32d92-ff59-47b1-b171-a1d20a153c27" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e6b2aea4-1daa-4c6f-8611-eeabba480ddd">
+<span class="eqno">(11.10)<a class="headerlink" href="#equation-e6b2aea4-1daa-4c6f-8611-eeabba480ddd" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left( \frac{v^{\rm Enceladus}}{v^{\rm Earth}}\right)_{\rm esc} 
 = \sqrt{\left(1.812\times 10^{-5}\right) \left(\frac{1}{0.0396}\right)} = 0.0214.
 \end{align}\]</div>
 <p>This means that the escape velocity of Enceladus is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-92e9d17a-8741-49d6-a04b-8d56db6c077b">
-<span class="eqno">(11.11)<a class="headerlink" href="#equation-92e9d17a-8741-49d6-a04b-8d56db6c077b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fc3f5f6e-8d29-428a-856a-974376339477">
+<span class="eqno">(11.11)<a class="headerlink" href="#equation-fc3f5f6e-8d29-428a-856a-974376339477" title="Permalink to this equation">#</a></span>\[\begin{align}
 v^{\rm Enceladus}_{\rm esc} = 0.0214 v_{\rm esc}^{\rm Earth} &amp;= 0.239\ {\rm km/s}, \\
 &amp;= \frac{0.239\ {\rm km}}{\rm s} \times \frac{3600\ {\rm s}}{1\ {\rm h}} = 861\ {\rm km/h}.
 \end{align}\]</div>
@@ -762,7 +762,7 @@ By Billy Quarles
 
   <p class="copyright">
     
-      © Copyright 2024.
+      © Copyright 2025.
       <br/>
     
   </p>
