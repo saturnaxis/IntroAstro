@@ -503,8 +503,8 @@ document.write(`
 <section id="angular-momentum">
 <h2><span class="section-number">7.1. </span>Angular Momentum<a class="headerlink" href="#angular-momentum" title="Link to this heading">#</a></h2>
 <p>Recall that linear momentum is the combination of mass <span class="math notranslate nohighlight">\(m\)</span> with a velocity <span class="math notranslate nohighlight">\(v\)</span> (i.e., <span class="math notranslate nohighlight">\(p = m\times v = mv\)</span>).  This mostly described motion along a straight line.  Let’s now apply momentum to circular motion, which requires us to consider how a mass moves on a circle of constant radius <span class="math notranslate nohighlight">\(r\)</span>.  The simplest form is to define the angular momentum <span class="math notranslate nohighlight">\(L\)</span> as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-77d05c3c-09ed-44f5-a3b1-43d1bcbde803">
-<span class="eqno">(7.1)<a class="headerlink" href="#equation-77d05c3c-09ed-44f5-a3b1-43d1bcbde803" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d855bc9b-56a0-4b96-8b25-25ef85a5259c">
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-d855bc9b-56a0-4b96-8b25-25ef85a5259c" title="Permalink to this equation">#</a></span>\[\begin{align}
 L &amp;= m\times v\times r = mvr,
 \end{align}\]</div>
 <p>which depends on the mass <span class="math notranslate nohighlight">\(m\)</span>, velocity <span class="math notranslate nohighlight">\(v\)</span> and the radius <span class="math notranslate nohighlight">\(r\)</span>.  Note that the combination of the mass and radius is also referred to as the mass distribution, or how spread out the mass is.</p>
@@ -514,60 +514,135 @@ L &amp;= m\times v\times r = mvr,
 <h3><span class="section-number">7.1.1. </span>Jupiter’s Orbital Angular Momentum<a class="headerlink" href="#jupiter-s-orbital-angular-momentum" title="Link to this heading">#</a></h3>
 <p>Here we’re assuming Jupiter to have a circular orbit, although its real orbit is elliptical.  Recall from <a class="reference external" href="https://saturnaxis.github.io/IntroAstro/Tutorials/gravity-and-orbits.html#gravity-and-orbits">Gravity and Orbits</a> that we determined Jupiter’s mass using one of its moons, Europa.  Therefore, we know Jupiter’s mass is <span class="math notranslate nohighlight">\(9.54 \times 10^{-4}\ M_\odot\)</span>.  We also know that Jupiter’s semimajor axis is <span class="math notranslate nohighlight">\(5.2\ {\rm AU}\)</span> (see the <a class="reference external" href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html">NASA Fact Sheet</a>).</p>
 <p>We can determine Jupiter’s orbital speed using the equation for circular velocity, but using our special units of <span class="math notranslate nohighlight">\(M_\odot\)</span>, AU, and years.  The circular velocity is then</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e0356f2b-aa4e-4bcd-b116-6e746642e09e">
-<span class="eqno">(7.2)<a class="headerlink" href="#equation-e0356f2b-aa4e-4bcd-b116-6e746642e09e" title="Permalink to this equation">#</a></span>\[\begin{align}
-v_c &amp;= \sqrt{\frac{GM}{a}} = \sqrt{\frac{GM_\odot}{a_{Jup}}} = \sqrt{\frac{(4\pi^2) M_\odot}{5.2\ {\rm AU}}}, \\
-&amp;= 2.76\ {\rm AU/yr}.
+<div class="amsmath math notranslate nohighlight" id="equation-11c95408-03ff-43c6-bffc-f6428d64e076">
+<span class="eqno">(7.2)<a class="headerlink" href="#equation-11c95408-03ff-43c6-bffc-f6428d64e076" title="Permalink to this equation">#</a></span>\[\begin{align}
+v_c &amp;= \sqrt{\frac{GM}{a}} = \sqrt{\frac{GM_\odot}{a_{Jup}}} = \sqrt{\frac{4\pi^2}{5.2}}, \\
+&amp;= 2.8\ \frac{\rm AU}{\rm yr}.
 \end{align}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">G</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="mi">2</span> <span class="c1">#value for G using Msun, yr, and AU as units</span>
+<span class="n">a_Jup</span> <span class="o">=</span> <span class="mf">5.204</span> <span class="c1">#semimajor axis of Jupiter in AU</span>
+<span class="n">M</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># solar mass</span>
+
+<span class="n">v_c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">G</span><span class="o">*</span><span class="n">M</span><span class="o">/</span><span class="n">a_Jup</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The circular velocity of Jupiter is </span><span class="si">%1.3g</span><span class="s2"> AU/yr&quot;</span> <span class="o">%</span> <span class="n">v_c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The circular velocity of Jupiter is 2.75 AU/yr
+</pre></div>
+</div>
+</div>
+</div>
 <p><strong>Does the above result make sense?</strong>  The circumference of Jupiter’s orbit <span class="math notranslate nohighlight">\(C_{Jup}\)</span> is <span class="math notranslate nohighlight">\(2\pi\times (5.2\ {\rm AU}) = 32.67\ {\rm AU}\)</span> and Jupiter’s orbital period <span class="math notranslate nohighlight">\(P_{Jup}\)</span> is <span class="math notranslate nohighlight">\(11.86\ {\rm yr}\)</span>.  We can simply divide the circumference by the orbital period to determine the orbital velocity <span class="math notranslate nohighlight">\(v_c = C_{Jup}/P_{Jup} = 2.76\ {\rm AU/yr}\)</span>.</p>
 <p>Now we can determine Jupiter’s orbital angular momentum <span class="math notranslate nohighlight">\(L_{Jup}^{orb}\)</span> as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-684cde23-2c97-4a16-97af-496e88f48520">
-<span class="eqno">(7.3)<a class="headerlink" href="#equation-684cde23-2c97-4a16-97af-496e88f48520" title="Permalink to this equation">#</a></span>\[\begin{align}
-L_{Jup}^{orb} &amp;= m_{Jup} v_{c,Jup} r_{Jup} = \left(9.54\times 10^{-4}\ {\rm M_\odot} \right) \left(2.76\ {\rm AU/yr}\right) \left(5.2\ {\rm AU} \right), \\
-&amp; = 1.37 \times 10^{-2}\ {\rm M_\odot\ AU^2/yr}.
+<div class="amsmath math notranslate nohighlight" id="equation-d463e639-38b5-4173-972c-d83f294cd05e">
+<span class="eqno">(7.3)<a class="headerlink" href="#equation-d463e639-38b5-4173-972c-d83f294cd05e" title="Permalink to this equation">#</a></span>\[\begin{align}
+L_{Jup}^{orb} &amp;= \left(m v_{c}r\right)_{Jup} = \left(9.54\times 10^{-4}\ {\rm M_\odot} \right) \left(2.76\ {\rm AU/yr}\right) \left(5.2\ {\rm AU} \right), \\
+&amp; = 1.37 \times 10^{-2}\ \frac{M_\odot\ \rm AU^2}{\rm yr}.
 \end{align}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">M_Jup</span> <span class="o">=</span> <span class="mf">9.54e-4</span> <span class="c1">#mass of Jupiter in solar masses</span>
+
+<span class="n">L_Jup</span> <span class="o">=</span> <span class="n">M_Jup</span> <span class="o">*</span> <span class="n">v_c</span> <span class="o">*</span> <span class="n">a_Jup</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The angular momentum of Jupiter is: </span><span class="si">%1.3g</span><span class="s2"> M_sun AU^2/yr.&quot;</span> <span class="o">%</span> <span class="n">L_Jup</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The angular momentum of Jupiter is: 0.0137 M_sun AU^2/yr.
+</pre></div>
+</div>
+</div>
+</div>
 <p>This result by itself doesn’t give us much context.  Instead of just computing a value, we compare the orbital angular momentum of Earth to Jupiter through a ratio.  We expect Jupiter to have more angular momentum because it’s more massive and has a larger orbit.  Therefore we compure the ratio as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f8634081-886d-45b3-aebb-bfd910bd7292">
-<span class="eqno">(7.4)<a class="headerlink" href="#equation-f8634081-886d-45b3-aebb-bfd910bd7292" title="Permalink to this equation">#</a></span>\[\begin{align}
-\frac{L_{Jup}^{orb}}{L_{\oplus}^{orb}} &amp;= \frac{m_{Jup} v_{c,Jup} r_{Jup}}{m_{\oplus} v_{c,\oplus} r_{\oplus}}, \\
+<div class="amsmath math notranslate nohighlight" id="equation-153facbd-3eb3-4b86-a13d-b7e483d65fa0">
+<span class="eqno">(7.4)<a class="headerlink" href="#equation-153facbd-3eb3-4b86-a13d-b7e483d65fa0" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{L_{Jup}^{orb}}{L_{\oplus}^{orb}} &amp;= \frac{\left(m v_{c} r\right)_{Jup}}{\left(mv_{c} r \right)_{\oplus} }, \\
 &amp;= \left(\frac{m_{Jup}}{m_\oplus}\right) \left(\frac{v_{c,Jup}}{v_{c,\oplus}}\right)\left(\frac{a_{Jup}}{a_\oplus}\right).
 \end{align}\]</div>
 <p>From the <a class="reference external" href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html">NASA Fact Sheet</a>, we know that Jupiter is approximately <span class="math notranslate nohighlight">\(317\ m_\oplus\)</span>, or <span class="math notranslate nohighlight">\(317\times\)</span> more massive than the Earth.  Earth’s semimajor axis is <span class="math notranslate nohighlight">\(1\ {\rm AU}\)</span>, and circular velocity is <span class="math notranslate nohighlight">\(2\pi\ {\rm AU/yr}\)</span>.  By substitution, we find</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2293dc13-5493-4c05-8038-c8b035ca24ea">
-<span class="eqno">(7.5)<a class="headerlink" href="#equation-2293dc13-5493-4c05-8038-c8b035ca24ea" title="Permalink to this equation">#</a></span>\[\begin{align}
-\frac{L_{Jup}^{orb}}{L_{\oplus}^{orb}} &amp;= \left(\frac{317\ m_\oplus}{m_\oplus}\right) \left(\frac{2.76\ {\rm AU/yr}}{2\pi\ {\rm AU/yr}}\right) \left(\frac{5.2\ {\rm AU}}{1\ {\rm AU}}\right)
-= 724. 
+<div class="amsmath math notranslate nohighlight" id="equation-2de77349-3b65-4d0f-a5d1-42d0eb14fd33">
+<span class="eqno">(7.5)<a class="headerlink" href="#equation-2de77349-3b65-4d0f-a5d1-42d0eb14fd33" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{L_{Jup}^{orb}}{L_{\oplus}^{orb}} &amp;= \left(\frac{317\ m_\oplus}{m_\oplus}\right) \left(\frac{2.75\ {\rm AU/yr}}{2\pi\ {\rm AU/yr}}\right) \left(\frac{5.2\ {\rm AU}}{1\ {\rm AU}}\right)
+= 723. 
 \end{align}\]</div>
-<p>This means that Jupiter has <span class="math notranslate nohighlight">\(724\times\)</span> more orbital angular momentum than the Earth.</p>
+<p>This means that Jupiter has <span class="math notranslate nohighlight">\(723\times\)</span> more orbital angular momentum than the Earth.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Objects on larger orbits typically have more angular momentum than those on smaller orbits.  If you move an object inward it has to orbit faster to conserve angular momentum.  When this is a gas cloud, it leads to the cloud spinning up.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mass_ratio</span> <span class="o">=</span> <span class="mi">317</span> <span class="c1">#number of Earth masses in Jupiter</span>
+<span class="n">v_ratio</span> <span class="o">=</span> <span class="n">v_c</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="c1">#orbital velocity ration between Earth &amp; Jupiter (circular orbits)</span>
+
+<span class="n">L_ratio</span> <span class="o">=</span> <span class="n">mass_ratio</span><span class="o">*</span><span class="n">v_ratio</span><span class="o">*</span><span class="n">a_Jup</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jupiter has </span><span class="si">%3.3g</span><span class="s2"> times more angular momentum than Earth.&quot;</span> <span class="o">%</span> <span class="n">L_ratio</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jupiter has 723 times more angular momentum than Earth.
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="jupiter-s-spin-angular-momentum">
 <h3><span class="section-number">7.1.2. </span>Jupiter’s Spin Angular Momentum<a class="headerlink" href="#jupiter-s-spin-angular-momentum" title="Link to this heading">#</a></h3>
 <p>The spin angular momentum is a little more complicated because we need to include the individual angular momentum from every tiny mass element.  This combines to form the mass distribution.  For Jupiter, we can assume that the planet is roughly spherical to simplify the problem.  For this tutorial, we’ll mostly skip to the final form where interested students can see an example from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-5-angular-momentum-and-its-conservation">OpenStax</a> for more details.</p>
 <p>For a uniform sphere the spin angular momentum, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a6f76232-b6b3-41e4-9e2e-b200c0739bef">
-<span class="eqno">(7.6)<a class="headerlink" href="#equation-a6f76232-b6b3-41e4-9e2e-b200c0739bef" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-601f45f5-fe27-491c-89a4-6015dc896429">
+<span class="eqno">(7.6)<a class="headerlink" href="#equation-601f45f5-fe27-491c-89a4-6015dc896429" title="Permalink to this equation">#</a></span>\[\begin{align}
 L_{Jup}^{spin} = \frac{2}{5} m_{Jup}R_{Jup}^2 \omega_{Jup},
 \end{align}\]</div>
-<p>where the radius of Jupiter is <span class="math notranslate nohighlight">\({\sim}11R_\oplus\)</span> and <span class="math notranslate nohighlight">\(1R_\oplus = 4.263 \times 10^{-5}\ {\rm AU}\)</span>.  The term <span class="math notranslate nohighlight">\(\omega_{Jup}\)</span> refers to its rotational speed <span class="math notranslate nohighlight">\((=2\pi/P_{rot})\)</span>, which we can calculate using its rotational period <span class="math notranslate nohighlight">\(P_{rot}\)</span> that is <span class="math notranslate nohighlight">\({\sim}10\ {\rm hr} = 1.14 \times 10^{-3}\ {\rm yr}\)</span>.  Then the above equation becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0b5f1bb4-c604-46cc-bc5a-5aec504716c3">
-<span class="eqno">(7.7)<a class="headerlink" href="#equation-0b5f1bb4-c604-46cc-bc5a-5aec504716c3" title="Permalink to this equation">#</a></span>\[\begin{align}
-L_{Jup}^{spin} &amp;= \frac{2}{5}\left(9.54\times 10^{-4}\ M_\odot \right) \left(4.68\times 10^{-4}\ {\rm AU}\right)^2 \left(\frac{2\pi}{1.14 \times 10^{-3}\ {\rm yr}} \right), \\
-&amp;= 4.61 \times 10^{-7}\ {\rm M_\odot\ AU^2/yr}.
+<p>where the radius of Jupiter is <span class="math notranslate nohighlight">\({\sim}11R_\oplus\)</span> and <span class="math notranslate nohighlight">\(1R_\oplus = 4.263 \times 10^{-5}\ {\rm AU}\)</span>.  The term <span class="math notranslate nohighlight">\(\omega_{Jup}\)</span> refers to its rotational speed <span class="math notranslate nohighlight">\((=2\pi/P_{rot})\)</span>, which we can calculate using its rotational period <span class="math notranslate nohighlight">\(P_{rot}\)</span> that is <span class="math notranslate nohighlight">\({\sim}10\ {\rm hr} = 1.25 \times 10^{-3}\ {\rm yr}\)</span>.  Then the above equation becomes</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c2e2e807-886d-4ab0-a72b-49fccd15dae4">
+<span class="eqno">(7.7)<a class="headerlink" href="#equation-c2e2e807-886d-4ab0-a72b-49fccd15dae4" title="Permalink to this equation">#</a></span>\[\begin{align}
+L_{Jup}^{spin} &amp;= \frac{2}{5}\left(9.54\times 10^{-4}\ M_\odot \right) \left(4.69\times 10^{-4}\ {\rm AU}\right)^2 \left(\frac{2\pi}{1.25 \times 10^{-3}\ {\rm yr}} \right), \\
+&amp;= 4.20 \times 10^{-7}\ \frac{M_\odot\ \rm AU^2}{\rm yr}.
 \end{align}\]</div>
 <p>We can see that Jupiter’s spin angular momentum is a lot smaller than its orbital angular momentum.  Both expressions for angular momentum depend on the distance, but to a different degree.  The orbital angular momentum depends only linearly on <span class="math notranslate nohighlight">\(r\)</span>, where the spin angular momentum depends on <span class="math notranslate nohighlight">\(r^2\)</span>.  Coupled with our previous finding that smaller <span class="math notranslate nohighlight">\(r\)</span> leads to lower orbital angular momentum, this is even more dramatic for the spin angular momentum.</p>
 <p>Again let’s compare the spin angular momentum between Jupiter and the Earth by using a ratio.  We can construct the ratio as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9f61b251-4dba-4f91-822e-e6d054987410">
-<span class="eqno">(7.8)<a class="headerlink" href="#equation-9f61b251-4dba-4f91-822e-e6d054987410" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d2a03fff-4343-446d-a798-d3b42e3d9b7e">
+<span class="eqno">(7.8)<a class="headerlink" href="#equation-d2a03fff-4343-446d-a798-d3b42e3d9b7e" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{L_{Jup}^{spin}}{L_\oplus^{spin}} &amp;= \frac{2}{5} m_{Jup}R_{Jup}^2 \left(\frac{2\pi}{P_{Jup}^{rot}} \right) \times \frac{5}{2} \frac{1}{m_{\oplus}R_{\oplus}^2} \left(\frac{P^{rot}_\oplus}{2\pi} \right), \\
 &amp;= \left(\frac{m_{Jup}}{m_\oplus}\right)\left(\frac{R_{Jup}}{R_\oplus}\right)^2 \left(\frac{P_\oplus^{rot}}{P_{Jup}^{rot}} \right), \\
 &amp; = \left(\frac{317\ m_\oplus}{m_\oplus}\right) \left(\frac{11\ R_\oplus}{R_\oplus}\right)^2 \left(\frac{24\ {\rm hr}}{11\ {\rm hr}}\right), \\
 &amp;= 8.37 \times 10^4.
 \end{align}\]</div>
 <p>Jupiter has <span class="math notranslate nohighlight">\({\sim}84,000\times\)</span> more spin angular momentum than the Earth.  We expect this because Jupiter is more massive, bigger, and spins faster.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">R_E</span> <span class="o">=</span> <span class="mf">4.263e-5</span> <span class="c1">#Radius of Earth in AU</span>
+<span class="n">R_Jup</span> <span class="o">=</span> <span class="mi">11</span><span class="o">*</span><span class="n">R_E</span> <span class="c1">#Radius of Jupiter in AU</span>
+<span class="n">PJ_rot</span> <span class="o">=</span> <span class="mi">11</span><span class="o">/</span><span class="mi">24</span><span class="o">/</span><span class="mf">365.25</span> <span class="c1">#Jupiter&#39;s rotation in years</span>
+<span class="n">PE_rot</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="mf">365.25</span> <span class="c1">#Earth&#39;s rotation period in years</span>
+
+<span class="n">L_Jup_spin</span> <span class="o">=</span> <span class="mf">0.4</span><span class="o">*</span><span class="n">M_Jup</span><span class="o">*</span><span class="n">R_Jup</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">PJ_rot</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The spin angular momentum of Juptier is: </span><span class="si">%1.3g</span><span class="s2"> Msun AU^2/yr&quot;</span> <span class="o">%</span> <span class="n">L_Jup_spin</span><span class="p">)</span>
+
+<span class="n">L_spin_ratio</span> <span class="o">=</span> <span class="n">mass_ratio</span><span class="o">*</span><span class="p">(</span><span class="n">R_Jup</span><span class="o">/</span><span class="n">R_E</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">PE_rot</span><span class="o">/</span><span class="n">PJ_rot</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jupiter has approximately </span><span class="si">%1.3g</span><span class="s2"> times more spin angular momentum than Earth.&quot;</span> <span class="o">%</span> <span class="n">L_spin_ratio</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The spin angular momentum of Juptier is: 4.2e-07 Msun AU^2/yr
+Jupiter has approximately 8.37e+04 times more spin angular momentum than Earth.
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 </section>
