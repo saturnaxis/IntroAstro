@@ -221,6 +221,23 @@
 <li class="toctree-l1"><a class="reference internal" href="moons-and-rings.html">11. Planetary Moons and Rings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="small-bodies.html">12. Dwarf Planets and Small Solar System Bodies</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stars</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="taking-measure-stars.html">13. Taking Measure of the Stars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sun.html">14. The Sun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ism-star-formation.html">15. Star Formation &amp; the ISM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="low-mass-stars.html">16. Evolution of Low-mass Stars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="high-mass-stars.html">17. Evolution of High-mass Stars</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Universe</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="relativity-black-holes.html">18. Relativity &amp; Black Holes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="galaxies.html">19. Galaxies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="milky-way.html">20. Milky Way</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expansion-universe.html">21. The Expanding Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cosmology.html">22. Cosmology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large-scale-structure.html">23. Large-scale Structure</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -499,8 +516,8 @@ document.write(`
 <section id="atmosphere-retention">
 <h2><span class="section-number">9.1. </span>Atmosphere Retention<a class="headerlink" href="#atmosphere-retention" title="Link to this heading">#</a></h2>
 <p>Planets hold onto their atmosphere through their own gravity.  We can estimate a planet’s ability to hold onto its atmosphere by comparing the average speed of particles in a gas to the escape velocity from the planet (see <a class="reference external" href="https://saturnaxis.github.io/IntroAstro/Tutorials/gravity-and-orbits.html#escape-velocity">4.2.2</a>).  The escape velocity is given as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-97bd426e-5c5d-4322-ba9a-c932a8df8e36">
-<span class="eqno">(9.1)<a class="headerlink" href="#equation-97bd426e-5c5d-4322-ba9a-c932a8df8e36" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-be2fd043-fad4-4367-9171-9fea7fd02f9d">
+<span class="eqno">(9.1)<a class="headerlink" href="#equation-be2fd043-fad4-4367-9171-9fea7fd02f9d" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{\rm esc} &amp;= \sqrt{\frac{2GM}{R}},
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(M\)</span> is the mass of the planet and <span class="math notranslate nohighlight">\(R\)</span> is the distance from the center (often just the planetary radius).  The units of <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(R\)</span> depend on the choice of <span class="math notranslate nohighlight">\(G\)</span> (the Universal Gravitational constant).  However, we can rewrite the above equation in terms of parameters for the Earth as</p>
@@ -521,8 +538,8 @@ v^\prime_{\rm esc} &amp;= \frac{v_{\rm esc}}{v_{\rm esc}^{\rm Earth}} &amp;= \sq
 \overline{v^2} &amp;= \frac{3kT}{m}.
 \end{align*}\]</div>
 <p>We can then arrive at an expression for the velocity of a gas molecule as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-beb2f686-df98-4a2e-8c0e-cba4ee03adef">
-<span class="eqno">(9.2)<a class="headerlink" href="#equation-beb2f686-df98-4a2e-8c0e-cba4ee03adef" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a13bd96b-94bd-45a2-b01e-ba1618ab9ef0">
+<span class="eqno">(9.2)<a class="headerlink" href="#equation-a13bd96b-94bd-45a2-b01e-ba1618ab9ef0" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{\rm molecule} = \sqrt{\frac{3kT}{m}}.
 \end{align}\]</div>
 <p>The temperature <span class="math notranslate nohighlight">\(T\)</span> is measured in <strong>Kelvin</strong>, where the mass <span class="math notranslate nohighlight">\(m\)</span> of the molecule is measured in kilograms (<strong>kg</strong>).  There are no tricks here because of the Bolztmann constant <span class="math notranslate nohighlight">\(k = 1.38 \times 10^{-23}\ {\rm J/K}\)</span>.</p>
@@ -556,8 +573,8 @@ v_{\rm molecule} = \sqrt{\frac{3kT}{m}}.
 </table>
 </div>
 <p>The mass of a hydrogen atom is <span class="math notranslate nohighlight">\(m_H = 1.67 \times 10^{-27}\ {\rm kg}\)</span>, where we can simply multiply the molecular mass by <span class="math notranslate nohighlight">\(m_H\)</span> to arrive at the mass of the molecule.  However, we don’t need to do this for every calculation, instead we can write</p>
-<div class="amsmath math notranslate nohighlight" id="equation-509805a9-3045-46e3-bd58-d3a571b03aed">
-<span class="eqno">(9.3)<a class="headerlink" href="#equation-509805a9-3045-46e3-bd58-d3a571b03aed" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-829cfb74-a7e2-4d34-9d02-b844036cde7e">
+<span class="eqno">(9.3)<a class="headerlink" href="#equation-829cfb74-a7e2-4d34-9d02-b844036cde7e" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{\rm molecule} &amp;= \sqrt{\frac{3k}{m_H}}\sqrt{\frac{T}{\text{Molecular Mass}}} \\
 &amp;= (157\ {\rm m/s})\sqrt{\frac{T}{\text{Molecular Mass}}} \\
 &amp;= (0.157\ {\rm km/s})\sqrt{\frac{T}{\text{Molecular Mass}}} .
@@ -576,8 +593,8 @@ v_{\rm molecule} &amp;= \sqrt{\frac{3k}{m_H}}\sqrt{\frac{T}{\text{Molecular Mass
 <div class="math notranslate nohighlight">
 \[ v_{\rm molecule} = (0.157\ {\rm km/s}) \times \sqrt{\frac{1400}{2.016}} = 4.14\ {\rm km/s}.\]</div>
 <p>The Earth’s escape velocity at the surface is <span class="math notranslate nohighlight">\(v_{\rm esc} \sim 11\ {\rm km/s}\)</span> and a general rule is that the average speed needs to be less than <span class="math notranslate nohighlight">\(1/6\ v_{\rm esc}\)</span>, or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a25105f7-c4ae-4a55-94d4-d975f6af42e3">
-<span class="eqno">(9.4)<a class="headerlink" href="#equation-a25105f7-c4ae-4a55-94d4-d975f6af42e3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4ffa1a09-432a-4201-8233-89479e1ba790">
+<span class="eqno">(9.4)<a class="headerlink" href="#equation-4ffa1a09-432a-4201-8233-89479e1ba790" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{\rm molecule} \leq \frac{1}{6}v_{\rm esc} 
 \end{align}\]</div>
 <p>to remain bound to the Earth over the lifetime of the Solar System.  This limit on gas speed is <span class="math notranslate nohighlight">\(1.83\ {\rm km/s}\)</span> for the Earth.  At either temperature, the average speed of molecular hydrogen gas is larger than the limiting speed.  Therefore, molecular hydrogen gas can escape the Earth after it reaches the upper atmosphere.</p>

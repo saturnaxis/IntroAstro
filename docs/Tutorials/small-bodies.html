@@ -79,6 +79,7 @@
     <link rel="canonical" href="https://saturnaxis.github.io/IntroAstro/Tutorials/small-bodies.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="13. Taking Measure of the Stars" href="taking-measure-stars.html" />
     <link rel="prev" title="11. Planetary Moons and Rings" href="moons-and-rings.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -219,6 +220,23 @@
 <li class="toctree-l1"><a class="reference internal" href="giant-planets.html">10. Worlds of Gas and Liquid – The Giant Planets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="moons-and-rings.html">11. Planetary Moons and Rings</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">12. Dwarf Planets and Small Solar System Bodies</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stars</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="taking-measure-stars.html">13. Taking Measure of the Stars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sun.html">14. The Sun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ism-star-formation.html">15. Star Formation &amp; the ISM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="low-mass-stars.html">16. Evolution of Low-mass Stars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="high-mass-stars.html">17. Evolution of High-mass Stars</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Universe</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="relativity-black-holes.html">18. Relativity &amp; Black Holes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="galaxies.html">19. Galaxies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="milky-way.html">20. Milky Way</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expansion-universe.html">21. The Expanding Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cosmology.html">22. Cosmology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large-scale-structure.html">23. Large-scale Structure</a></li>
 </ul>
 
     </div>
@@ -607,16 +625,16 @@ document.write(`
 </details>
 </div>
 <p>Kepler’s laws showed us that an eccentric orbit has two special points where the speed of the orbiting object is fastest (perihelion) and slowest (aphelion).  Those two points coincide to when the object is closest (<span class="math notranslate nohighlight">\(q\)</span>; perihelion) and farthest (<span class="math notranslate nohighlight">\(Q\)</span>; aphelion) from the Sun.  We can calculate these distances using the semimajor axis and eccentricity by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-519934b0-ee14-4f68-81c4-2214e759176b">
-<span class="eqno">(12.1)<a class="headerlink" href="#equation-519934b0-ee14-4f68-81c4-2214e759176b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b08d085b-8359-4297-bdb5-448a3fa6d1e6">
+<span class="eqno">(12.1)<a class="headerlink" href="#equation-b08d085b-8359-4297-bdb5-448a3fa6d1e6" title="Permalink to this equation">#</a></span>\[\begin{align}
 q &amp;= a(1-e), \\
 Q &amp;= a(1+e).
 \end{align}\]</div>
 <p>Notice that the only difference between these values is the sign in front of the eccentricity <span class="math notranslate nohighlight">\(e\)</span>.</p>
 <p><strong>What are the aphelion and perihelion distances for the Apollo asteroid 2005 YU55, which has a semimajor axis of <span class="math notranslate nohighlight">\(1.14\ {\rm AU}\)</span> and an eccentricity of <span class="math notranslate nohighlight">\(0.43\)</span>?</strong></p>
 <p>Solving this problem is straightforward (i.e., no unit coversions!), where we can just substitute values.  This is done by,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-520612f4-32f1-440b-afaa-c19d077ee7bd">
-<span class="eqno">(12.2)<a class="headerlink" href="#equation-520612f4-32f1-440b-afaa-c19d077ee7bd" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7740ec9a-3a9f-4576-92d5-0ae74b9a4223">
+<span class="eqno">(12.2)<a class="headerlink" href="#equation-7740ec9a-3a9f-4576-92d5-0ae74b9a4223" title="Permalink to this equation">#</a></span>\[\begin{align}
 q &amp;= a(1-e) = (1.14\ {\rm AU})(1-0.43) = 0.65\ {\rm AU}, \\
 Q &amp;= a(1+e) = (1.14\ {\rm AU})(1+0.43) = 1.63\ {\rm AU}.
 \end{align}\]</div>
@@ -631,8 +649,8 @@ allowfullscreen></iframe>
 <section id="impact-energy">
 <h2><span class="section-number">12.2. </span>Impact Energy<a class="headerlink" href="#impact-energy" title="Link to this heading">#</a></h2>
 <p>The energy of a moving object depends on the object’s mass <span class="math notranslate nohighlight">\(m\)</span> and how fast its going (or its velocity) <span class="math notranslate nohighlight">\(v\)</span>.  In physics, we represent this energy as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0b6215f6-4389-41a1-8290-853a3f0266d0">
-<span class="eqno">(12.3)<a class="headerlink" href="#equation-0b6215f6-4389-41a1-8290-853a3f0266d0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-25fc47a3-2b7d-43f2-bb83-ea7f65696678">
+<span class="eqno">(12.3)<a class="headerlink" href="#equation-25fc47a3-2b7d-43f2-bb83-ea7f65696678" title="Permalink to this equation">#</a></span>\[\begin{align}
 E_{\rm K} = \frac{1}{2}mv^2,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(E_{\rm K}\)</span> is the kinetic energy in joules (J), <span class="math notranslate nohighlight">\(m\)</span> is the mass (in kg), and the velocity <span class="math notranslate nohighlight">\(v\)</span> (in <span class="math notranslate nohighlight">\(\rm m/s\)</span>).  The kinetic energy is the maximum amount of energy that an asteroid of comet can deliver upon impact.</p>
@@ -641,8 +659,8 @@ E_{\rm K} = \frac{1}{2}mv^2,
 <div class="math notranslate nohighlight">
 \[ v = \frac{20\ {\rm km}}{1\ {\rm s}} \times \frac{1000\ {\rm m}}{\rm km} = 2\times 10^4\ {\rm m/s}. \]</div>
 <p>Now we can substitute to find <span class="math notranslate nohighlight">\(E_{\rm K}\)</span> as,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2650373c-10ab-4916-88d9-b16508ea94f0">
-<span class="eqno">(12.4)<a class="headerlink" href="#equation-2650373c-10ab-4916-88d9-b16508ea94f0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5530b732-5d70-4810-973a-a8fbba49a22f">
+<span class="eqno">(12.4)<a class="headerlink" href="#equation-5530b732-5d70-4810-973a-a8fbba49a22f" title="Permalink to this equation">#</a></span>\[\begin{align}
 E_{\rm K} &amp;= \frac{1}{2}\left(5\times 10^{14}\ {\rm kg}\right)\left(2\times 10^4\ {\rm m/s}\right)^2 \ {\rm J}, \\
 &amp;= \frac{1}{2}\left(5\times 10^{14}\ {\rm kg}\right)\left(4\times 10^8\ {\rm m/s}\right)\ {\rm J}, \\
 &amp;= \left(\frac{1}{2}\times 5 \times 4 \right)(10^{14} \times 10^8), \\
@@ -650,13 +668,13 @@ E_{\rm K} &amp;= \frac{1}{2}\left(5\times 10^{14}\ {\rm kg}\right)\left(2\times 
 \end{align}\]</div>
 <p>This seems like a lot of energy, where <span class="math notranslate nohighlight">\(10^{23}\ {\rm J}\)</span> is a big number.  Let’s put this into context.</p>
 <p>A 1-megaton hydrogen bomb (<span class="math notranslate nohighlight">\(67\times\)</span> as energetic as the Hiroshima atomic bomb) releases about <span class="math notranslate nohighlight">\(10^{15}\ {\rm J}\)</span> of energy.  The impact of this object would deliver as much energy as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-683f07cd-6e71-4e6d-ac09-ac5c23719762">
-<span class="eqno">(12.5)<a class="headerlink" href="#equation-683f07cd-6e71-4e6d-ac09-ac5c23719762" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d6e69450-fcfe-40a4-b021-fda1614200fd">
+<span class="eqno">(12.5)<a class="headerlink" href="#equation-d6e69450-fcfe-40a4-b021-fda1614200fd" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{10^{23}\ {\rm J}}{10^{15}\ {\rm J}} = 10^8\ {\rm bombs}.
 \end{align}\]</div>
 <p>The World consumption of electricity in 2022 (<a class="reference external" href="https://en.wikipedia.org/wiki/Electric_energy_consumption">Wikipedia:World_energy_consumption</a>) was approximately <span class="math notranslate nohighlight">\(24,200\ {\rm TWh}\)</span>, where <span class="math notranslate nohighlight">\(1\ {\rm Wh} = 3600\ {\rm J}\)</span>.  We want to find the total consumption in <span class="math notranslate nohighlight">\(J\)</span> so that we can compare <code class="docutils literal notranslate"><span class="pre">apples-to-apples</span></code>.  This is given by,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-eb178437-d995-46f2-a21d-c2f88dde7be0">
-<span class="eqno">(12.6)<a class="headerlink" href="#equation-eb178437-d995-46f2-a21d-c2f88dde7be0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cdc77a8e-7add-4b0d-a53a-32ddef7cea1b">
+<span class="eqno">(12.6)<a class="headerlink" href="#equation-cdc77a8e-7add-4b0d-a53a-32ddef7cea1b" title="Permalink to this equation">#</a></span>\[\begin{align}
 24,400\ {\rm TWh} &amp;= \left(2.44 \times 10^4 \right) \times 10^{12}\ {\rm Wh} = 2.44 \times 10^{16}\ {\rm Wh}, \\
 &amp;= \frac{2.44 \times 10^{16}\ {\rm Wh}}{1} \times \frac{3600\ {\rm J}}{1\ {\rm Wh}} = 8.8\times 10^{19}\ {\rm J}.
 \end{align}\]</div>
@@ -702,6 +720,15 @@ E_{\rm K} &amp;= \frac{1}{2}\left(5\times 10^{14}\ {\rm kg}\right)\left(2\times 
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title"><span class="section-number">11. </span>Planetary Moons and Rings</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="taking-measure-stars.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">13. </span>Taking Measure of the Stars</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
