@@ -26,5 +26,21 @@ parts:
   - file: Tutorials/giant-planets.ipynb
   - file: Tutorials/moons-and-rings.ipynb
   - file: Tutorials/small-bodies.ipynb
-
+- caption: Stars
+  numbered: true
+  chapters:
+  - file: Tutorials/taking-measure-stars.ipynb
+  - file: Tutorials/sun.ipynb
+  - file: Tutorials/ism-star-formation.ipynb
+  - file: Tutorials/low-mass-stars.ipynb
+  - file: Tutorials/high-mass-stars.ipynb
+- caption: The Universe
+  numbered: true
+  chapters:
+  - file: Tutorials/relativity-black-holes.ipynb
+  - file: Tutorials/galaxies.ipynb
+  - file: Tutorials/milky-way.ipynb
+  - file: Tutorials/expansion-universe.ipynb
+  - file: Tutorials/cosmology.ipynb
+  - file: Tutorials/large-scale-structure.ipynb
 

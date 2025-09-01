@@ -1,0 +1,718 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>13. Taking Measure of the Stars &#8212; Introductory Astronomy</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css?v=20ffa6e1" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-TQDV8M90DP"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-TQDV8M90DP');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-TQDV8M90DP');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorials/taking-measure-stars';</script>
+    <link rel="canonical" href="https://saturnaxis.github.io/IntroAstro/Tutorials/taking-measure-stars.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="14. The Sun" href="sun.html" />
+    <link rel="prev" title="12. Dwarf Planets and Small Solar System Bodies" href="small-bodies.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../home.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/jwst-galaxy-ngc1512.jpg" class="logo__image only-light" alt="Introductory Astronomy - Home"/>
+    <script>document.write(`<img src="../_static/jwst-galaxy-ngc1512.jpg" class="logo__image only-dark" alt="Introductory Astronomy - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    Introductory Astronomy
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preamble</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/who-for.html">Who are these notes for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/cite-reuse.html">How to cite and reuse this material</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Astronomy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="thinking-like-astronomer.html">1. Thinking Like an Astronomer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="patterns-in-sky.html">2. Patterns in the Sky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="motion-astronomical-bodies.html">3. Motion of Astronomical Bodies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gravity-and-orbits.html">4. Gravity and Orbits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="light.html">5. Light</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools-of-astronomer.html">6. Tools of an Astronomer</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solar System Astronomy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="formation-planetary-systems.html">7. The Formation of Planetary Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrestrial-interiors-surfaces.html">8. The Terrestrial Planets and Earth’s Moon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrestrial-atmospheres.html">9. Atmospheres of the Terrestrial Planets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="giant-planets.html">10. Worlds of Gas and Liquid – The Giant Planets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moons-and-rings.html">11. Planetary Moons and Rings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="small-bodies.html">12. Dwarf Planets and Small Solar System Bodies</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stars</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">13. Taking Measure of the Stars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sun.html">14. The Sun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ism-star-formation.html">15. Star Formation &amp; the ISM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="low-mass-stars.html">16. Evolution of Low-mass Stars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="high-mass-stars.html">17. Evolution of High-mass Stars</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Universe</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="relativity-black-holes.html">18. Relativity &amp; Black Holes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="galaxies.html">19. Galaxies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="milky-way.html">20. Milky Way</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expansion-universe.html">21. The Expanding Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cosmology.html">22. Cosmology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large-scale-structure.html">23. Large-scale Structure</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/saturnaxis/IntroAstro/main?urlpath=tree/Tutorials/taking-measure-stars.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/saturnaxis/IntroAstro/blob/main/Tutorials/taking-measure-stars.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/saturnaxis/IntroAstro" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/saturnaxis/IntroAstro/issues/new?title=Issue%20on%20page%20%2FTutorials/taking-measure-stars.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Tutorials/taking-measure-stars.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Taking Measure of the Stars</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parallax-and-distance">13.1. Parallax and Distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-magnitude-system">13.2. The Magnitude System</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-the-sizes-of-stars">13.3. Estimating the Sizes of Stars</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measuring-the-mass-of-an-eclipsing-binary-pair">13.4. Measuring the Mass of an Eclipsing Binary Pair</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="taking-measure-of-the-stars">
+<h1><span class="section-number">13. </span>Taking Measure of the Stars<a class="headerlink" href="#taking-measure-of-the-stars" title="Link to this heading">#</a></h1>
+<section id="parallax-and-distance">
+<h2><span class="section-number">13.1. </span>Parallax and Distance<a class="headerlink" href="#parallax-and-distance" title="Link to this heading">#</a></h2>
+<p>A star’s <a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_parallax">parallax</a> is a measure of how much (in angle) it moves on the sky relative to a baseline distance.  For stars, we typically use the distance from the Earth to the Sun (<span class="math notranslate nohighlight">\(1\ {\rm AU}\)</span>) as the baseline.  Thus, we define the parallax angle <span class="math notranslate nohighlight">\(p\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[ \tan{p} = \frac{\text{baseline distance}}{\text{distance to star}} = \frac{b}{d}.\]</div>
+<p>Stars are really far away and typically have very small movements on the sky, where the closest stars move only <span class="math notranslate nohighlight">\({\sim}0.768\)</span> arcseconds (or <span class="math notranslate nohighlight">\(\rm arcsec\)</span>).  Using the Earth’s orbit as a baseline and simplifying for small angles, we get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-82fb20d7-930b-48a1-a694-037de1fd047d">
+<span class="eqno">(13.1)<a class="headerlink" href="#equation-82fb20d7-930b-48a1-a694-037de1fd047d" title="Permalink to this equation">#</a></span>\[\begin{align}
+p \propto \frac{1}{d}.
+\end{align}\]</div>
+<p>The parallax angle <span class="math notranslate nohighlight">\(p\)</span> must be measured in arcseconds, which makes the proportion an equality and gives us a distance in <strong>parsec</strong> <span class="math notranslate nohighlight">\((\text{pc})\)</span>.  A parsec can be converted into a <strong>light-year</strong> <span class="math notranslate nohighlight">\(({\rm ly})\)</span> through the conversion factor: <span class="math notranslate nohighlight">\(1\ {\rm pc} = 3.26\ {\rm ly}\)</span>.</p>
+<p>After the Sun, the next-closest star to the Earth is <a class="reference external" href="https://en.wikipedia.org/wiki/Proxima_Centauri">Proxima Centauri</a>.  Proxima is a faint member of the triple-star system Alpha Centauri (only confirmed as a member in 2016).  Due to New Horizon’s, we have an impressively measured parallax of <span class="math notranslate nohighlight">\(0.7685\)</span> arcseconds.  <strong>How far away is Proxima Centauri (in ly)?</strong></p>
+<p>We have to do two (fairly light) calculations.  First, we need to determine the distance in parsecs because our measurement is in arcseconds.  This can be shown as,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6bf8195f-d85e-4c66-850e-ce3cab4ebcee">
+<span class="eqno">(13.2)<a class="headerlink" href="#equation-6bf8195f-d85e-4c66-850e-ce3cab4ebcee" title="Permalink to this equation">#</a></span>\[\begin{align}
+d = \frac{1}{p({\rm arcsec})} = \frac{1}{0.7685} = 1.301\ {\rm pc}.
+\end{align}\]</div>
+<p>Next, we need to convert the distance in <span class="math notranslate nohighlight">\(\rm pc\)</span> to a distance in <span class="math notranslate nohighlight">\(\rm ly\)</span>.  So, we apply the conversion factor by,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ab5197ad-a2b7-4561-9f3d-c960349d1709">
+<span class="eqno">(13.3)<a class="headerlink" href="#equation-ab5197ad-a2b7-4561-9f3d-c960349d1709" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{1.301\ {\rm pc}}{1} \times \frac{3.26\ {\rm ly}}{1\ {\rm pc}} = 4.24\ {\rm ly}.
+\end{align}\]</div>
+<p>Proxima is <span class="math notranslate nohighlight">\(4.24\ {\rm ly}\)</span> away from the Earth.  Given that <span class="math notranslate nohighlight">\(1\ {\rm AU}\)</span> is small compared to a light-year, it doesn’t matter if we say its that distance from the Earth or the Sun.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Recall that 1 degree on the sky is about the width of your pinky finger at arm’s length. A single arcminute is <span class="math notranslate nohighlight">\(1/60\)</span> of a degree, and an arcsecond is <span class="math notranslate nohighlight">\(1\60\)</span> of an arcminute.  This means that an arcescond is <span class="math notranslate nohighlight">\(1/3600\)</span> (or <span class="math notranslate nohighlight">\(0.0027\%\)</span>) of the width of your pinky.  The movement of the closest star due to parallax is smaller than that.  It’s no wonder that the ancients were believed in geocentrism for so long, since stellar parallax couldn’t be measured.</p>
+</div>
+</section>
+<section id="the-magnitude-system">
+<h2><span class="section-number">13.2. </span>The Magnitude System<a class="headerlink" href="#the-magnitude-system" title="Link to this heading">#</a></h2>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Apparent_magnitude">apparent magnitude</a> for celestial objects (or how bright a object looks) was developed by Hipparchus.  But it was adjusted and standardized by 1856.</p>
+<p>Astronomers defined 1st magnitude (or <span class="math notranslate nohighlight">\(m=1\)</span>) stars to be exactly <span class="math notranslate nohighlight">\(100\times\)</span> brither than 6th magnitude (or <span class="math notranslate nohighlight">\(m=6\)</span>) stars.  The system is extended to stars brighter than 1st magnitude by using the negative numbers and fainter than 6th magnitude by increasingly positive numbers.  To find how much brighter (or fainter) as star is, you must follow this relation,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-65de03f1-ed02-41d0-915b-c7dea46467e2">
+<span class="eqno">(13.4)<a class="headerlink" href="#equation-65de03f1-ed02-41d0-915b-c7dea46467e2" title="Permalink to this equation">#</a></span>\[\begin{align}
+B = 2.512^{(m_1-m_2)},
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span> are the apparent magnitudes of the two objects. Let’s check to see how much brighter a 6th magnitude star is compared to a 1st magnitude.</p>
+<div class="math notranslate nohighlight">
+\[B = 2.512^{(6-1)} = 2.512^5 \approx 100. \]</div>
+<p>Here are some rules of thumb for the magnitude system:</p>
+<ol class="arabic simple">
+<li><p>Smaller (or more negative) numbers represent bright objects; The Sun’s apparent magnitude <span class="math notranslate nohighlight">\(m_{\rm Sun} = -26.7\)</span>.</p></li>
+<li><p>Fainter (or more positive) numbers represent faint objects; The apparent magnitude of M81 <span class="math notranslate nohighlight">\(m_{\rm M81} = 6.94\)</span>.</p></li>
+<li><p>Magnitudes measure brightness as factors of <span class="math notranslate nohighlight">\(2.512\)</span>.</p></li>
+</ol>
+<p><strong>Sirius is one of the brightest star’s in the Northern night sky, with an apparent magnitude of <span class="math notranslate nohighlight">\(-1.46\)</span>.  Many people (mistakenly) believe Polaris is one of the brightest stars, where its apparent magnitude is about <span class="math notranslate nohighlight">\(2.00\)</span>.  How much brighter is Sirius than Polaris?</strong></p>
+<p>We need to find the difference in magnitudes between the two stars.  Recall that the distance between a positive and negative number is the sum of their difference from zero.  We can incorporate this into our equation as,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c21ee701-3fad-4621-8ad7-a7915ec5b5d1">
+<span class="eqno">(13.5)<a class="headerlink" href="#equation-c21ee701-3fad-4621-8ad7-a7915ec5b5d1" title="Permalink to this equation">#</a></span>\[\begin{align}
+B = 2.512^(2-(-1.46)) = 2.512^{3.46} = 24.2.
+\end{align}\]</div>
+<p>This means that Sirius is about <span class="math notranslate nohighlight">\(24.2\times\)</span> brighter than Polaris.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m_Polaris</span> <span class="o">=</span> <span class="mf">2.00</span>
+<span class="n">m_Sirius</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.46</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="mf">2.512</span><span class="o">**</span><span class="p">(</span><span class="n">m_Polaris</span><span class="o">-</span><span class="n">m_Sirius</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sirius is </span><span class="si">%2.1f</span><span class="s2"> times brighter than Polaris.&quot;</span> <span class="o">%</span> <span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sirius is 24.2 times brigther than Polaris.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="estimating-the-sizes-of-stars">
+<h2><span class="section-number">13.3. </span>Estimating the Sizes of Stars<a class="headerlink" href="#estimating-the-sizes-of-stars" title="Link to this heading">#</a></h2>
+</section>
+<section id="measuring-the-mass-of-an-eclipsing-binary-pair">
+<h2><span class="section-number">13.4. </span>Measuring the Mass of an Eclipsing Binary Pair<a class="headerlink" href="#measuring-the-mass-of-an-eclipsing-binary-pair" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "saturnaxis/IntroAstro",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Tutorials"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="small-bodies.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">12. </span>Dwarf Planets and Small Solar System Bodies</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="sun.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">14. </span>The Sun</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parallax-and-distance">13.1. Parallax and Distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-magnitude-system">13.2. The Magnitude System</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-the-sizes-of-stars">13.3. Estimating the Sizes of Stars</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measuring-the-mass-of-an-eclipsing-binary-pair">13.4. Measuring the Mass of an Eclipsing Binary Pair</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Billy Quarles
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
