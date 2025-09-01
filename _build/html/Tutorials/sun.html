@@ -73,6 +73,8 @@
                 gtag('config', 'G-TQDV8M90DP');
             </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorials/sun';</script>
     <link rel="canonical" href="https://saturnaxis.github.io/IntroAstro/Tutorials/sun.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -514,9 +516,115 @@ document.write(`
 <h1><span class="section-number">14. </span>The Sun<a class="headerlink" href="#the-sun" title="Link to this heading">#</a></h1>
 <section id="the-source-of-the-sun-s-energy">
 <h2><span class="section-number">14.1. </span>The Source of the Sun’s Energy<a class="headerlink" href="#the-source-of-the-sun-s-energy" title="Link to this heading">#</a></h2>
+<p>The Sun will not last forever, where its lifetime is limited by the amount of fuel available.  We can calculate how long the Sun will live by comparing the mass available for nuclear fusion and the total mass available.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In other chapters, we could use ratios to simplify the mathematics.  Unfortunately, this won’t be the case here.  It may be helpful for you to review the topics in <a class="reference external" href="https://saturnaxis.github.io/IntroAstro/Tutorials/thinking-like-astronomer.html">Chapter 1</a>, specifically for scientific notation and/or how to use the <code class="docutils literal notranslate"><span class="pre">EE</span></code> button on your calculator.</p>
+</div>
+<p>Some mass is lost when converting four hydrogen nuclei (i.e., protons) into a single helium nucleus.  The mass lost is converted into energy.  First, let’s do some accounting:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(m_{\rm H} = 1.6726 \times 10^{-27}\ {\rm kg}\)</span>; mass of a single proton</p></li>
+<li><p><span class="math notranslate nohighlight">\(m_{\rm He} = 6.6447 \times 10^{-27}\ {\rm kg}\)</span>; mass of a single helium-4 nucleus</p></li>
+</ol>
+<p>Assuming no mass loss, we expect that <span class="math notranslate nohighlight">\(4m_{\rm H} = m_{\rm He}\)</span>.  Instead, we must consider the mass lost <span class="math notranslate nohighlight">\(m\)</span> by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-56210a37-d760-4174-bd12-07685175b39e">
+<span class="eqno">(14.1)<a class="headerlink" href="#equation-56210a37-d760-4174-bd12-07685175b39e" title="Permalink to this equation">#</a></span>\[\begin{align}
+4m_{\rm H} &amp;= m_{\rm He} + m, \\
+m &amp;= 4m_{\rm H} - m_{\rm He}, \\
+m&amp;= 4(1.6726\times 10^{-27}\ {\rm kg}) - 6.6447\times 10^{-27}\ {\rm kg},\\
+m &amp;= 0.0457 \times 10^{-27}\ {\rm kg} = 4.58\times 10^{-29}\ {\rm kg}.
+\end{align}\]</div>
+<p>We can calculate the mass loss as <span class="math notranslate nohighlight">\(m/(4m_{\rm H}) = 0.0068\)</span>, or about <span class="math notranslate nohighlight">\(0.7\%\)</span>.  The seems like a small amount, but the Sun has lots of atoms. Fusing a single kilogram of hydrogen into helium releases about <span class="math notranslate nohighlight">\(6.3\times 10^{14}\ {\rm J}\)</span> of energy.  To see how much the Sun must be fusing each second to produce its current luminosity, we compare the energy used per time with the energy used per mass, or</p>
+<div class="amsmath math notranslate nohighlight" id="equation-cf2b6ae6-1f9d-40e2-8204-ea01b83e9b81">
+<span class="eqno">(14.2)<a class="headerlink" href="#equation-cf2b6ae6-1f9d-40e2-8204-ea01b83e9b81" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{\text{Luminosity of Sun}}{\text{Energy per kilogram}} = \frac{3.9\times 10^{26}\ {\rm J/s}}{6.3\times 10^{14}\ {\rm J/kg}} = 6.2\times 10^{11}\ {\rm kg/s}.
+\end{align}\]</div>
+<p>This is about <span class="math notranslate nohighlight">\(620\)</span> billion <span class="math notranslate nohighlight">\(\rm kg\)</span> of hydrogen converted into helium each second, where <span class="math notranslate nohighlight">\(0.7\%\)</span> of it (<span class="math notranslate nohighlight">\({\sim}4\)</span> billion <span class="math notranslate nohighlight">\(\rm kg\)</span>) is converted to energy in the process.</p>
+<p><strong>How much longer will the Sun last?</strong>
+Astronomers estimate that only <span class="math notranslate nohighlight">\(10\%\)</span> of the Sun’s mass is available for fusion because the other <span class="math notranslate nohighlight">\(90\%\)</span> will never get hot (or dense) enough for fusion to occur.  The total mass of the Sun is <span class="math notranslate nohighlight">\(1.989 \times 10^{30}\ {\rm kg}\)</span>, so only <span class="math notranslate nohighlight">\(1.989 \times 10^{29}\ {\rm kg}\)</span> is available for fusion.</p>
+<p>Let’s estimate how much mass <span class="math notranslate nohighlight">\(M_{\rm year}\)</span> the Sun consumes in a year using the mass loss that we calculated above.  This is written as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-834de3b9-c76d-45bd-9a32-ae6803cd230c">
+<span class="eqno">(14.3)<a class="headerlink" href="#equation-834de3b9-c76d-45bd-9a32-ae6803cd230c" title="Permalink to this equation">#</a></span>\[\begin{align}
+M_{\rm year} = \left(\frac{6.2\times 10^{11}\ {\rm kg}}{1 \rm s}\right)\times \left(\frac{3.16 \times 10^7\ {\rm s}}{1\ {\rm yr}}\right) = 2.0 \times 10^{19}\ \frac{\rm kg}{\rm yr}.
+\end{align}\]</div>
+<p>If we know how much fuel the Sun has (<span class="math notranslate nohighlight">\(1.989 \times 10^{29}\ {\rm kg}\)</span>) and we know how much the Sun fuses each year (<span class="math notranslate nohighlight">\(2.0 \times 10^{19}\ {\rm kg/yr}\)</span>), we can divide the the total amount by the amount used per yeare to find the lifetime <span class="math notranslate nohighlight">\(\tau\)</span> of the Sun:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e036015e-0c86-4974-88a9-924de98999b9">
+<span class="eqno">(14.4)<a class="headerlink" href="#equation-e036015e-0c86-4974-88a9-924de98999b9" title="Permalink to this equation">#</a></span>\[\begin{align}
+\tau &amp;= \frac{M_{\rm fuel}}{M_{\rm year}} = \frac{1.989 \times 10^{29}\ {\rm kg}}{2.0\times 10^{19}\ {\rm kg/yr}}, \\
+&amp;= 9.9 \times 10^9\ {\rm yr} \approx 10^{10}\ {\rm yr}.
+\end{align}\]</div>
+<p>When the Sun formed, it had enough fuel to power it for about <span class="math notranslate nohighlight">\(10\)</span> billion years.  The Sun is nearly halfway through its lifetime of hydrogen fusion.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#scipy.constants is a library that has common constants in physics/chemistry</span>
+<span class="c1">#https://docs.scipy.org/doc/scipy/reference/constants.html</span>
+<span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">m_p</span><span class="p">,</span> <span class="n">year</span>
+
+
+<span class="n">M_sun</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="c1">#mass of the Sun in kg</span>
+<span class="n">L_sun</span> <span class="o">=</span> <span class="mf">3.828e26</span> <span class="c1">#Luminosity of the Sun in W (or J/s)</span>
+<span class="n">energy_kg</span> <span class="o">=</span> <span class="mf">6.3e14</span> <span class="c1">#energy released to fuse 1 kg of hydrogen</span>
+
+<span class="n">m_He</span> <span class="o">=</span> <span class="mf">6.6447e-27</span> <span class="c1">#mass of a helium nucleus in kg</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">m_p</span> <span class="o">-</span> <span class="n">m_He</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The mass lost that is converted into energy is </span><span class="si">%1.4e</span><span class="s2"> kg.&quot;</span> <span class="o">%</span> <span class="n">m</span><span class="p">)</span>
+<span class="n">mass_loss</span> <span class="o">=</span> <span class="n">m</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">m_p</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The mass loss (percentage) is </span><span class="si">%1.2f</span><span class="s2"> percent.&quot;</span> <span class="o">%</span> <span class="n">mass_loss</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------&quot;</span><span class="p">)</span>
+<span class="n">energy_release</span> <span class="o">=</span> <span class="n">L_sun</span><span class="o">/</span><span class="n">energy_kg</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The mass fused per second is </span><span class="si">%1.1e</span><span class="s2"> kg/s.&quot;</span> <span class="o">%</span> <span class="n">energy_release</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------&quot;</span><span class="p">)</span>
+<span class="n">M_year</span> <span class="o">=</span> <span class="n">energy_release</span><span class="o">*</span><span class="n">year</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The mass consumed by the Sun each year is </span><span class="si">%1.1e</span><span class="s2"> kg/yr.&quot;</span> <span class="o">%</span> <span class="n">M_year</span><span class="p">)</span>
+
+<span class="n">M_fuel</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">*</span><span class="n">M_sun</span> 
+<span class="n">tau</span> <span class="o">=</span> <span class="n">M_fuel</span><span class="o">/</span><span class="n">M_year</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The lifetime of the Sun is </span><span class="si">%1.1e</span><span class="s2"> yr.&quot;</span> <span class="o">%</span> <span class="n">tau</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mass lost that is converted into energy is 4.5788e-29 kg.
+The mass loss (percentage) is 0.68 percent.
+------
+The mass fused per second is 6.1e+11 kg/s.
+------
+The mass consumed by the Sun each year is 1.9e+19 kg/yr.
+The lifetime of the Sun is 1.0e+10 yr.
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="sunspots-temperature">
 <h2><span class="section-number">14.2. </span>Sunspots &amp; Temperature<a class="headerlink" href="#sunspots-temperature" title="Link to this heading">#</a></h2>
+<p>Sunspots are <span class="math notranslate nohighlight">\({\sim}1500\ {\rm K}\)</span> cooler than their surroundings.  <strong>What does that lower temperature tell us about their luminosity?</strong></p>
+<p>Recall the ratios we used in <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/constants.html">Chapter 5</a> to compare how much brighter the Sun is compared to the Earth.  We used a form of the Stefan-Boltzmann law with the flux as</p>
+<div class="math notranslate nohighlight">
+\[ \mathcal{F} = \sigma T^4. \]</div>
+<p>We want to compare how the flux of the sunspot with a similar sized section of the its warmer surroundings.  Let’s use the ratios again so that we don’t have to lookup <span class="math notranslate nohighlight">\(\sigma\)</span>.  Comparing the spot to the surface, we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-94d7145e-c1b8-4007-bd61-59e3e7b05b80">
+<span class="eqno">(14.5)<a class="headerlink" href="#equation-94d7145e-c1b8-4007-bd61-59e3e7b05b80" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{\mathcal{F}_{\rm spot}}{\mathcal{F}_{\rm surface}} &amp;= \frac{\sigma T_{\rm spot}^4}{\sigma T_{\rm surface}^4} = \left(\frac{T_{\rm spot}}{T_{\rm surface}}\right)^4, \\
+&amp;= \left(\frac{5777\ {\rm K} -1500\ {\rm K}}{5777\ {\rm K}}\right)^4 = 0.3.
+\end{align}\]</div>
+<p>Therefore, the flux coming from a sunspot is only <span class="math notranslate nohighlight">\(30\%\)</span> of that coming from the nearby surface (i.e., <span class="math notranslate nohighlight">\(\mathcal{F}_{\rm spot} = 0.3\ \mathcal{F}_{\rm surface}\)</span>).  The sunspot is about <span class="math notranslate nohighlight">\(30\%\)</span> as bright as the surrounding photosphere.  However the sunspot would still be brighter than the full Moon.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">T_surf</span> <span class="o">=</span> <span class="mi">5777</span> <span class="c1">#average surface temperature of the Sun</span>
+<span class="n">T_spot</span> <span class="o">=</span> <span class="n">T_surf</span> <span class="o">-</span> <span class="mi">1500</span> <span class="c1">#estimate sunspot temperature</span>
+
+<span class="n">F_ratio</span> <span class="o">=</span> <span class="p">(</span><span class="n">T_spot</span><span class="o">/</span><span class="n">T_surf</span><span class="p">)</span><span class="o">**</span><span class="mi">4</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The sunspot emits about </span><span class="si">%1.1f</span><span class="s2"> times as much light as the surrounding surface.&quot;</span> <span class="o">%</span> <span class="n">F_ratio</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The sunspot emits about 0.3 times as much light as the surrounding surface.
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 

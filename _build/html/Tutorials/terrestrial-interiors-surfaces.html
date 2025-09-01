@@ -517,16 +517,16 @@ document.write(`
 <h2><span class="section-number">8.1. </span>Computing the Ages of Rocks<a class="headerlink" href="#computing-the-ages-of-rocks" title="Link to this heading">#</a></h2>
 <p>Some elements are radioactive, which means that a parent element decays into a daughter element plus and a much smaller particle is ejected.  Scientists can quantify the decay process by measuring the ratio of the final amount <span class="math notranslate nohighlight">\(P_F\)</span> to the original amount <span class="math notranslate nohighlight">\(P_o\)</span> of the parent elements, or <span class="math notranslate nohighlight">\(P_F/P_o\)</span>.  This ratio changes over time as more of the parent elements decay into daughter elements.  The <em>time it takes</em> for half of the orignal amount to decay is called the <strong>half-life</strong>.</p>
 <p>We can express the ratio in terms of the number of half-lives <span class="math notranslate nohighlight">\(n\)</span> that have elapsed, or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-76628c55-6215-4c96-94ec-f0d008394b59">
-<span class="eqno">(8.1)<a class="headerlink" href="#equation-76628c55-6215-4c96-94ec-f0d008394b59" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-aaccab02-fb48-457f-aa27-bd2ad480cc61">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-aaccab02-fb48-457f-aa27-bd2ad480cc61" title="Permalink to this equation">#</a></span>\[\begin{align} 
 \frac{P_F}{P_o} = \left(\frac{1}{2}\right)^n,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(P_F\)</span> and <span class="math notranslate nohighlight">\(P_o\)</span> represent the final and original amounts, respectively.</p>
 <p>The most abundant isotope of uranium is U-238, which decays through a series of intermediate daughters to an isotope of lead (Pb-206).  The half-life of U-238 is 4.5 billion years.  Therefore, after 4.5 billion years, a sample that originally contained only U-238 and no Pb-206 would be found with equal numbers of both U-238 and Pb-206.  If we found a mineral with such a composition, we would know that the mineral crystallized (i.e., formed) 4.5 billion years ago.</p>
 <p>Another isotope of uranium is U-235, which decays to a different lead isotope Pb-207 with a half-life of 700 million years.</p>
 <p><a class="reference external" href="https://www.sciencedirect.com/science/article/pii/0012821X74900594">Tera et al. (1974)</a> analyzed lunar rock brought back from the Apollo missions.  They found in one of the samples (67455,6) that it contains <span class="math notranslate nohighlight">\(114.6\ {\rm picomoles}\)</span> of Pb-206.  The same sample contained <span class="math notranslate nohighlight">\(0.194\ {\rm nanomoles}\)</span> of U-238 per gram of sample.  The ratio of lead to uranium is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7a267fa5-fd27-462d-9ab6-53cbe6e7bca1">
-<span class="eqno">(8.2)<a class="headerlink" href="#equation-7a267fa5-fd27-462d-9ab6-53cbe6e7bca1" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fd31add1-a2d6-433f-b617-f8ad50572b90">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-fd31add1-a2d6-433f-b617-f8ad50572b90" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{\rm ^{206}Pb}{\rm ^{238}U} = \frac{114.6 \times 10^{-12}\ {\rm mole}}{0.194 \times 10^{-9}\ {\rm mole}} = \frac{1.146 \times 10^{-10}}{1.94 \times 10^{-10}} = 0.591.
 \end{align}\]</div>
 <div class="cell docutils container">
@@ -547,25 +547,25 @@ document.write(`
 </div>
 <p>This means that <span class="math notranslate nohighlight">\({\sim}60%\)</span> of the parent isotope U-238 has decayed into Pb-206.  As a result, there is <span class="math notranslate nohighlight">\(4/10\)</span> of the parent isotope U-238 remaining in the mineral sample.  Approximately 1 half-life has passed since the mineral formed, in which case the lunar sample is approximately 4.5 billion years old.</p>
 <p>Notice that this calculation was not a neat power of 2.  We can arrive at a more precise value transforming Eqn. <a class="reference external" href="https://saturnaxis.github.io/IntroAstro/Tutorials/terrestrial-interiors-surfaces.html#equation-76775912-6bb3-4f2f-99d3-abe9966ce1a0">1</a> through the logarithm by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7795788f-b6ed-4fd4-99ba-92bd33832e52">
-<span class="eqno">(8.3)<a class="headerlink" href="#equation-7795788f-b6ed-4fd4-99ba-92bd33832e52" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-28d2fd77-97d6-4cdf-8916-0a35ac726fbe">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-28d2fd77-97d6-4cdf-8916-0a35ac726fbe" title="Permalink to this equation">#</a></span>\[\begin{align}
 \log_{10}\frac{P_F}{P_o} &amp;= \log_{10}\left(\frac{1}{2}\right)^n, \\
 &amp;= n\log_{10}\left(\frac{1}{2}\right), \\
 &amp;= -0.3n.
 \end{align}\]</div>
 <p>Written in words, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-16f3a9ee-8145-4af4-a432-b4e91d96e7e7">
-<span class="eqno">(8.4)<a class="headerlink" href="#equation-16f3a9ee-8145-4af4-a432-b4e91d96e7e7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-33f1f91b-f40b-43ee-b76f-51b170918106">
+<span class="eqno">(8.4)<a class="headerlink" href="#equation-33f1f91b-f40b-43ee-b76f-51b170918106" title="Permalink to this equation">#</a></span>\[\begin{align}
 \log_{10}\left(\frac{\text{Actual measured quantity of isotope}}{\text{Original quantity of isotope}} \right) = -0.3 \left(\frac{\text{Time spent decaying (age)}}{\text{Half-life}}\right).
 \end{align}\]</div>
 <p>Solving for the age, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8e4925ee-4ea6-4ccc-b0e6-85bee4aba0a2">
-<span class="eqno">(8.5)<a class="headerlink" href="#equation-8e4925ee-4ea6-4ccc-b0e6-85bee4aba0a2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-62fa71be-9475-4ea2-b905-94f7a4996355">
+<span class="eqno">(8.5)<a class="headerlink" href="#equation-62fa71be-9475-4ea2-b905-94f7a4996355" title="Permalink to this equation">#</a></span>\[\begin{align}
 \text{Time spent decaying (age)} = -\left(\frac{\text{Half-life}}{0.3}\right) \times \log_{10}\left(\frac{\text{Actual measured quantity of isotope}}{\text{Original quantity of isotope}} \right).
 \end{align}\]</div>
 <p>For the U-238 that decays to Pb-206 with a half-life of <span class="math notranslate nohighlight">\(4.498 \times 10^9\ {\rm yr}\)</span>, we can calculate the age as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7987e008-eecd-496f-b64a-cd48cba191ab">
-<span class="eqno">(8.6)<a class="headerlink" href="#equation-7987e008-eecd-496f-b64a-cd48cba191ab" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-890ee7cc-1b34-4f62-87d0-124e88456908">
+<span class="eqno">(8.6)<a class="headerlink" href="#equation-890ee7cc-1b34-4f62-87d0-124e88456908" title="Permalink to this equation">#</a></span>\[\begin{align}
 \text{Time spent decaying (age)} &amp;= -\left(\frac{4.498 \times 10^9\ {\rm yr}}{0.3}\right) \times \log_{10}\left(1-0.591 \right), \\
 &amp;= 1.294 \left(4.498 \times 10^9\ {\rm yr}\right), \\
 &amp;= 5.82 \times 10^9\ {\rm yr}.
