@@ -73,6 +73,8 @@
                 gtag('config', 'G-TQDV8M90DP');
             </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorials/low-mass-stars';</script>
     <link rel="canonical" href="https://saturnaxis.github.io/IntroAstro/Tutorials/low-mass-stars.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -498,7 +500,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-main-sequence-lifetimes">16.1. Estimating Main-Sequence Lifetimes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#escapting-the-surface-of-an-evolved-star">16.2. Escapting the Surface of an Evolved Star</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#escaping-the-surface-of-an-evolved-star">16.2. Escaping the Surface of an Evolved Star</a></li>
 </ul>
             </nav>
         </div>
@@ -514,9 +516,107 @@ document.write(`
 <h1><span class="section-number">16. </span>Evolution of Low-mass Stars<a class="headerlink" href="#evolution-of-low-mass-stars" title="Link to this heading">#</a></h1>
 <section id="estimating-main-sequence-lifetimes">
 <h2><span class="section-number">16.1. </span>Estimating Main-Sequence Lifetimes<a class="headerlink" href="#estimating-main-sequence-lifetimes" title="Link to this heading">#</a></h2>
+<p>Since we know the how long the Sun should last (i.e., its lifetime <span class="math notranslate nohighlight">\(\tau_\odot\)</span>) from <a class="reference external" href="https://saturnaxis.github.io/IntroAstro/Tutorials/sun.html#the-source-of-the-sun-s-energy">14.1</a>, we can estimate the main sequence lifetime of other stars.  This is done by comparing the energy production rate (relative to the Sun) and mass available (compared to the Sun’s mass).  This can be expressed mathematically as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-066197d2-c3c9-42eb-bc7c-26abe932d018">
+<span class="eqno">(16.1)<a class="headerlink" href="#equation-066197d2-c3c9-42eb-bc7c-26abe932d018" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{\tau_\star}{\tau_\odot} &amp;= \left(\frac{M_\star}{M_\odot}\right) \times \left(\frac{L_\odot}{L_\star}\right), \\
+\tau_\star &amp;= \left(\frac{M_\star}{M_\odot}\right)\times \left(\frac{L_\odot}{L_\star}\right) \times 10^{10}\ {\rm yr}.
+\end{align}\]</div>
+<p>There is also a relationship between the mass and luminosity of stars.  Since the star’s mass provides the fuel for the luminosity, this should make sense.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Mass%E2%80%93luminosity_relation"><strong>mass-luminosity relation</strong></a> is defined empirically, which means that the known values for the mass and luminosity of many stars are compared and fit to a power-law.  Depending on how the power law is constructed (i.e., how the stars are binned), the exponents may vary.</p>
+</div>
+<p>The mass-luminosity relationship for main-sequence (FGK) stars is given as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-af92c6aa-e57c-4ecd-b48e-229c9c3e56cf">
+<span class="eqno">(16.2)<a class="headerlink" href="#equation-af92c6aa-e57c-4ecd-b48e-229c9c3e56cf" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{L_\star}{L_\odot} = \left(\frac{M_\star}{M_\odot}\right)^{3.5}.
+\end{align}\]</div>
+<p>With a little algebra, we can estimate the lifetime for main-sequence (FGK) stars soley based upon their mass.  This is given as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-aa61a6ea-a619-46aa-a82d-a264a4a67e52">
+<span class="eqno">(16.3)<a class="headerlink" href="#equation-aa61a6ea-a619-46aa-a82d-a264a4a67e52" title="Permalink to this equation">#</a></span>\[\begin{align}
+\tau_\star &amp;= \left(\frac{M_\star}{M_\odot}\right)\times \left(\frac{M_\star}{M_\odot}\right)^{{-3.5}} \times 10^{10}\ {\rm yr}
+= \left(\frac{M_\star}{M_\odot}\right)^{{-2.5}} \times 10^{10}\ {\rm yr}.
+\end{align}\]</div>
+<p><strong>What is the main-sequence lifetime for a <span class="math notranslate nohighlight">\(\rm K5\)</span> main-sequence star?</strong>  From our textbook, the mass of a <span class="math notranslate nohighlight">\(\rm K5\)</span> star is <span class="math notranslate nohighlight">\(0.67\ M_\odot\)</span>. We directly substitute into our above equation:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a018708f-901d-4005-9648-d68e3cf923bc">
+<span class="eqno">(16.4)<a class="headerlink" href="#equation-a018708f-901d-4005-9648-d68e3cf923bc" title="Permalink to this equation">#</a></span>\[\begin{align}
+\tau_{\rm K5}= \left(\frac{1}{0.67}\right)^{2.5} \times 10^{10}\ {\rm yr} = 2.7 \times 10^{10}\ {\rm yr}.
+\end{align}\]</div>
+<p>A <span class="math notranslate nohighlight">\(\rm K5\)</span> star has a main-sequence lifetime of <span class="math notranslate nohighlight">\(27\ {\rm billion\ years}\)</span>, which is <span class="math notranslate nohighlight">\(2.7\times\)</span> longer than the Sun’s lifetime.  Even though a <span class="math notranslate nohighlight">\(\rm K5\)</span> starts with less fuel, it uses it more slowly and thus, lives longer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tau_sun</span> <span class="o">=</span> <span class="mf">1e10</span> <span class="c1">#main-sequence lifetime for the Sun</span>
+
+<span class="n">M_K5</span> <span class="o">=</span> <span class="mf">0.67</span> <span class="c1">#mass of a K5 star in Msun</span>
+<span class="n">tau_K5</span> <span class="o">=</span> <span class="n">M_K5</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">2.5</span><span class="p">)</span><span class="o">*</span><span class="n">tau_sun</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The main-sequence lifetime of a K5 star is </span><span class="si">%1.1e</span><span class="s2"> yr or </span><span class="si">%d</span><span class="s2"> Gyr.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">tau_K5</span><span class="p">,</span><span class="n">tau_K5</span><span class="o">/</span><span class="mf">1e9</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The main-sequence lifetime of a K5 star is 2.7e+10 yr or 27 Gyr.
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="escapting-the-surface-of-an-evolved-star">
-<h2><span class="section-number">16.2. </span>Escapting the Surface of an Evolved Star<a class="headerlink" href="#escapting-the-surface-of-an-evolved-star" title="Link to this heading">#</a></h2>
+<section id="escaping-the-surface-of-an-evolved-star">
+<h2><span class="section-number">16.2. </span>Escaping the Surface of an Evolved Star<a class="headerlink" href="#escaping-the-surface-of-an-evolved-star" title="Link to this heading">#</a></h2>
+<p>In <a class="reference external" href="https://saturnaxis.github.io/IntroAstro/Tutorials/gravity-and-orbits.html#escape-velocity">Chapter 4</a> and <a class="reference external" href="https://saturnaxis.github.io/IntroAstro/Tutorials/terrestrial-atmospheres.html">Chapter 9</a>, we discussed ways for atoms (or rockets) to escape the gravity of a planet.  Recall that the escape velocity from the surface of body is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1729e03b-cb68-400e-a208-b8ffea0b1b30">
+<span class="eqno">(16.5)<a class="headerlink" href="#equation-1729e03b-cb68-400e-a208-b8ffea0b1b30" title="Permalink to this equation">#</a></span>\[\begin{align}
+v_{\rm esc} = \sqrt{\frac{2GM}{R}},
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(M\)</span> is the mass of the body and <span class="math notranslate nohighlight">\(R\)</span> is the radius of the body.</p>
+<p>At the end of a star’s lifetime, it can become a red giant, where the stellar atmosphere swells to many times its size on the main-sequence.  Let’s first calculate the escape velocity of the Sun on the main-sequence <span class="math notranslate nohighlight">\(v_{\odot,\ \rm esc}^{\rm MS}\)</span> as,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1b1536dc-79ea-4ed1-9e06-840e73eaafca">
+<span class="eqno">(16.6)<a class="headerlink" href="#equation-1b1536dc-79ea-4ed1-9e06-840e73eaafca" title="Permalink to this equation">#</a></span>\[\begin{align}
+v_{\odot,\ \rm esc}^{\rm MS} &amp;= \sqrt{\frac{2GM_\odot}{R_\odot}}, \\
+&amp;= \sqrt{\frac{2\times \left[6.67\times 10^{-11}\ {\rm m^3/(kg\ s^2)}\right] \times(1.989 \times 10^{30}\ {\rm kg})}{6.96 \times 10^8\ {\rm m}}}, \\
+&amp;= 6.17 \times 10^5\ {\rm m/s} = 617\ {\rm km/s}.
+\end{align}\]</div>
+<p>This is about <span class="math notranslate nohighlight">\(56\times\)</span> the escape velocity for the Earth!</p>
+<p><strong>What will the escape velocity be when the Sun becomes a red giant (<span class="math notranslate nohighlight">\(R=50\ R_\odot,\ M=0.9\ M_\odot\)</span>)?</strong>  We can now write the escape velocity equation relative to the Sun so that we can compare with other stars, as well as when the Sun becomes a red giant.  Using ratios, we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ab4ff000-ff45-45bf-a455-f7887d8a100a">
+<span class="eqno">(16.7)<a class="headerlink" href="#equation-ab4ff000-ff45-45bf-a455-f7887d8a100a" title="Permalink to this equation">#</a></span>\[\begin{align}
+\left(\frac{v}{v^{\rm MS}_\odot}\right)_{\rm esc} = \sqrt{\left(\frac{M}{M_\odot}\right)\times \left(\frac{R_\odot}{R}\right)},
+\end{align}\]</div>
+<p>where this is similar (in form) to when we compared the circular velocities in <a class="reference external" href="https://saturnaxis.github.io/IntroAstro/Tutorials/gravity-and-orbits.html#circular-and-escape-velocity">4.2</a>.  Substituting the values for the Sun as a red giant into the above equation, we get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d7b85777-4ace-4312-85bb-1f6a3cb96d88">
+<span class="eqno">(16.8)<a class="headerlink" href="#equation-d7b85777-4ace-4312-85bb-1f6a3cb96d88" title="Permalink to this equation">#</a></span>\[\begin{align}
+\left(\frac{v}{v^{\rm MS}_\odot}\right)_{\rm esc} &amp;= \sqrt{\left(0.9\right)\times \left(\frac{1}{50}\right)} = 0.13, \\
+v_{\rm esc} &amp;=0.13\ v_{\odot,\ \rm esc}^{\rm MS}, \\
+&amp; = 83\ {\rm km/s}.
+\end{align}\]</div>
+<p>The escape velocity from the red giant’s surface is only <span class="math notranslate nohighlight">\(13\%\)</span> of when it was a main-sequence star.  That is part of the reason that red giant and AGB stars lose mass.  The Sun may eventually lose <span class="math notranslate nohighlight">\(50\%\)</span> of its mass.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">G</span>
+
+<span class="n">M_sun</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="c1">#mass of the Sun in kg</span>
+<span class="n">R_sun</span> <span class="o">=</span> <span class="mf">6.96e8</span> <span class="c1">#radius of the Sun in m</span>
+
+<span class="n">v_esc_MS</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">G</span><span class="o">*</span><span class="n">M_sun</span><span class="o">/</span><span class="n">R_sun</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The escape velocity of the Sun on the main sequence is: </span><span class="si">%1.3e</span><span class="s2"> m/s or </span><span class="si">%3d</span><span class="s2"> km/s.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">v_esc_MS</span><span class="p">,</span><span class="n">v_esc_MS</span><span class="o">/</span><span class="mf">1e3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------&quot;</span><span class="p">)</span>
+
+<span class="n">M_RG</span> <span class="o">=</span> <span class="mf">0.9</span> <span class="c1">#mass of red giant in Msun</span>
+<span class="n">R_RG</span> <span class="o">=</span> <span class="mi">50</span> <span class="c1"># radius of red giant in Rsun</span>
+<span class="n">v_esc_RG</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">M_RG</span><span class="o">/</span><span class="n">R_RG</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The escape velocity is </span><span class="si">%2d</span><span class="s2"> percent of the main-sequence value or </span><span class="si">%2i</span><span class="s2"> km/s.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">v_esc_RG</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">v_esc_RG</span><span class="o">*</span><span class="n">v_esc_MS</span><span class="o">/</span><span class="mf">1e3</span><span class="p">,</span><span class="mi">0</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The escape velocity of the Sun on the main sequence is: 6.176e+05 m/s or 617 km/s.
+------
+The escape velocity is 13 percent of the main-sequence value or 83 km/s.
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -585,7 +685,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-main-sequence-lifetimes">16.1. Estimating Main-Sequence Lifetimes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#escapting-the-surface-of-an-evolved-star">16.2. Escapting the Surface of an Evolved Star</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#escaping-the-surface-of-an-evolved-star">16.2. Escaping the Surface of an Evolved Star</a></li>
 </ul>
   </nav></div>
 
