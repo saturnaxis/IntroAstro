@@ -73,6 +73,8 @@
                 gtag('config', 'G-TQDV8M90DP');
             </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorials/ism-star-formation';</script>
     <link rel="canonical" href="https://saturnaxis.github.io/IntroAstro/Tutorials/ism-star-formation.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -514,9 +516,75 @@ document.write(`
 <h1><span class="section-number">15. </span>Star Formation &amp; the ISM<a class="headerlink" href="#star-formation-the-ism" title="Link to this heading">#</a></h1>
 <section id="dust-glows-in-the-ir">
 <h2><span class="section-number">15.1. </span>Dust Glows in the IR<a class="headerlink" href="#dust-glows-in-the-ir" title="Link to this heading">#</a></h2>
+<p>Using Wien’s law (see <a class="reference external" href="https://saturnaxis.github.io/IntroAstro/Tutorials/light.html#wien-s-law">5.3.2</a>) we can measure the temperature of an object from its spectrum, including dust.  Wien’s law relates an objects tempearture to the peak wavelength <span class="math notranslate nohighlight">\((\lambda_{\rm peak})\)</span> of its blackbody curve.</p>
+<p>For <strong>warm dust</strong> at a temperature of <span class="math notranslate nohighlight">\(100\ {\rm K}\)</span>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-77e6fd82-d5fe-4885-a879-cc4d414c3db5">
+<span class="eqno">(15.1)<a class="headerlink" href="#equation-77e6fd82-d5fe-4885-a879-cc4d414c3db5" title="Permalink to this equation">#</a></span>\[\begin{align}
+\lambda_{\rm peak} = \frac{2.9\times 10^6\ {\rm nm \cdot K}}{100\ {\rm K}} = 29,000\ {\rm nm} = 29\ {\rm \mu m},
+\end{align}\]</div>
+<p>which lies in the infrared.  The red part of the spectrum ends at about <span class="math notranslate nohighlight">\(700\ {\rm nm}\)</span>, where wavelengths <span class="math notranslate nohighlight">\(\gtrsim 700\ {\rm nm}\)</span> up to <span class="math notranslate nohighlight">\(1\ {\rm mm}\ (\text{or } 10^6\ {\rm nm})\)</span> define the IR portion of the spectrum.</p>
+<p>For <strong>cooler dust</strong>, at <span class="math notranslate nohighlight">\(10\ {\rm K}\)</span>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-43dbb42b-b45e-4cfa-a917-faac6807a032">
+<span class="eqno">(15.2)<a class="headerlink" href="#equation-43dbb42b-b45e-4cfa-a917-faac6807a032" title="Permalink to this equation">#</a></span>\[\begin{align}
+\lambda_{\rm peak} = \frac{2.9\times 10^6\ {\rm nm \cdot K}}{10\ {\rm K}} = 290,000\ {\rm nm} = 290\ {\rm \mu m},
+\end{align}\]</div>
+<p>the peak wavelength still lies in the infrared.</p>
+<p><em>The temperature and the peak wavelength are inversely proportional.</em>  If the temperature decreases, the peak wavelength increases.  We see that for the cooler dust that is common for the ISM, the peak wavelength is in the far-IR region of the EM spectrum.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Weins_law_temp</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+    <span class="c1">#temp in K</span>
+    <span class="k">return</span> <span class="mf">2.9e6</span><span class="o">/</span><span class="n">T</span>
+
+<span class="c1">#For warm dust at 100 K</span>
+<span class="n">lamb_peak</span> <span class="o">=</span> <span class="n">Weins_law_temp</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The peak wavelength for warm dust is </span><span class="si">%1.1e</span><span class="s2"> nm or </span><span class="si">%d</span><span class="s2"> um.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">lamb_peak</span><span class="p">,</span><span class="n">lamb_peak</span><span class="o">/</span><span class="mf">1e3</span><span class="p">))</span>
+<span class="c1">#For cool dust at 10 K</span>
+<span class="n">lamb_peak</span> <span class="o">=</span> <span class="n">Weins_law_temp</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The peak wavelength for cool dust is </span><span class="si">%1.1e</span><span class="s2"> nm or </span><span class="si">%d</span><span class="s2"> um.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">lamb_peak</span><span class="p">,</span><span class="n">lamb_peak</span><span class="o">/</span><span class="mf">1e3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The peak wavelength for warm dust is 2.9e+04 nm or 29 um.
+The peak wavelength for cool dust is 2.9e+05 nm or 290 um.
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="properties-of-protostars">
 <h2><span class="section-number">15.2. </span>Properties of Protostars<a class="headerlink" href="#properties-of-protostars" title="Link to this heading">#</a></h2>
+<p>A star’s luminosity depends on the radius and surface temperature of a star.  We can compare the luminosity of the Sun with a protostar through the ratio of this relationship to get,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-bbe97c6e-b19f-4a0c-9791-a22dfec5c93f">
+<span class="eqno">(15.3)<a class="headerlink" href="#equation-bbe97c6e-b19f-4a0c-9791-a22dfec5c93f" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{L_{\rm proto}}{L_\odot} = \left(\frac{R_{\rm proto}}{R_\odot}\right)^2 \left(\frac{T_{\rm proto}}{T_\odot}\right)^4,
+\end{align}\]</div>
+<p>where the subscript <span class="math notranslate nohighlight">\(\rm proto\)</span> refers to the protostar and <span class="math notranslate nohighlight">\(\odot\)</span> refers to the Sun.  See <a class="reference external" href="https://saturnaxis.github.io/IntroAstro/Tutorials/light.html#stefan-boltzmann-law">5.3.1</a> or <a class="reference external" href="https://saturnaxis.github.io/IntroAstro/Tutorials/taking-measure-stars.html#estimating-the-sizes-of-stars">13.3</a> for review of the symbols (<span class="math notranslate nohighlight">\(L\)</span>, <span class="math notranslate nohighlight">\(R\)</span>, or <span class="math notranslate nohighlight">\(T\)</span>).</p>
+<p>Suppose that when the Sun was a protostar, the protostar’s radius is <span class="math notranslate nohighlight">\(10\times\)</span> that of the Sun now (or <span class="math notranslate nohighlight">\(R_{\rm proto} = 10\ R_\odot\)</span>) and has a surface temperature of <span class="math notranslate nohighlight">\(3300\ {\rm K}\)</span>.  <strong>What would its luminosity have been?</strong></p>
+<p>We can apply our formula directly.  We find that,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-72c37723-ae8e-4010-b35c-b31fbe68839c">
+<span class="eqno">(15.4)<a class="headerlink" href="#equation-72c37723-ae8e-4010-b35c-b31fbe68839c" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{L_{\rm proto}}{L_\odot} = \left(\frac{10\ R_\odot}{1\ R_\odot}\right)^2 \left(\frac{3300\ {\rm K}}{5777\ {\rm K}}\right)^4 = 10.6.
+\end{align}\]</div>
+<p>The Sun was <span class="math notranslate nohighlight">\({\sim}10.6\times\)</span> more luminousas a protstar than it is now.  From the H-R diagram of protostars, as a <span class="math notranslate nohighlight">\(1\ M_\odot\)</span> star approaches the main sequence, it moves down (toward lower luminosity) and to the left (toward higher surface temperature).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">T_sun</span> <span class="o">=</span> <span class="mi">5777</span> <span class="c1">#average surface temperature of the Sun in K</span>
+<span class="n">T_proto</span> <span class="o">=</span> <span class="mi">3300</span> <span class="c1">#surface temperature of the protostar</span>
+<span class="n">R_proto</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1">#radius of the protostar in solar radii</span>
+
+<span class="n">L_ratio</span> <span class="o">=</span> <span class="n">R_proto</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">T_proto</span><span class="o">/</span><span class="n">T_sun</span><span class="p">)</span><span class="o">**</span><span class="mi">4</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The protostar is </span><span class="si">%2.1f</span><span class="s2"> times brighter than the Sun.&quot;</span> <span class="o">%</span> <span class="n">L_ratio</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The protostar is 10.6 times brighter than the Sun.
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
