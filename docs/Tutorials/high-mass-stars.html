@@ -73,6 +73,8 @@
                 gtag('config', 'G-TQDV8M90DP');
             </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorials/high-mass-stars';</script>
     <link rel="canonical" href="https://saturnaxis.github.io/IntroAstro/Tutorials/high-mass-stars.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -517,6 +519,51 @@ document.write(`
 </section>
 <section id="gravity-on-a-neutron-star">
 <h2><span class="section-number">17.2. </span>Gravity on a Neutron Star<a class="headerlink" href="#gravity-on-a-neutron-star" title="Link to this heading">#</a></h2>
+<p>Neutron stars are more massive that the Sun, but have a radius of a small city (<span class="math notranslate nohighlight">\({\sim}10-15\ {\rm km}\)</span>).  Hence, they are incredibly dense objects.</p>
+<p>Let’s look at the surface gravity for a typical neutron star <span class="math notranslate nohighlight">\((M_{\rm NS} = 2\ M_\odot,\ R = 15\ {\rm km})\)</span>.  The surface gravity <span class="math notranslate nohighlight">\(g\)</span> is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8681b48e-3191-4e9f-a3d8-b73b13cf9774">
+<span class="eqno">(17.1)<a class="headerlink" href="#equation-8681b48e-3191-4e9f-a3d8-b73b13cf9774" title="Permalink to this equation">#</a></span>\[\begin{align}
+g &amp;= \frac{GM_{\rm NS}}{R_{\rm NS}^2}, \\
+&amp;= \frac{\left(6.67\times 10^{-11}\ {\rm m^3/[kg\ s^2]}\right)\left(3.978 \times 10^{30}\ {\rm kg}\right)}{\left(1.5\times 10^4\ {\rm m}\right)^2}, \\
+&amp;= 1.2 \times 10^{12} \frac{\rm m}{\rm s^2}.
+\end{align}\]</div>
+<p>Comparing that number to the surface gravity on Earth (<span class="math notranslate nohighlight">\({\sim}10\ {\rm m/s^2}\)</span>) shows that the surface gravity on a neutron star is <span class="math notranslate nohighlight">\({\sim}10^{11}\)</span> (or 100 billion) times larger.</p>
+<p><strong>What is the escape velocity from a neutron star?</strong> From <a class="reference external" href="https://saturnaxis.github.io/IntroAstro/Tutorials/gravity-and-orbits.html#escape-velocity">4.2.2</a> (and other sections), we’ve shown that the escape velocity can be written as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ea9bd3b8-908a-4162-97bf-8d7140846ece">
+<span class="eqno">(17.2)<a class="headerlink" href="#equation-ea9bd3b8-908a-4162-97bf-8d7140846ece" title="Permalink to this equation">#</a></span>\[\begin{align}
+v_{\rm esc} &amp;= \sqrt{\frac{2GM}{R}}.
+\end{align}\]</div>
+<p>We can write it in another form so that we can re-use our result for the surface gravity <span class="math notranslate nohighlight">\(g\)</span>.  Substituting the requisite values, we get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-07e55e1d-b336-46f4-81f2-4ea718887908">
+<span class="eqno">(17.3)<a class="headerlink" href="#equation-07e55e1d-b336-46f4-81f2-4ea718887908" title="Permalink to this equation">#</a></span>\[\begin{align}
+v_{\rm esc} &amp;= \sqrt{2gR} = \sqrt{\left(30000\ {\rm m}\right) \times \left(1.2 \times 10^{12}\ {\rm m/s^2}\right)},\\
+&amp;= 1.9 \times 10^8\ {\rm m/s}, \\
+&amp;= 0.63c.
+\end{align}\]</div>
+<p>The escape velocity from that neutron star is <span class="math notranslate nohighlight">\(&gt;60\%\)</span> of the speed of light and almost <span class="math notranslate nohighlight">\(17,000\times\)</span> greater than from Earth.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">G</span><span class="p">,</span><span class="n">c</span>
+
+<span class="n">M_sun</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="c1">#mass of Sun in kg</span>
+<span class="n">R_NS</span> <span class="o">=</span> <span class="mf">15e3</span> <span class="c1">#radius of neutron star (km -&gt; m)</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="n">G</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">M_sun</span><span class="p">)</span><span class="o">/</span><span class="n">R_NS</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The surface gravity g of a neutron star is </span><span class="si">%1.1e</span><span class="s2"> m/s^2.&quot;</span> <span class="o">%</span> <span class="n">g</span><span class="p">)</span>
+
+<span class="n">v_esc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">R_NS</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The escape velocity from a neturon star is: </span><span class="si">%1.1e</span><span class="s2"> m/s or </span><span class="si">%1.2f</span><span class="s2">c.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">v_esc</span><span class="p">,</span><span class="n">v_esc</span><span class="o">/</span><span class="n">c</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The surface gravity g of a neutron star is 1.2e+12 m/s^2.
+The escape velocity from a neturon star is: 1.9e+08 m/s or 0.63c.
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
