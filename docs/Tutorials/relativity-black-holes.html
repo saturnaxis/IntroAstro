@@ -517,8 +517,8 @@ document.write(`
 <section id="time-dilation">
 <h2><span class="section-number">18.1. </span>Time Dilation<a class="headerlink" href="#time-dilation" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Hendrik_Lorentz">Hendrik Lorentz</a> derived an expression that scales quantities by how fast they are moving relative to the speed of light.  When this factor is applied to time, it stretches time in a process called <a class="reference external" href="https://saturnaxis.github.io/ModernPhysics/Chapter_2/special-theory-of-relativity.html#time-dilation-and-length-contraction">time dilation</a>.  This factor (called the <em>Lorentz factor</em>) is abbreviated using <span class="math notranslate nohighlight">\(\gamma\)</span> and given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8adfa383-831f-482d-bf22-ab7c785ef46b">
-<span class="eqno">(18.1)<a class="headerlink" href="#equation-8adfa383-831f-482d-bf22-ab7c785ef46b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f2593070-4c03-411e-9973-894b319bb148">
+<span class="eqno">(18.1)<a class="headerlink" href="#equation-f2593070-4c03-411e-9973-894b319bb148" title="Permalink to this equation">#</a></span>\[\begin{align}
 \gamma = \frac{1}{\sqrt{1-\left(\frac{v}{c}\right)^2}}.
 \end{align}\]</div>
 <p>Figure <a class="reference internal" href="#lorentz-factor"><span class="std std-numref">Fig. 18.1</span></a> shows how the value for the Lorentz factor changes with increasing speed <span class="math notranslate nohighlight">\(v/c\)</span>, where Table <a class="reference internal" href="#tab-lorentz-factor"><span class="std std-numref">Table 18.1</span></a> provides select numerical values of <span class="math notranslate nohighlight">\(\gamma\)</span> for a range of <span class="math notranslate nohighlight">\(v/c\)</span>.</p>
@@ -526,7 +526,7 @@ document.write(`
 <figure class="align-default" id="lorentz-factor" style="width: 600px">
 <img alt="../_images/5bf996cd1c83abdd02b66ee14654418a452907e3a06c07dab0f6d60a35a33b65.png" src="../_images/5bf996cd1c83abdd02b66ee14654418a452907e3a06c07dab0f6d60a35a33b65.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 18.1 </span><span class="caption-text">The Lorentz factor <span class="math notranslate nohighlight">\(\gamma\)</span> as a function of <span class="math notranslate nohighlight">\(v\c\)</span>.  Note that it is not much different until <span class="math notranslate nohighlight">\(v/c \sim 0.5\)</span> and only reaches a factor of <span class="math notranslate nohighlight">\(2\)</span> at <span class="math notranslate nohighlight">\(v/c{\sim}0.9\)</span>.</span><a class="headerlink" href="#lorentz-factor" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 18.1 </span><span class="caption-text">The Lorentz factor <span class="math notranslate nohighlight">\(\gamma\)</span> as a function of <span class="math notranslate nohighlight">\(v\c\)</span>.  Note that it is not much different until <span class="math notranslate nohighlight">\(v/c \sim 0.5\)</span> and only reaches a factor of <span class="math notranslate nohighlight">\(2\)</span> at <span class="math notranslate nohighlight">\(v/c \sim 0.9\)</span>.</span><a class="headerlink" href="#lorentz-factor" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="pst-scrollable-table-container"><table class="table" id="tab-lorentz-factor">
@@ -623,8 +623,8 @@ document.write(`
 </div>
 <p>Suppose you take a trip to Proxima Centauri, which is <span class="math notranslate nohighlight">\(4.25\ {\rm ly}\)</span> away, to study the Earth-sized planet in orbit around it.  You travel at <span class="math notranslate nohighlight">\(0.2c\)</span>, whereas your twin stays behind on Earth.  <strong>How long does your trip take for your twin back on Earth?</strong></p>
 <p>Your twin will measure the time using our common Newtonian experience, where</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bc1f2c4a-5901-4439-ba1c-9b5e21d51ae6">
-<span class="eqno">(18.2)<a class="headerlink" href="#equation-bc1f2c4a-5901-4439-ba1c-9b5e21d51ae6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e97db5f0-4c1e-4f28-8fb6-ed39152620ec">
+<span class="eqno">(18.2)<a class="headerlink" href="#equation-e97db5f0-4c1e-4f28-8fb6-ed39152620ec" title="Permalink to this equation">#</a></span>\[\begin{align}
 \text{Time passed} &amp;= \frac{\text{distance traveled}}{\text{speed}}, \\
 &amp;= \frac{4.25\ {\rm ly}}{0.2c} = 21.25\ {\rm years}.
 \end{align}\]</div>
@@ -632,22 +632,23 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>Notice that we could effectively use <span class="math notranslate nohighlight">\(c=1\)</span> due to the definition of a <code class="docutils literal notranslate"><span class="pre">light-year</span></code>.  If a light-year is the distance light travels in a year at a speed <span class="math notranslate nohighlight">\(c\)</span>, then <span class="math notranslate nohighlight">\((1\ {\rm ly})/c = 1\ {\rm year}\)</span>.</p>
 </div>
-<p>The round trip would take <span class="math notranslate nohighlight">\(42.5\)</span> years.  When you return, you will find that <span class="math notranslate nohighlight">\(42.4\)</span> years have passed on Earth.</p>
+<p>The round trip would take <span class="math notranslate nohighlight">\(42.5\)</span> years.  When you return, you will find that <span class="math notranslate nohighlight">\(42.5\)</span> years have passed on Earth.</p>
 <hr class="docutils" />
 <p>To you on the spaceship (moving at <span class="math notranslate nohighlight">\(0.2c\)</span>), time will pass more slowly.  You will measure the time in the spaceship as</p>
-<p>begin{align}
-t_{\rm ship} &amp;= \frac{t_{\rm Earth}}{\gamma}, \
+<div class="amsmath math notranslate nohighlight" id="equation-8fc1dc3e-5946-4a15-b4db-4f8e2e03c79b">
+<span class="eqno">(18.3)<a class="headerlink" href="#equation-8fc1dc3e-5946-4a15-b4db-4f8e2e03c79b" title="Permalink to this equation">#</a></span>\[\begin{align}
+t_{\rm ship} &amp;= \frac{t_{\rm Earth}}{\gamma}, \\
 &amp;= \frac{42.5\ {\rm years}}{1.02} = 41.6\ {\rm years}.
-\end{align}</p>
+\end{align}\]</div>
 <p>This is a relatively small difference, only <span class="math notranslate nohighlight">\({\sim}1\ {\rm year}\)</span>.  But for siblings, that’s a lot!</p>
 <p><strong>Suppose that your ship went a lot faster, say <span class="math notranslate nohighlight">\(0.9c\)</span>.</strong>  Your twin on Earth will measure</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8f09ab0b-448b-4e67-81a9-75c4c877becc">
-<span class="eqno">(18.3)<a class="headerlink" href="#equation-8f09ab0b-448b-4e67-81a9-75c4c877becc" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cb5da561-4531-4c5f-884e-43385f0c7781">
+<span class="eqno">(18.4)<a class="headerlink" href="#equation-cb5da561-4531-4c5f-884e-43385f0c7781" title="Permalink to this equation">#</a></span>\[\begin{align}
 t_{\rm Earth} = \frac{4.25\ {\rm ly}}{0.9} = 9.44\ {\rm years}
 \end{align}\]</div>
 <p>for the round trip time.  You, on the other hand, will measure a round trip time of</p>
-<div class="amsmath math notranslate nohighlight" id="equation-84c8e6d7-d529-467b-aada-35e7a9136520">
-<span class="eqno">(18.4)<a class="headerlink" href="#equation-84c8e6d7-d529-467b-aada-35e7a9136520" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-85aebf72-8b57-4912-8f1a-7f5ffda26524">
+<span class="eqno">(18.5)<a class="headerlink" href="#equation-85aebf72-8b57-4912-8f1a-7f5ffda26524" title="Permalink to this equation">#</a></span>\[\begin{align}
 t_{\rm ship} = \frac{9.44\ {\rm years}}{2.29} = 4.12\ {\rm years}.
 \end{align}\]</div>
 <p>Your twin will have aged <span class="math notranslate nohighlight">\(9.44\)</span> years, while you will have aged only <span class="math notranslate nohighlight">\(4.12\)</span> years.</p>
@@ -691,13 +692,13 @@ The trip time you measure aboard the ship is: 4.12 years.
 <p>For a more practical experiment, time dilation applies for subatomic particles.  One type of particle (called a pion) exists for <span class="math notranslate nohighlight">\(20\)</span> nanoseconds (<span class="math notranslate nohighlight">\(\rm ns\)</span>) before it decays into different particles.</p>
 <p><strong>Suppose pions are produced in a particle accelerator moving at a speed of <span class="math notranslate nohighlight">\(0.999c\)</span>, how long will physicists see the pions before they decay?</strong></p>
 <p>In the reference frame of the pions, they live for <span class="math notranslate nohighlight">\(20\ {\rm ns}\)</span>.  This is analogous to you in the previous example that was moving a high speed in a spaceship.  Therefore, we know the pion’s trip time and are looking for how long the physicists perceive the trip time on Earth.  With some algebra, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-af9f5d4c-ba28-4627-a326-27408b9a3e1d">
-<span class="eqno">(18.5)<a class="headerlink" href="#equation-af9f5d4c-ba28-4627-a326-27408b9a3e1d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9d84cd09-81c5-4c2c-9a92-ae4481d8da4f">
+<span class="eqno">(18.6)<a class="headerlink" href="#equation-9d84cd09-81c5-4c2c-9a92-ae4481d8da4f" title="Permalink to this equation">#</a></span>\[\begin{align}
 t_{\rm physicist} = \gamma \times t_{\rm pions}.
 \end{align}\]</div>
 <p>For an object moving at <span class="math notranslate nohighlight">\(0.999c\)</span>, the value of <span class="math notranslate nohighlight">\(\gamma = 22.37\)</span>.  We can directly substitute to get</p>
-<div class="amsmath math notranslate nohighlight" id="equation-58797ca0-4108-4664-94ed-f42560759ada">
-<span class="eqno">(18.6)<a class="headerlink" href="#equation-58797ca0-4108-4664-94ed-f42560759ada" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0885f92b-e4ed-493d-8543-fb28bad74ae0">
+<span class="eqno">(18.7)<a class="headerlink" href="#equation-0885f92b-e4ed-493d-8543-fb28bad74ae0" title="Permalink to this equation">#</a></span>\[\begin{align}
 t_{\rm physicist} = (22.37) \times (20\ {\rm ns}) = 447\ {\rm ns}.
 \end{align}\]</div>
 <p>The physicists observe that pions moving at nearly the speed of light survive longer before they decay.</p>
